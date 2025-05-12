@@ -49,39 +49,38 @@ bhaskara:
 
 	jal bhaskara_delta # fa0 = delta
 
-	li t0, 0
-	fcvt.s.w ft0, t0
+	fmv.w.x ft0, zero
 	flt.s t0, fa0, ft0
 	bnez t0, bhaskara_complexas # delta < 0
 
-
 	bhaskara_reais:
-		# todo: calcular raízes reais
-		fsqrt.s ft0, fa0  # ft0 = sqrt(delta)
-		
-		li t0, 2
-		fcvt.s.w ft1, t0
-		fmul.s  ft1, ft1, fs0 # ft1 = 2a 
-		
-		li a7, 2
+		fsqrt.s ft0, fa0     # ft0 = sqrt(delta)
+		fadd.s ft1, fs0, fs0 # ft1 = 2a
 
 		# raiz x1
-		fneg.s fs3, fs1 # fs4 = -b
-		fsub.s fs3, fs3, ft0 # -b - sqrt(delta)
+		fneg.s fs3, fs1      # fs3 = -b
+		fsub.s fs3, fs3, ft0 # fs3 = -b - sqrt(delta)
 		fdiv.s fs3, fs3, ft1 # fs3 = (-b + sqrt(delta))/2a
 
 		# raiz x2
-		fneg.s fs4, fs1  # fs3 = -b
-		fadd.s fs4, fs4, ft0 # fs3 = -b + sqrt(delta)
-		fdiv.s fs4, fs4, ft1 # fs3 = (-b + sqrt(delta))/2a
-
-
+		fneg.s fs4, fs1      # fs4 = -b
+		fadd.s fs4, fs4, ft0 # fs4 = -b + sqrt(delta)
+		fdiv.s fs4, fs4, ft1 # fs4 = (-b + sqrt(delta))/2a
 
 		li a0, 1
 		j bhaskara_end
 
 	bhaskara_complexas:
-		# todo: calcular raízes complexas
+		fneg.s ft0, fa0      # -delta
+		fsqrt.s ft0, ft0     # ft0 = sqrt(-delta)
+		fadd.s ft1, fs0, fs0 # ft1 = 2a
+
+		# alfa
+		fneg.s fs3, fs1      # fs3 = -b
+		fdiv.s fs3, fs3, ft1 # fs3 = -b / 2a
+
+		# beta
+		fdiv.s fs4, ft0, ft1 # fs3 = sqrt(-delta)/2a
 	
 		li a0, 2
 		j bhaskara_end
@@ -116,13 +115,8 @@ bhaskara:
 		fcvt.s.w ft1, t1
 		
 		fmul.s ft1, ft1, fa0 # 4a
-		fmul.s ft1, ft1, fa2 #4ac
-		
-		fsub.s fa0, ft0, ft1
-		
-		# test	
-		#li a7, 2
-		#ecall
+		fmul.s ft1, ft1, fa2 # 4ac
+		fsub.s fa0, ft0, ft1 # b^2 - 4ac 
 		
 		ret
 	
