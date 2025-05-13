@@ -8,6 +8,8 @@ break_line: .asciz "\n"
 
 root_1: .asciz "R(1) = "
 root_2: .asciz "R(2) = "
+
+
 sep_plus: .asciz " + "
 sep_minus: .asciz " - "
 complex_end: .asciz  " i"
@@ -178,6 +180,7 @@ show_roots:
 		ecall
 
 		fcvt.w.s a0, ft1
+	
 		la a1, input_buffer
 		jal int_to_string
 
@@ -260,6 +263,9 @@ int_to_string:
 	mv t1, a1           # t1 = buffer pointer (write position)
     
 	beqz t0, write_zero # if number is 0, handle specially
+	
+	bgez t0, convert_loop
+	neg t0, t0 # converte o número para positivo para conversão, sinal adicionado no fim
 
 	convert_loop:
 		li t2, 10
@@ -278,6 +284,14 @@ int_to_string:
 		addi t1, t1, 1
 	
 	reverse_string:
+		li t0, ' ' # pode ser trocado por "+"
+		bgez a0, skip_sign
+		li t0, '-'
+
+		skip_sign:
+		
+		sb t0, 0(t1)
+		addi t1, t1, 1
 		sb zero, 0(t1)       # null terminator
 	
 		#Reverse the string in buffer
@@ -294,7 +308,7 @@ int_to_string:
 		addi t3, t3, -1
 		j reverse_loop
 	
-	end_int_to_string:
+	end_int_to_string:	
 		lw ra, 0(sp)
 		addi sp, sp 4
 		ret
