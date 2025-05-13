@@ -2,36 +2,41 @@
 input_vector: .space 12
 return_buffer: .space 128
 input_buffer: .space 128
+auxiliar_buffer: .space 128
 
-error_msg: .asciz "Erro! Não é equação do segundo grau!"
+
+error_msg: .asciz "Erro! Não é equação do segundo grau!\n"
 break_line: .asciz "\n"
 
 root_1: .asciz "R(1) = "
 root_2: .asciz "R(2) = "
 
-
-sep_plus: .asciz " + "
-sep_minus: .asciz " - "
+sign_plus: .asciz " + "
+sign_minus: .asciz " - "
 complex_end: .asciz  " i"
 
 
 .text
 .globl main
 
-main:
-	jal read_input
-
-	la t0, input_vector
-	flw fa0, 0(t0)
-	flw fa1, 4(t0)
-	flw fa2, 8(t0)
-	addi sp, sp, 12 # restaura a pilha
-
-	jal bhaskara
-	jal show_roots
-
-	li a7, 10
-	ecall
+main:	
+	main_loop:
+		jal read_input
+	
+		la t0, input_vector
+		flw fa0, 0(t0)
+		flw fa1, 4(t0)
+		flw fa2, 8(t0)
+		addi sp, sp, 12 # restaura a pilha
+	
+		jal bhaskara
+		jal show_roots
+		
+		j main_loop
+	
+	end_main:
+		li a7, 10
+		ecall
 
 read_input:
 	addi sp, sp, -12 # aloca espaço na pilha
@@ -65,6 +70,10 @@ bhaskara:
 	fmv.s fs0, fa0
 	fmv.s fs1, fa1
 	fmv.s fs2, fa2
+
+	fmv.w.x ft0, zero
+	feq.s t0, fa0, ft0
+	bnez t0, bhaskara_erro # a = 0
 
 	jal bhaskara_delta # fa0 = delta
 
@@ -192,9 +201,93 @@ show_roots:
 		li a7, 4
 		ecall
 
+		li a0, '\n'
+		li a7, 11
+		ecall
+
 		j end_show_roots
 
 	show_complex_roots:
+		fcvt.w.s a0, ft0
+		la a1, input_buffer
+		jal int_to_string
+
+		la a0, root_1
+		la a1, input_buffer
+		jal concat_strings
+		
+		la a0, return_buffer
+		la a1, input_buffer
+		jal copy_string
+		
+		la a0, input_buffer
+		la a1, sign_plus
+		jal concat_strings
+
+		la a0, return_buffer
+		la a1, auxiliar_buffer
+		jal copy_string
+
+		fcvt.w.s a0, ft1
+		la a1, input_buffer
+		jal int_to_string
+
+		la a0, auxiliar_buffer
+		la a1, input_buffer
+		jal concat_strings
+
+		la a0, return_buffer
+		la a1, complex_end
+		jal concat_strings
+
+		la a0, return_buffer
+		li a7, 4
+		ecall
+
+		li a0, '\n'
+		li a7, 11
+		ecall
+
+		fcvt.w.s a0, ft0
+		la a1, input_buffer
+		jal int_to_string
+
+		la a0, root_2
+		la a1, input_buffer
+		jal concat_strings
+		
+		la a0, return_buffer
+		la a1, input_buffer
+		jal copy_string
+		
+		la a0, input_buffer
+		la a1, sign_minus # TODO: melhorar essa bomba
+		jal concat_strings
+
+		la a0, return_buffer
+		la a1, auxiliar_buffer
+		jal copy_string
+
+		fcvt.w.s a0, ft1
+		la a1, input_buffer
+		jal int_to_string
+
+		la a0, auxiliar_buffer
+		la a1, input_buffer
+		jal concat_strings
+
+		la a0, return_buffer
+		la a1, complex_end
+		jal concat_strings
+
+		la a0, return_buffer
+		li a7, 4
+		ecall
+
+		li a0, '\n'
+		li a7, 11
+		ecall
+
 		j end_show_roots
 
 	end_show_roots:
@@ -221,9 +314,9 @@ concat_strings:
 	
 
 	append:
-		lb t1, 0(a1)       
+		lb t1, 0(a1)
 		sb t1, 0(t2)        
-		beq t1, zero, end_concat_string   
+		beq t1, zero, end_concat_string  
 		addi t2, t2, 1       
 		addi a1, a1, 1       
 		j append
@@ -248,7 +341,7 @@ copy_string:
 		j copy_loop
 
 	end_copy:
-		sb t0, 0(t2) # fecha a string
+		sb t0, 0(a1) # fecha a string
 	
 		lw ra, 0(sp)
 		addi sp, sp, 4
@@ -268,12 +361,12 @@ int_to_string:
 	neg t0, t0 # converte o número para positivo para conversão, sinal adicionado no fim
 
 	convert_loop:
-		li t2, 10
-		rem t3, t0, t2      # t3 = digit = t0 % 10
+		li   t2, 10
+		rem  t3, t0, t2      # t3 = digit = t0 % 10
 		addi t3, t3, 48     # convert digit to ASCII
-		sb t3, 0(t1)        # store in buffer
+		sb   t3, 0(t1)        # store in buffer
 		addi t1, t1, 1      # advance buffer
-		div t0, t0, t2      # t0 = t0 / 10
+		div  t0, t0, t2      # t0 = t0 / 10
 		bnez t0, convert_loop
 	
 		j reverse_string
@@ -284,14 +377,14 @@ int_to_string:
 		addi t1, t1, 1
 	
 	reverse_string:
-		li t0, ' ' # pode ser trocado por "+"
+
 		bgez a0, skip_sign
 		li t0, '-'
-
-		skip_sign:
-		
 		sb t0, 0(t1)
 		addi t1, t1, 1
+		skip_sign:
+		
+
 		sb zero, 0(t1)       # null terminator
 	
 		#Reverse the string in buffer
