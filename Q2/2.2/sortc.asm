@@ -1,0 +1,187 @@
+.data
+v:
+        .word   9
+        .word   2
+        .word   5
+        .word   1
+        .word   8
+        .word   2
+        .word   4
+        .word   3
+        .word   6
+        .word   7
+        .word   10
+        .word   2
+        .word   32
+        .word   54
+        .word   2
+        .word   12
+        .word   6
+        .word   3
+        .word   1
+        .word   78
+        .word   54
+        .word   23
+        .word   1
+        .word   54
+        .word   2
+        .word   65
+        .word   3
+        .word   6
+        .word   55
+        .word   31
+        
+.text
+
+csrr s1,3074
+csrr s0,3073
+call main
+csrr t0,3073   # le o time atual 
+csrr t1,3074   # le o num instr atual 
+sub s0,t0,s0   # calcula o tempo de execução Texec em ms 
+sub s1,t1,s1   # calcula o número de instruções I executadas
+
+li a7, 10
+ecall
+
+show:
+        addi    sp,sp,-32
+        sw      ra,28(sp)
+        sw      s0,24(sp)
+        addi    s0,sp,32
+        sw      a0,-20(s0)
+        sw      a1,-24(s0)
+        lw      a5,-20(s0)
+        lw      a4,-24(s0)
+         mv     t0,a5 
+         mv     t1,a4 
+         mv     t2,zero 
+loop1:  beq     t2,t1,fim1 
+        li      a7,1 
+        lw      a0,0(t0) 
+        ecall 
+        li      a7,11 
+        li      a0,9 
+        ecall 
+        addi    t0,t0,4 
+        addi    t2,t2,1 
+        j       loop1 
+fim1:   li      a7,11 
+        li      a0,10 
+        ecall 
+
+        nop
+        lw      ra,28(sp)
+        lw      s0,24(sp)
+        addi    sp,sp,32
+        jr      ra
+swap:
+        addi    sp,sp,-48
+        sw      ra,44(sp)
+        sw      s0,40(sp)
+        addi    s0,sp,48
+        sw      a0,-36(s0)
+        sw      a1,-40(s0)
+        lw      a5,-40(s0)
+        slli    a5,a5,2
+        lw      a4,-36(s0)
+        add     a5,a4,a5
+        lw      a5,0(a5)
+        sw      a5,-20(s0)
+        lw      a5,-40(s0)
+        addi    a5,a5,1
+        slli    a5,a5,2
+        lw      a4,-36(s0)
+        add     a4,a4,a5
+        lw      a5,-40(s0)
+        slli    a5,a5,2
+        lw      a3,-36(s0)
+        add     a5,a3,a5
+        lw      a4,0(a4)
+        sw      a4,0(a5)
+        lw      a5,-40(s0)
+        addi    a5,a5,1
+        slli    a5,a5,2
+        lw      a4,-36(s0)
+        add     a5,a4,a5
+        lw      a4,-20(s0)
+        sw      a4,0(a5)
+        nop
+        lw      ra,44(sp)
+        lw      s0,40(sp)
+        addi    sp,sp,48
+        jr      ra
+sort:
+        addi    sp,sp,-48
+        sw      ra,44(sp)
+        sw      s0,40(sp)
+        addi    s0,sp,48
+        sw      a0,-36(s0)
+        sw      a1,-40(s0)
+        sw      zero,-20(s0)
+        j       .L4
+.L8:
+        lw      a5,-20(s0)
+        addi    a5,a5,-1
+        sw      a5,-24(s0)
+        j       .L5
+.L7:
+        lw      a1,-24(s0)
+        lw      a0,-36(s0)
+        call    swap
+        lw      a5,-24(s0)
+        addi    a5,a5,-1
+        sw      a5,-24(s0)
+.L5:
+        lw      a5,-24(s0)
+        blt     a5,zero,.L6
+        lw      a5,-24(s0)
+        slli    a5,a5,2
+        lw      a4,-36(s0)
+        add     a5,a4,a5
+        lw      a4,0(a5)
+        lw      a5,-24(s0)
+        addi    a5,a5,1
+        slli    a5,a5,2
+        lw      a3,-36(s0)
+        add     a5,a3,a5
+        lw      a5,0(a5)
+        bgt     a4,a5,.L7
+.L6:
+        lw      a5,-20(s0)
+        addi    a5,a5,1
+        sw      a5,-20(s0)
+.L4:
+        lw      a4,-20(s0)
+        lw      a5,-40(s0)
+        blt     a4,a5,.L8
+        nop
+        nop
+        lw      ra,44(sp)
+        lw      s0,40(sp)
+        addi    sp,sp,48
+        jr      ra
+
+main:
+        addi    sp,sp,-16
+        sw      ra,12(sp)
+        sw      s0,8(sp)
+        addi    s0,sp,16
+        li      a1,30
+        lui     a5,%hi(v)
+        addi    a0,a5,%lo(v)
+        call    show
+        li      a1,30
+        lui     a5,%hi(v)
+        addi    a0,a5,%lo(v)
+        call    sort
+        li      a1,30
+        lui     a5,%hi(v)
+        addi    a0,a5,%lo(v)
+        call    show
+        li      a5,0
+        mv      a0,a5
+        lw      ra,12(sp)
+        lw      s0,8(sp)
+        addi    sp,sp,16
+        jr      ra
