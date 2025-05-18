@@ -43,7 +43,7 @@ main:
 		ecall
 
 read_input:
-	addi sp, sp, -12 # aloca espaÃ§o na pilha
+	addi sp, sp, -12 # aloca espa�o na pilha
 
 	la t0, input_vector
 	
@@ -123,7 +123,7 @@ bhaskara:
 		j bhaskara_end
 
 	bhaskara_end:
-		fmv.s ft0, fs3 # fiz isso sÃ³ pra nÃ£o confundir no ajuste da pilha
+		fmv.s ft0, fs3 # fiz isso s� pra n�o confundir no ajuste da pilha
 		fmv.s ft1, fs4
 
 		lw  ra,  0(sp)
@@ -368,7 +368,7 @@ int_to_string:
 	beqz t0, write_zero # if number is 0, handle specially
 	
 	bgez t0, convert_loop
-	neg t0, t0 # converte o nÃºmero para positivo para conversÃ£o, sinal adicionado no fim
+	neg t0, t0 # converte o n�mero para positivo para convers�o, sinal adicionado no fim
 
 	convert_loop:
 		li   t2, 10
@@ -426,10 +426,10 @@ float_to_string:
 	
 	fcvt.w.s a0, fa0, rtz
 	bnez a0, continue_float_to_string1
-	li t0, 0
-	fcvt.s.w ft0, t0
-	fgt.s t0, fa0, ft0
-	bnez t0, continue_float_to_string1
+	
+	fcvt.w.s t0, fa0, rdn
+	bgez t0, continue_float_to_string1
+	
 	li t0, '-'
 	mv a1, s1
 	sw t0, 0(a1)
