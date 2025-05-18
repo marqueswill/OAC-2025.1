@@ -425,14 +425,25 @@ float_to_string:
 	mv s1, a1 #salva o addr
 	
 	fcvt.w.s a0, fa0, rtz
+	bnez a0, continue_float_to_string1
+	li t0, 0
+	fcvt.s.w ft0, t0
+	fgt.s t0, fa0, ft0
+	bnez t0, continue_float_to_string1
+	li t0, '-'
+	mv a1, s1
+	sw t0, 0(a1)
+	addi a1, a1, 1
+	
+	continue_float_to_string1:
 	jal 	 int_to_string # return_buffer recebe parte inteira do float
 	
 	
-	fcvt.w.s a0, fa0, rtz
-	bgez a0, continue_float_to_string
+	fcvt.w.s a0, fa0, rdn
+	bgez a0, continue_float_to_string2
 	fneg.s fa0, fa0
 	
-	continue_float_to_string:
+	continue_float_to_string2:
 
 	li a0, '.'
 	mv a1, s1
