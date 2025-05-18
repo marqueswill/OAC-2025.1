@@ -1,11 +1,14 @@
 O0
-instruções:
-tamanho:
+tempo: 18
+instruções: 10107 - 3 = 10104
+tamanho: 3,86 KB (3.959 bytes)
 
 O3
+tempo:
 instruções:
-tamanho:
+tamanho: 2,87 KB (2.942 bytes)
 
 Os
+tempo:
 instruções:
-tamanho:
+tamanho: 2,63 KB (2.701 bytes)

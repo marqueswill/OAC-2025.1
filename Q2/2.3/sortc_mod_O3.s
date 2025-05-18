@@ -98,7 +98,7 @@ fim1:   li      a7,11
         li      a0,10 
         ecall 
 
-        lw      ra,12(sp)
+        lw      ra,12(sp) 
         lw      s0,8(sp)
         lw      s1,4(sp)
         li      a0,0

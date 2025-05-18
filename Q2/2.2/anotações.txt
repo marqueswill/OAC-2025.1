@@ -1,0 +1,14 @@
+Modificações feitas:
+
+Como indicado pelo relatório, substituímos a função show de sortc.c por aquela presente em 
+sortc_mod.c para resolver problemas relacionados ao import de bibliotecas para compilação.
+Um dos problemas que encontramos ao tentar montar o código gerado no rars, foram as labels das funções
+que entraram em conflito com os pseudônimos dos registradores de ponto flutuante do programa. Para resolver
+isso, renomeamos cada procedure repetindo sua primeira letra, então a procedure f1 foi renomeada como ff1 e 
+assim por diante.
+Além disso, também colocamos as diretivas de identificação .data e .text nas linhas corretas e no 
+início do text escrevemos um programa para calcular o tempo de execução e o número de instruções executadas.
+Por fim, entre o código gerado e o adicionado, colocamos uma chamada para encerrar a execução e separar ambas
+as partes. Obtivemos então o seguinte resultado:
+
+<INSERIR IMAGEM>
