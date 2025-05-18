@@ -1,0 +1,85 @@
+f1:
+        addi    sp,sp,-32
+        sw      ra,28(sp)
+        sw      s0,24(sp)
+        addi    s0,sp,32
+        sw      a0,-20(s0)
+        lw      a5,-20(s0)
+        slli    a5,a5,2
+        mv      a0,a5
+        lw      ra,28(sp)
+        lw      s0,24(sp)
+        addi    sp,sp,32
+        jr      ra
+f2:
+        addi    sp,sp,-32
+        sw      ra,28(sp)
+        sw      s0,24(sp)
+        addi    s0,sp,32
+        sw      a0,-20(s0)
+        lw      a5,-20(s0)
+        slli    a5,a5,2
+        mv      a0,a5
+        lw      ra,28(sp)
+        lw      s0,24(sp)
+        addi    sp,sp,32
+        jr      ra
+f3:
+        addi    sp,sp,-32
+        sw      ra,28(sp)
+        sw      s0,24(sp)
+        addi    s0,sp,32
+        sw      a0,-20(s0)
+        lw      a5,-20(s0)
+        slli    a5,a5,2
+        mv      a0,a5
+        lw      ra,28(sp)
+        lw      s0,24(sp)
+        addi    sp,sp,32
+        jr      ra
+f4:
+        addi    sp,sp,-32
+        sw      ra,28(sp)
+        sw      s0,24(sp)
+        addi    s0,sp,32
+        sw      a0,-20(s0)
+        lw      a5,-20(s0)
+        slli    a5,a5,2
+        mv      a0,a5
+        lw      ra,28(sp)
+        lw      s0,24(sp)
+        addi    sp,sp,32
+        jr      ra
+f5:
+        addi    sp,sp,-32
+        sw      ra,28(sp)
+        sw      s0,24(sp)
+        addi    s0,sp,32
+        sw      a0,-20(s0)
+        lw      a5,-20(s0)
+        slli    a5,a5,2
+        mv      a0,a5
+        lw      ra,28(sp)
+        lw      s0,24(sp)
+        addi    sp,sp,32
+        jr      ra
+f6:
+        addi    sp,sp,-32
+        sw      ra,28(sp)
+        sw      s0,24(sp)
+        addi    s0,sp,32
+        sw      a0,-20(s0)
+        lw      a5,-20(s0)
+        fcvt.d.w        fa4,a5
+        lui     a5,%hi(.LC0)
+        fld     fa5,%lo(.LC0)(a5)
+        fmul.d  fa5,fa4,fa5
+        fcvt.w.d a5,fa5,rtz
+        mv      a0,a5
+        lw      ra,28(sp)
+        lw      s0,24(sp)
+        addi    sp,sp,32
+        jr      ra
+.LC0:
+        .word   0
+        .word   1074790400

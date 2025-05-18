@@ -1,0 +1,11 @@
+O0
+instruções:
+tamanho:
+
+O3
+instruções:
+tamanho:
+
+Os
+instruções:
+tamanho:
