@@ -426,10 +426,10 @@ float_to_string:
 	
 	fcvt.w.s a0, fa0, rtz
 	bnez a0, continue_float_to_string1
-	li t0, 0
-	fcvt.s.w ft0, t0
-	fgt.s t0, fa0, ft0
-	bnez t0, continue_float_to_string1
+	
+	fcvt.w.s t0, fa0, rdn
+	bgez t0, continue_float_to_string1
+	
 	li t0, '-'
 	mv a1, s1
 	sw t0, 0(a1)
