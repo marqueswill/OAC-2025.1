@@ -32,6 +32,10 @@ main:
 		jal bhaskara
 		jal show_roots
 		
+		li a0, '\n'
+		li a7, 11
+		ecall
+		
 		j main_loop
 	
 	end_main:
@@ -39,7 +43,7 @@ main:
 		ecall
 
 read_input:
-	addi sp, sp, -12 # aloca espaço na pilha
+	addi sp, sp, -12 # aloca espaÃ§o na pilha
 
 	la t0, input_vector
 	
@@ -119,7 +123,7 @@ bhaskara:
 		j bhaskara_end
 
 	bhaskara_end:
-		fmv.s ft0, fs3 # fiz isso só pra não confundir no ajuste da pilha
+		fmv.s ft0, fs3 # fiz isso sÃ³ pra nÃ£o confundir no ajuste da pilha
 		fmv.s ft1, fs4
 
 		lw  ra,  0(sp)
@@ -154,9 +158,14 @@ show_roots:
 	flw ft0, 0(sp)
 	flw ft1, 4(sp)
 	addi sp, sp, 8
-	
-	addi sp, sp, -4
-	sw ra, 0(sp)
+
+	addi sp, sp, -12
+	sw  ra,  0(sp)
+	fsw fs0, 4(sp)
+	fsw fs1, 8(sp)
+
+	fmv.s fs0, ft0
+	fmv.s fs1, ft1
 	
 	li t0, 1
 	beq a0, t0, show_real_roots
@@ -172,9 +181,9 @@ show_roots:
 
 	show_real_roots:
 		# todo: show float roots too
-		fcvt.w.s a0, ft0
+		fmv.s fa0, fs0
 		la a1, input_buffer
-		jal int_to_string
+		jal float_to_string
 
 		la a0, root_1
 		la a1, input_buffer
@@ -188,10 +197,9 @@ show_roots:
 		li a7, 11
 		ecall
 
-		fcvt.w.s a0, ft1
-	
+		fmv.s fa0, fs1
 		la a1, input_buffer
-		jal int_to_string
+		jal float_to_string
 
 		la a0, root_2
 		la a1, input_buffer
@@ -208,9 +216,9 @@ show_roots:
 		j end_show_roots
 
 	show_complex_roots:
-		fcvt.w.s a0, ft0
+		fmv.s fa0, fs0
 		la a1, input_buffer
-		jal int_to_string
+		jal float_to_string
 
 		la a0, root_1
 		la a1, input_buffer
@@ -228,9 +236,9 @@ show_roots:
 		la a1, auxiliar_buffer
 		jal copy_string
 
-		fcvt.w.s a0, ft1
+		fmv.s fa0, fs1
 		la a1, input_buffer
-		jal int_to_string
+		jal float_to_string
 
 		la a0, auxiliar_buffer
 		la a1, input_buffer
@@ -248,9 +256,9 @@ show_roots:
 		li a7, 11
 		ecall
 
-		fcvt.w.s a0, ft0
+		fmv.s fa0, fs0
 		la a1, input_buffer
-		jal int_to_string
+		jal float_to_string
 
 		la a0, root_2
 		la a1, input_buffer
@@ -268,9 +276,9 @@ show_roots:
 		la a1, auxiliar_buffer
 		jal copy_string
 
-		fcvt.w.s a0, ft1
+		fmv.s fa0, fs1
 		la a1, input_buffer
-		jal int_to_string
+		jal float_to_string
 
 		la a0, auxiliar_buffer
 		la a1, input_buffer
@@ -292,7 +300,9 @@ show_roots:
 
 	end_show_roots:
 		lw ra, 0(sp)
-		addi sp, sp, 4
+		flw fs0, 4(sp)
+		flw fs1, 8(sp)
+		addi sp, sp, 12
 		ret
 
 # concat_strings(a0 = address of str1, a1 = address of str2)
@@ -358,7 +368,7 @@ int_to_string:
 	beqz t0, write_zero # if number is 0, handle specially
 	
 	bgez t0, convert_loop
-	neg t0, t0 # converte o número para positivo para conversão, sinal adicionado no fim
+	neg t0, t0 # converte o nÃºmero para positivo para conversÃ£o, sinal adicionado no fim
 
 	convert_loop:
 		li   t2, 10
@@ -404,4 +414,75 @@ int_to_string:
 	end_int_to_string:	
 		lw ra, 0(sp)
 		addi sp, sp 4
+		ret
+		
+# fa0 = float, a1 = address to buffer
+float_to_string:
+	addi sp, sp, -8
+	sw   ra, 0(sp)
+	sw   s1, 4(sp)
+	
+	mv s1, a1 #salva o addr
+	
+	fcvt.w.s a0, fa0, rtz
+	jal 	 int_to_string # return_buffer recebe parte inteira do float
+	
+	
+	fcvt.w.s a0, fa0, rtz
+	bgez a0, continue_float_to_string
+	fneg.s fa0, fa0
+	
+	continue_float_to_string:
+
+	li a0, '.'
+	mv a1, s1
+	jal append_char
+
+	li 	 t0, 10
+	fcvt.s.w ft0, t0
+	fmul.s   fa0, fa0, ft0 # move virgula para ->
+	fcvt.w.s t0, fa0, rdn  # extrai parte inteira
+
+	li  t1, 10
+	rem a0, t0, t1  # extrai unidade
+	addi a0, a0, 48 # converte para char
+	mv a1, s1
+	jal append_char
+
+	li 	 t0, 10
+	fcvt.s.w ft0, t0
+	fmul.s   fa0, fa0, ft0 # move virgula 2x para ->
+	fcvt.w.s t0, fa0       # extrai parte inteira arredondada
+
+	li  t1, 10
+	rem a0, t0, t1 # extrai unidade
+	addi a0, a0, 48, #converte para char
+	mv a1, s1
+	jal append_char
+
+	end_float_to_string:
+		lw ra, 0(sp)
+		lw s1, 4(sp)
+		addi sp, sp, 8
+		ret
+
+# a0 = char, a1 = string	
+append_char:
+	addi sp, sp, -4
+	sw   ra, 0(sp)
+	
+	append_char_loop:
+		lb   t0, 0(a1)
+		beqz t0, end_append_char
+		addi a1, a1, 1
+		j append_char_loop
+	
+	end_append_char:
+		sb a0, 0(a1) # append do char
+		addi a1, a1, 1
+		li t0, 0
+		sb t0, 0(a1) #fecha com byte \0
+	
+		lw ra, 0(sp)
+		addi sp, sp, 4
 		ret
