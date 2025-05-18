@@ -5,7 +5,7 @@ input_buffer: .space 128
 auxiliar_buffer: .space 128
 
 
-error_msg: .asciz "Erro! NÃ£o Ã© equaÃ§Ã£o do segundo grau!\n"
+error_msg: .asciz "Erro! Não é equação do segundo grau!\n"
 break_line: .asciz "\n"
 
 root_1: .asciz "R(1) = "
@@ -43,7 +43,7 @@ main:
 		ecall
 
 read_input:
-	addi sp, sp, -12 # aloca espaï¿½o na pilha
+	addi sp, sp, -12 # aloca espaço na pilha
 
 	la t0, input_vector
 	
@@ -123,7 +123,7 @@ bhaskara:
 		j bhaskara_end
 
 	bhaskara_end:
-		fmv.s ft0, fs3 # fiz isso sï¿½ pra nï¿½o confundir no ajuste da pilha
+		fmv.s ft0, fs3 # fiz isso só pra não confundir no ajuste da pilha
 		fmv.s ft1, fs4
 
 		lw  ra,  0(sp)
@@ -368,7 +368,7 @@ int_to_string:
 	beqz t0, write_zero # if number is 0, handle specially
 	
 	bgez t0, convert_loop
-	neg t0, t0 # converte o nï¿½mero para positivo para conversï¿½o, sinal adicionado no fim
+	neg t0, t0 # converte o número para positivo para conversão, sinal adicionado no fim
 
 	convert_loop:
 		li   t2, 10
