@@ -1,0 +1,11 @@
+O0
+instruções: 128
+tamanho: 3.86 KB (3.959 bytes)
+
+O3
+instruções: 92
+tamanho: 2.87 KB (2.942 bytes)
+
+Os
+instruções: 81
+tamanho: 2.63 KB (2.701 bytes)

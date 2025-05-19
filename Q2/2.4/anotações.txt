@@ -1,0 +1,9 @@
+Conforme indicado, compilamos o teste12.c utilizando as otimizações -O1 e -O2. Notamos que 
+ambos os códigos gerados eram praticamente idênticos, com execeção da função f6 que embora
+possuísse as mesmas instruções, duas delas tiveram sua ordem trocada de uma otimização para outra.
+Isso ocorreu porque <INSERIR EXPLICAÇÃO OU HIPÓTESE>
+
+Além disso, tentamos também medir o tempo de execução e o tamanho dos arquivos para comparar
+a otimização entre ambos. Utilizamos o comando "csrr s1,3074" para obter os tempos de execução, mas ambos 
+tempos medidos foram zero. Comparamos então o tamanho em bytes de cada arquivo gerado e também obtivemos arquivos
+de mesmo tamanho (440 bytes).
