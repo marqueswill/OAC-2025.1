@@ -1,0 +1,25 @@
+|decoder7
+In[0] => Rin[0].DATAIN
+In[1] => Rin[1].DATAIN
+In[2] => Rin[2].DATAIN
+In[3] => Rin[3].DATAIN
+Out[0] <= Out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= Out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= Out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= Out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= Out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= Out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= Out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Clk => Out[0]~reg0.CLK
+Clk => Out[1]~reg0.CLK
+Clk => Out[2]~reg0.CLK
+Clk => Out[3]~reg0.CLK
+Clk => Out[4]~reg0.CLK
+Clk => Out[5]~reg0.CLK
+Clk => Out[6]~reg0.CLK
+Clk => Rin[0].CLK
+Clk => Rin[1].CLK
+Clk => Rin[2].CLK
+Clk => Rin[3].CLK
+
+
