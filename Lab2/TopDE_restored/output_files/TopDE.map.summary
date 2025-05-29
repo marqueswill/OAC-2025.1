@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu May 29 15:06:07 2025
+Analysis & Synthesis Status : Successful - Thu May 29 15:34:21 2025
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : TopDE
 Top-level Entity Name : ALUControl
 Family : Cyclone IV E
-Total logic elements : 9
-    Total combinational functions : 9
+Total logic elements : 8
+    Total combinational functions : 8
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 43
+Total pins : 39
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

@@ -1,10 +1,10 @@
 |ALUControl
-iALUOp[0] => Decoder0.IN5
-iALUOp[1] => Decoder0.IN4
-iALUOp[2] => Decoder0.IN3
-iALUOp[3] => Decoder0.IN2
-iALUOp[4] => Decoder0.IN1
-iALUOp[5] => Decoder0.IN0
+iALUOp[0] => Mux0.IN5
+iALUOp[0] => Mux1.IN5
+iALUOp[0] => Mux2.IN5
+iALUOp[1] => Mux0.IN4
+iALUOp[1] => Mux1.IN4
+iALUOp[1] => Mux2.IN4
 iInstruction[0] => ~NO_FANOUT~
 iInstruction[1] => ~NO_FANOUT~
 iInstruction[2] => ~NO_FANOUT~
@@ -67,9 +67,9 @@ iInstruction[31] => Equal0.IN10
 iInstruction[31] => Equal1.IN10
 iInstruction[31] => Equal2.IN10
 iInstruction[31] => Equal3.IN10
-oControl[0] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
-oControl[1] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
-oControl[2] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+oControl[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+oControl[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+oControl[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 oControl[3] <= <GND>
 oControl[4] <= <GND>
 
