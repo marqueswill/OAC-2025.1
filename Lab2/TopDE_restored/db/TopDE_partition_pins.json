@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "oControl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oControl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oControl[2]",
+					"strict" : false
+				},
+				{
+					"name" : "iALUOp[2]",
+					"strict" : false
+				},
+				{
+					"name" : "iALUOp[3]",
+					"strict" : false
+				},
+				{
+					"name" : "iALUOp[4]",
+					"strict" : false
+				},
+				{
+					"name" : "iALUOp[5]",
+					"strict" : false
+				},
+				{
+					"name" : "iInstruction[12]",
+					"strict" : false
+				},
+				{
+					"name" : "iInstruction[25]",
+					"strict" : false
+				},
+				{
+					"name" : "iInstruction[26]",
+					"strict" : false
+				},
+				{
+					"name" : "iInstruction[27]",
+					"strict" : false
+				},
+				{
+					"name" : "iInstruction[28]",
+					"strict" : false
+				},
+				{
+					"name" : "iInstruction[29]",
+					"strict" : false
+				},
+				{
+					"name" : "iInstruction[31]",
+					"strict" : false
+				},
+				{
+					"name" : "iInstruction[13]",
+					"strict" : false
+				},
+				{
+					"name" : "iInstruction[14]",
+					"strict" : false
+				},
+				{
+					"name" : "iInstruction[30]",
+					"strict" : false
+				},
+				{
+					"name" : "iALUOp[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iALUOp[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
