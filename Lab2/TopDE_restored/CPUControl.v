@@ -1,3 +1,7 @@
+`ifndef PARAM
+	`include "Parametros.v"
+`endif
+
 module CPUControl(
 	input  [5:0] iOpcode,
 	output 		 oRegDst,
