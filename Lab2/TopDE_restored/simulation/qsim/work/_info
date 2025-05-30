@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 dC:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim
 vALUControl
-Z1 !s110 1748544483
+Z1 !s110 1748625319
 !i10b 1
-!s100 m3PA6BNYCG=Xjfk]WQ0fa2
-I_m0<1[N:ceXWXn^ek6fcB0
+!s100 LP:SEi0obbAUlJZ]6SJ<Y0
+IJC=F[CcBA9=BD<C8_n:M^2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1748544482
-Z4 8TopDE.vo
-Z5 FTopDE.vo
-L0 32
+w1748625319
+Z3 8TopDE.vo
+Z4 FTopDE.vo
+Z5 L0 32
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1748544483.000000
+Z7 !s108 1748625319.000000
 Z8 !s107 TopDE.vo|
 Z9 !s90 -work|work|TopDE.vo|
 !i113 1
@@ -33,14 +33,14 @@ n@a@l@u@control
 vALUControl_vlg_vec_tst
 R1
 !i10b 1
-!s100 e?ankhP4bN:@3TNmN^Sfa0
-IY^[=zd7YmBSINdY=hc[0A3
+!s100 1bei2X@dAB>MLHEWagVE^3
+I1b>7SVU1:b?WG:Gd^OOka0
 R2
 R0
-R3
+w1748625318
 8ALUControl.vwf.vt
 FALUControl.vwf.vt
-L0 30
+Z12 L0 30
 R6
 r1
 !s85 0
@@ -52,22 +52,66 @@ R7
 R10
 R11
 n@a@l@u@control_vlg_vec_tst
-vhard_block
-R1
+vCPUControl
+Z13 !s110 1748626411
 !i10b 1
-!s100 ;LP9hE@EgA?cijZ=<fH>A3
-IlI50@cG?F>2z3hh?;Mh;@0
+!s100 n;4KGj<NO948C=o=Q92T63
+IJjZUN3ZNchW3_`geQz`fX2
 R2
 R0
+Z14 w1748626411
 R3
 R4
 R5
-L0 700
 R6
 r1
 !s85 0
 31
-R7
+Z15 !s108 1748626411.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@c@p@u@control
+vCPUControl_vlg_vec_tst
+R13
+!i10b 1
+!s100 7VL>Vo=6_PmEdMmRLOHj72
+I3eFBzSeVbzlHf8hBImcQQ1
+R2
+R0
+w1748626410
+8CPUControl.vwf.vt
+FCPUControl.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R15
+!s107 CPUControl.vwf.vt|
+!s90 -work|work|CPUControl.vwf.vt|
+!i113 1
+R10
+R11
+n@c@p@u@control_vlg_vec_tst
+vhard_block
+R13
+!i10b 1
+!s100 IHD2<PKTYf6jM6^D<3:j33
+I_QL4H>zO_Onc`IHfZ211?1
+R2
+R0
+R14
+R3
+R4
+L0 989
+R6
+r1
+!s85 0
+31
+R15
 R8
 R9
 !i113 1

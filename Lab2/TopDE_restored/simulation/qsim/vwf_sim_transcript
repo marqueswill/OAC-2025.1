@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TopDE -c TopDE --vector_source="C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ALUControl.vwf" --testbench_file="C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/ALUControl.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TopDE -c TopDE --vector_source="C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/CPUControl.vwf" --testbench_file="C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/CPUControl.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,8 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu May 29 15:48:01 2025
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TopDE -c TopDE --vector_source=C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ALUControl.vwf --testbench_file=C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/ALUControl.vwf.vt
+    Info: Processing started: Fri May 30 14:33:30 2025
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TopDE -c TopDE --vector_source=C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/CPUControl.vwf --testbench_file=C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/CPUControl.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
@@ -55,13 +55,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu May 29 15:48:02 2025
+    Info: Processing started: Fri May 30 14:33:31 2025
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/ TopDE -c TopDE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file TopDE.vo in folder "C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4656 megabytes
-    Info: Processing ended: Thu May 29 15:48:02 2025
+    Info: Processing ended: Fri May 30 14:33:31 2025
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
@@ -81,55 +81,55 @@ Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
-# do TopDE.do
 
+# do TopDE.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:48:03 on May 29,2025
+# Start time: 14:33:31 on May 30,2025
 # vlog -work work TopDE.vo 
-# -- Compiling module ALUControl
+# -- Compiling module CPUControl
 # -- Compiling module hard_block
 # 
 # Top level modules:
-# 	ALUControl
-# End time: 15:48:03 on May 29,2025, Elapsed time: 0:00:00
+# 	CPUControl
+# End time: 14:33:31 on May 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:48:03 on May 29,2025
-# vlog -work work ALUControl.vwf.vt 
 
-# -- Compiling module ALUControl_vlg_vec_tst
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:31 on May 30,2025
+# vlog -work work CPUControl.vwf.vt 
+# -- Compiling module CPUControl_vlg_vec_tst
 # 
 # Top level modules:
-# 	ALUControl_vlg_vec_tst
-# End time: 15:48:03 on May 29,2025, Elapsed time: 0:00:00
+# 	CPUControl_vlg_vec_tst
+# End time: 14:33:31 on May 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.ALUControl_vlg_vec_tst 
-# Start time: 15:48:03 on May 29,2025
-# Loading work.ALUControl_vlg_vec_tst
-# Loading work.ALUControl
+# vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CPUControl_vlg_vec_tst 
+# Start time: 14:33:31 on May 30,2025
+# Loading work.CPUControl_vlg_vec_tst
+# Loading work.CPUControl
 # Loading work.hard_block
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
 # Loading cycloneive_ver.cycloneive_lcell_comb
 # after#26
-# ** Note: $finish    : ALUControl.vwf.vt(47)
-#    Time: 1 us  Iteration: 0  Instance: /ALUControl_vlg_vec_tst
-# End time: 15:48:03 on May 29,2025, Elapsed time: 0:00:00
+# ** Note: $finish    : CPUControl.vwf.vt(57)
+#    Time: 1 us  Iteration: 0  Instance: /CPUControl_vlg_vec_tst
+# End time: 14:33:32 on May 30,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ALUControl.vwf...
+Reading C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/CPUControl.vwf...
 
 Reading C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/TopDE.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/TopDE_20250529154803.sim.vwf
+Writing the resulting VWF to C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/TopDE_20250530143332.sim.vwf
 
 Finished VCD to VWF conversion.
 

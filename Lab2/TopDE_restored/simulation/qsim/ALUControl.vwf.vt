@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/29/2025 15:48:02"
+// Generated on "05/30/2025 14:15:18"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          ALUControl
 // 
@@ -204,9 +204,9 @@ end
 initial
 begin
 	iInstruction[14] = 1'b0;
-	iInstruction[14] = #310000 1'b1;
+	iInstruction[14] = #240000 1'b1;
 	iInstruction[14] = #120000 1'b0;
-	iInstruction[14] = #290000 1'b1;
+	iInstruction[14] = #360000 1'b1;
 	iInstruction[14] = #100000 1'b0;
 end 
 // iInstruction[ 13 ]
@@ -214,20 +214,18 @@ initial
 begin
 	iInstruction[13] = 1'b1;
 	iInstruction[13] = #150000 1'b0;
-	iInstruction[13] = #160000 1'b1;
-	iInstruction[13] = #120000 1'b0;
-	iInstruction[13] = #70000 1'b1;
-	iInstruction[13] = #60000 1'b0;
-	iInstruction[13] = #160000 1'b1;
+	iInstruction[13] = #90000 1'b1;
+	iInstruction[13] = #190000 1'b0;
+	iInstruction[13] = #290000 1'b1;
 	iInstruction[13] = #100000 1'b0;
 end 
 // iInstruction[ 12 ]
 initial
 begin
 	iInstruction[12] = 1'b0;
-	iInstruction[12] = #310000 1'b1;
+	iInstruction[12] = #240000 1'b1;
 	iInstruction[12] = #60000 1'b0;
-	iInstruction[12] = #350000 1'b1;
+	iInstruction[12] = #420000 1'b1;
 	iInstruction[12] = #100000 1'b0;
 end 
 // iInstruction[ 11 ]

@@ -8,23 +8,25 @@ module ALUControl(
 	output logic [4:0]  oControl
 );
 
-wire [6:0] FUNCT7;
-wire [2:0] FUNCT3;
+reg [7:0] OPCODE;
+reg [7:0] FUNCT7;
+reg [3:0] FUNCT3;
 
-assign FUNCT7 = iInstruction[31:25];
-assign FUNCT3 = iInstruction[14:12];
+assign FUNCT7 = {1'b0, iInstruction[31:25]};
+assign FUNCT3 = {1'b0, iInstruction[14:12]};
+assign OPCODE = {1'b0, iInstruction[6:0]};
 
 always @(*) begin
 	case (iALUOp)
 		2'b00: oControl <= OPADD;
 		2'b01: oControl <= OPSUB;
 		2'b10: 
-			casex ({FUNCT7, FUNCT3})
-				FUNADD:  oControl <= OPADD;
-				FUNSLT:  oControl <= OPSLT;
-				FUNOR:   oControl <= OPOR;
-				FUNAND:  oControl <= OPAND;
-				FUNSUB:  oControl <= OPSUB;
+			casex ({OPCODE, FUNCT3, FUNCT7})
+				IDAND:   oControl <= OPAND;
+				IDOR :   oControl <= OPOR;
+				IDSLT:   oControl <= OPSLT;
+				IDSUB:   oControl <= OPSUB;
+				IDADD:   oControl <= OPADD;
 				default: oControl <= ZERO;
 			endcase
 		
