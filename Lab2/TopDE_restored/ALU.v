@@ -14,7 +14,8 @@ module ALU (
 	input 		 [4:0]  iControl,
 	input signed [31:0] iA, 
 	input signed [31:0] iB,
-	output logic [31:0] oResult
+	output logic [31:0] oResult,
+	output logic 		  oZero
 	);
 
 //	wire [4:0] iControl=OPDIV;		// Usado para as analises
@@ -25,6 +26,8 @@ assign mul 	= $signed(iA) * $signed(iB);
 assign mulu = $unsigned(iA) * $unsigned(iB);
 assign mulsu= $signed(iA) * $unsigned(iB);
 `endif
+
+assign oZero = oResult == 32'b0;
 
 always @(*)
 begin
