@@ -1,0 +1,317 @@
+// Copyright (C) 2019  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "05/30/2025 14:33:30"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          CPUControl
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module CPUControl_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [31:0] iInstruction;
+// wires                                               
+wire [1:0] oALUOp;
+wire oALUSrc;
+wire oBranch;
+wire oMemRead;
+wire oMemWrite;
+wire oMemtoReg;
+wire oRegWrite;
+
+// assign statements (if any)                          
+CPUControl i1 (
+// port map - connection between master ports and signals/registers   
+	.iInstruction(iInstruction),
+	.oALUOp(oALUOp),
+	.oALUSrc(oALUSrc),
+	.oBranch(oBranch),
+	.oMemRead(oMemRead),
+	.oMemWrite(oMemWrite),
+	.oMemtoReg(oMemtoReg),
+	.oRegWrite(oRegWrite)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// iInstruction[ 31 ]
+initial
+begin
+	iInstruction[31] = 1'b0;
+	iInstruction[31] = #420000 1'b1;
+	iInstruction[31] = #70000 1'b0;
+	iInstruction[31] = #200000 1'b1;
+	iInstruction[31] = #80000 1'b0;
+end 
+// iInstruction[ 30 ]
+initial
+begin
+	iInstruction[30] = 1'b0;
+	iInstruction[30] = #200000 1'b1;
+	iInstruction[30] = #60000 1'b0;
+	iInstruction[30] = #160000 1'b1;
+	iInstruction[30] = #70000 1'b0;
+	iInstruction[30] = #200000 1'b1;
+	iInstruction[30] = #80000 1'b0;
+end 
+// iInstruction[ 29 ]
+initial
+begin
+	iInstruction[29] = 1'b0;
+	iInstruction[29] = #420000 1'b1;
+	iInstruction[29] = #70000 1'b0;
+	iInstruction[29] = #200000 1'b1;
+	iInstruction[29] = #80000 1'b0;
+end 
+// iInstruction[ 28 ]
+initial
+begin
+	iInstruction[28] = 1'b0;
+	iInstruction[28] = #420000 1'b1;
+	iInstruction[28] = #70000 1'b0;
+	iInstruction[28] = #200000 1'b1;
+	iInstruction[28] = #80000 1'b0;
+end 
+// iInstruction[ 27 ]
+initial
+begin
+	iInstruction[27] = 1'b0;
+	iInstruction[27] = #420000 1'b1;
+	iInstruction[27] = #70000 1'b0;
+	iInstruction[27] = #200000 1'b1;
+	iInstruction[27] = #80000 1'b0;
+end 
+// iInstruction[ 26 ]
+initial
+begin
+	iInstruction[26] = 1'b0;
+	iInstruction[26] = #340000 1'b1;
+	iInstruction[26] = #150000 1'b0;
+	iInstruction[26] = #200000 1'b1;
+	iInstruction[26] = #80000 1'b0;
+end 
+// iInstruction[ 25 ]
+initial
+begin
+	iInstruction[25] = 1'b0;
+	iInstruction[25] = #340000 1'b1;
+	iInstruction[25] = #150000 1'b0;
+	iInstruction[25] = #200000 1'b1;
+	iInstruction[25] = #80000 1'b0;
+end 
+// iInstruction[ 24 ]
+initial
+begin
+	iInstruction[24] = 1'b0;
+end 
+// iInstruction[ 23 ]
+initial
+begin
+	iInstruction[23] = 1'b0;
+	iInstruction[23] = #690000 1'b1;
+	iInstruction[23] = #80000 1'b0;
+end 
+// iInstruction[ 22 ]
+initial
+begin
+	iInstruction[22] = 1'b1;
+	iInstruction[22] = #550000 1'b0;
+	iInstruction[22] = #140000 1'b1;
+	iInstruction[22] = #80000 1'b0;
+end 
+// iInstruction[ 21 ]
+initial
+begin
+	iInstruction[21] = 1'b0;
+end 
+// iInstruction[ 20 ]
+initial
+begin
+	iInstruction[20] = 1'b1;
+	iInstruction[20] = #340000 1'b0;
+	iInstruction[20] = #80000 1'b1;
+	iInstruction[20] = #210000 1'b0;
+	iInstruction[20] = #60000 1'b1;
+	iInstruction[20] = #80000 1'b0;
+end 
+// iInstruction[ 19 ]
+initial
+begin
+	iInstruction[19] = 1'b0;
+	iInstruction[19] = #690000 1'b1;
+	iInstruction[19] = #80000 1'b0;
+end 
+// iInstruction[ 18 ]
+initial
+begin
+	iInstruction[18] = 1'b0;
+	iInstruction[18] = #690000 1'b1;
+	iInstruction[18] = #80000 1'b0;
+end 
+// iInstruction[ 17 ]
+initial
+begin
+	iInstruction[17] = 1'b1;
+	iInstruction[17] = #490000 1'b0;
+	iInstruction[17] = #60000 1'b1;
+	iInstruction[17] = #80000 1'b0;
+	iInstruction[17] = #60000 1'b1;
+	iInstruction[17] = #80000 1'b0;
+end 
+// iInstruction[ 16 ]
+initial
+begin
+	iInstruction[16] = 1'b0;
+	iInstruction[16] = #490000 1'b1;
+	iInstruction[16] = #60000 1'b0;
+	iInstruction[16] = #80000 1'b1;
+	iInstruction[16] = #140000 1'b0;
+end 
+// iInstruction[ 15 ]
+initial
+begin
+	iInstruction[15] = 1'b1;
+	iInstruction[15] = #490000 1'b0;
+	iInstruction[15] = #60000 1'b1;
+	iInstruction[15] = #80000 1'b0;
+	iInstruction[15] = #60000 1'b1;
+	iInstruction[15] = #80000 1'b0;
+end 
+// iInstruction[ 14 ]
+initial
+begin
+	iInstruction[14] = 1'b1;
+	iInstruction[14] = #130000 1'b0;
+	iInstruction[14] = #560000 1'b1;
+	iInstruction[14] = #80000 1'b0;
+end 
+// iInstruction[ 13 ]
+initial
+begin
+	iInstruction[13] = 1'b1;
+	iInstruction[13] = #200000 1'b0;
+	iInstruction[13] = #290000 1'b1;
+	iInstruction[13] = #60000 1'b0;
+	iInstruction[13] = #80000 1'b1;
+	iInstruction[13] = #140000 1'b0;
+end 
+// iInstruction[ 12 ]
+initial
+begin
+	iInstruction[12] = 1'b1;
+	iInstruction[12] = #50000 1'b0;
+	iInstruction[12] = #640000 1'b1;
+	iInstruction[12] = #80000 1'b0;
+end 
+// iInstruction[ 11 ]
+initial
+begin
+	iInstruction[11] = 1'b0;
+	iInstruction[11] = #420000 1'b1;
+	iInstruction[11] = #70000 1'b0;
+end 
+// iInstruction[ 10 ]
+initial
+begin
+	iInstruction[10] = 1'b0;
+	iInstruction[10] = #420000 1'b1;
+	iInstruction[10] = #70000 1'b0;
+end 
+// iInstruction[ 9 ]
+initial
+begin
+	iInstruction[9] = 1'b1;
+	iInstruction[9] = #490000 1'b0;
+	iInstruction[9] = #60000 1'b1;
+	iInstruction[9] = #220000 1'b0;
+end 
+// iInstruction[ 8 ]
+initial
+begin
+	iInstruction[8] = 1'b0;
+end 
+// iInstruction[ 7 ]
+initial
+begin
+	iInstruction[7] = 1'b1;
+	iInstruction[7] = #490000 1'b0;
+	iInstruction[7] = #60000 1'b1;
+	iInstruction[7] = #220000 1'b0;
+end 
+// iInstruction[ 6 ]
+initial
+begin
+	iInstruction[6] = 1'b0;
+	iInstruction[6] = #340000 1'b1;
+	iInstruction[6] = #150000 1'b0;
+	iInstruction[6] = #200000 1'b1;
+	iInstruction[6] = #80000 1'b0;
+end 
+// iInstruction[ 5 ]
+initial
+begin
+	iInstruction[5] = 1'b1;
+	iInstruction[5] = #550000 1'b0;
+	iInstruction[5] = #140000 1'b1;
+	iInstruction[5] = #80000 1'b0;
+end 
+// iInstruction[ 4 ]
+initial
+begin
+	iInstruction[4] = 1'b1;
+	iInstruction[4] = #340000 1'b0;
+	iInstruction[4] = #210000 1'b1;
+	iInstruction[4] = #80000 1'b0;
+end 
+// iInstruction[ 3 ]
+initial
+begin
+	iInstruction[3] = 1'b0;
+	iInstruction[3] = #690000 1'b1;
+	iInstruction[3] = #80000 1'b0;
+end 
+// iInstruction[ 2 ]
+initial
+begin
+	iInstruction[2] = 1'b0;
+	iInstruction[2] = #340000 1'b1;
+	iInstruction[2] = #80000 1'b0;
+	iInstruction[2] = #270000 1'b1;
+	iInstruction[2] = #80000 1'b0;
+end 
+// iInstruction[ 1 ]
+initial
+begin
+	iInstruction[1] = 1'b1;
+	iInstruction[1] = #770000 1'b0;
+end 
+// iInstruction[ 0 ]
+initial
+begin
+	iInstruction[0] = 1'b1;
+	iInstruction[0] = #770000 1'b0;
+end 
+endmodule
+
