@@ -34,9 +34,11 @@ end
 always @(posedge clockCPU or posedge reset) begin
     if (reset)
         PC <= TEXT_ADDRESS;
-    else if(Instr[6:0] == 7'b1100111) // Verifica se a instrução é JALR
+    else if(oJalr) // Verifica se a instrução é JALR
         PC <= (LeituraReg1 + imm) & ~32'b1;  // Atualiza PC para rs1 + imm, garantindo alinhamento
-    else if(oBranch & oZeroAlu)
+    else if(oJal)
+		PC <= PC + imm;
+	else if(oBranch & oZeroAlu)
 		PC <= imm;
 	 else
         PC <= ProxInst;
@@ -61,7 +63,7 @@ ramD MemDADOS (.address(SaidaULA[11:2]), .clock(clockMem), .data(LeituraReg2), .
 
 // Controle da CPU
 
-CPUControl cpuControl(Instr[6:0], oRegDst, oALUOrg, oMem2Reg, oEscreveReg, LeMem, EscreveMem, oBranch, oALUOp);
+CPUControl cpuControl(Instr[31:0], oRegDst, oALUOrg, oMem2Reg, oEscreveReg, LeMem, EscreveMem, oBranch, oJalr, oJal, oALUOp);
 
 //Controle da ULA
 		
@@ -85,7 +87,7 @@ ALU ula(AluControl,
 
 //Escrita no registrador
 always @(*) begin
-    if (Instr[6:0] == 7'b1100111) // JALR
+    if (oJalr) // JALR
         EscritaReg <= ProxInst; // Armazena PC+4 no registrador de destino
     else if (oMem2Reg)
         EscritaReg <= DadosLidosMemoria;
