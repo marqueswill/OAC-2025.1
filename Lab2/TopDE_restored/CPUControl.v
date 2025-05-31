@@ -23,7 +23,7 @@ assign FUNCT7 = {1'b0, iInstruction[31:25]};
 assign FUNCT3 = {1'b0, iInstruction[14:12]};
 assign OPCODE = {1'b0, iInstruction[6:0]};
 
-wire [7:0] outputs;
+wire [10:0] outputs;
 
 assign oALUSrc   = outputs[9];
 assign oMemtoReg = outputs[8];
@@ -31,8 +31,8 @@ assign oRegWrite = outputs[7];
 assign oMemRead  = outputs[6];
 assign oMemWrite = outputs[5];
 assign oBranch   = outputs[4];
-assign oBranch   = outputs[3];
-assign oBranch   = outputs[2];
+assign oJalr     = outputs[3];
+assign oJal      = outputs[2];
 assign oALUOp    = outputs[1:0];
 
 always @(*) begin
@@ -42,10 +42,10 @@ always @(*) begin
 		IDSLT	 : outputs <= 10'b 0010000010;
 		IDSUB	 : outputs <= 10'b 0010000010;
 		IDADD	 : outputs <= 10'b 0010000010;
-		IDJALR   : outputs <= 10'b 1010000100;
+		IDJALR : outputs <= 10'b 1010000100;
 		IDBEQ	 : outputs <= 10'b 0000010001;
 		IDSW	 : outputs <= 10'b 1000100000;
-		IDADDI   : outputs <= 10'b 1010000000;
+		IDADDI : outputs <= 10'b 1010000000;
 		IDLW	 : outputs <= 10'b 1111000000;
 		IDJAL	 : outputs <= 10'b 0010001000;
 		default: outputs   <= ZERO;

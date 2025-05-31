@@ -63,7 +63,7 @@ ramD MemDADOS (.address(SaidaULA[11:2]), .clock(clockMem), .data(LeituraReg2), .
 
 // Controle da CPU
 
-CPUControl cpuControl(Instr[31:0], oRegDst, oALUOrg, oMem2Reg, oEscreveReg, LeMem, EscreveMem, oBranch, oJalr, oJal, oALUOp);
+CPUControl cpuControl(Instr[31:0], oALUOrg, oMem2Reg, oEscreveReg, LeMem, EscreveMem, oBranch, oJalr, oJal, oALUOp);
 
 //Controle da ULA
 		
