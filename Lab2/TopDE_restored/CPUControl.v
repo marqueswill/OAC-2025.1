@@ -1,3 +1,7 @@
+`ifndef PARAM
+	`include "Parametros.v"
+`endif
+
 module CPUControl(
 	input  [31:0] iInstruction,
 	output 		  oALUSrc,
@@ -47,6 +51,5 @@ always @(*) begin
 		default: outputs   <= ZERO;
 	endcase
 end
-
 
 endmodule
