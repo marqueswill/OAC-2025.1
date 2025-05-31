@@ -31,18 +31,18 @@ assign oALUOp    = outputs[1:0];
 
 always @(*) begin
 	casex ({OPCODE, FUNCT3, FUNCT7}) // Uma saída por instrução, dá pra fazer de forma mais generalizada
-		IDAND	 : outputs <= 8'b	00100010;
-		IDOR	 : outputs <= 8'b	00100010;
-		IDSLT	 : outputs <= 8'b	00100010;
-		IDSUB	 : outputs <= 8'b	00100010;
-		IDADD	 : outputs <= 8'b	00100010;
-		IDJALR : outputs <= 8'b	10100000;
-		IDBEQ	 : outputs <= 8'b	00000101;
-		IDSW	 : outputs <= 8'b	10001000;
-		IDADDI : outputs <= 8'b	10100000;
-		IDLW	 : outputs <= 8'b	11110000;
-		IDJAL	 : outputs <= 8'b	00100000;
-		default: outputs <= ZERO;
+		IDAND	 : outputs <= 10'b 0010000010;
+		IDOR	 : outputs <= 10'b 0010000010;
+		IDSLT	 : outputs <= 10'b 0010000010;
+		IDSUB	 : outputs <= 10'b 0010000010;
+		IDADD	 : outputs <= 10'b 0010000010;
+		IDJALR : outputs   <= 10'b 1010000100;
+		IDBEQ	 : outputs <= 10'b 0000010001;
+		IDSW	 : outputs <= 10'b 1000100000;
+		IDADDI : outputs   <= 10'b 1010000000;
+		IDLW	 : outputs <= 10'b 1111000000;
+		IDJAL	 : outputs <= 10'b 0010001000;
+		default: outputs   <= ZERO;
 	endcase
 end
 
