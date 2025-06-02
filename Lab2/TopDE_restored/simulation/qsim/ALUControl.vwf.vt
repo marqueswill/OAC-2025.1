@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/30/2025 14:15:18"
+// Generated on "06/02/2025 17:21:43"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          ALUControl
 // 
@@ -52,7 +52,7 @@ begin
 	iALUOp[1] = 1'b0;
 	iALUOp[1] = #240000 1'b1;
 	iALUOp[1] = #320000 1'b0;
-	iALUOp[1] = #380000 1'b1;
+	iALUOp[1] = #300000 1'b1;
 end 
 // iALUOp[ 0 ]
 initial
@@ -60,6 +60,8 @@ begin
 	iALUOp[0] = 1'b0;
 	iALUOp[0] = #150000 1'b1;
 	iALUOp[0] = #90000 1'b0;
+	iALUOp[0] = #620000 1'b1;
+	iALUOp[0] = #80000 1'b0;
 end 
 // iInstruction[ 31 ]
 initial
@@ -147,7 +149,7 @@ begin
 	iInstruction[22] = #70000 1'b1;
 	iInstruction[22] = #490000 1'b0;
 	iInstruction[22] = #160000 1'b1;
-	iInstruction[22] = #100000 1'b0;
+	iInstruction[22] = #160000 1'b0;
 end 
 // iInstruction[ 21 ]
 initial
@@ -165,7 +167,7 @@ begin
 	iInstruction[20] = #150000 1'b1;
 	iInstruction[20] = #490000 1'b0;
 	iInstruction[20] = #80000 1'b1;
-	iInstruction[20] = #100000 1'b0;
+	iInstruction[20] = #160000 1'b0;
 end 
 // iInstruction[ 19 ]
 initial
@@ -185,7 +187,7 @@ end
 initial
 begin
 	iInstruction[17] = 1'b1;
-	iInstruction[17] = #820000 1'b0;
+	iInstruction[17] = #880000 1'b0;
 end 
 // iInstruction[ 16 ]
 initial
@@ -198,7 +200,7 @@ end
 initial
 begin
 	iInstruction[15] = 1'b1;
-	iInstruction[15] = #820000 1'b0;
+	iInstruction[15] = #880000 1'b0;
 end 
 // iInstruction[ 14 ]
 initial
@@ -207,7 +209,7 @@ begin
 	iInstruction[14] = #240000 1'b1;
 	iInstruction[14] = #120000 1'b0;
 	iInstruction[14] = #360000 1'b1;
-	iInstruction[14] = #100000 1'b0;
+	iInstruction[14] = #160000 1'b0;
 end 
 // iInstruction[ 13 ]
 initial
@@ -217,7 +219,7 @@ begin
 	iInstruction[13] = #90000 1'b1;
 	iInstruction[13] = #190000 1'b0;
 	iInstruction[13] = #290000 1'b1;
-	iInstruction[13] = #100000 1'b0;
+	iInstruction[13] = #160000 1'b0;
 end 
 // iInstruction[ 12 ]
 initial
@@ -226,7 +228,7 @@ begin
 	iInstruction[12] = #240000 1'b1;
 	iInstruction[12] = #60000 1'b0;
 	iInstruction[12] = #420000 1'b1;
-	iInstruction[12] = #100000 1'b0;
+	iInstruction[12] = #160000 1'b0;
 end 
 // iInstruction[ 11 ]
 initial
@@ -246,7 +248,7 @@ begin
 	iInstruction[9] = 1'b1;
 	iInstruction[9] = #70000 1'b0;
 	iInstruction[9] = #170000 1'b1;
-	iInstruction[9] = #580000 1'b0;
+	iInstruction[9] = #640000 1'b0;
 end 
 // iInstruction[ 8 ]
 initial
@@ -259,7 +261,7 @@ initial
 begin
 	iInstruction[7] = 1'b0;
 	iInstruction[7] = #150000 1'b1;
-	iInstruction[7] = #670000 1'b0;
+	iInstruction[7] = #730000 1'b0;
 end 
 // iInstruction[ 6 ]
 initial
@@ -277,7 +279,7 @@ begin
 	iInstruction[5] = #70000 1'b1;
 	iInstruction[5] = #490000 1'b0;
 	iInstruction[5] = #80000 1'b1;
-	iInstruction[5] = #180000 1'b0;
+	iInstruction[5] = #240000 1'b0;
 end 
 // iInstruction[ 4 ]
 initial
@@ -285,6 +287,8 @@ begin
 	iInstruction[4] = 1'b0;
 	iInstruction[4] = #240000 1'b1;
 	iInstruction[4] = #400000 1'b0;
+	iInstruction[4] = #180000 1'b1;
+	iInstruction[4] = #60000 1'b0;
 end 
 // iInstruction[ 3 ]
 initial
@@ -304,13 +308,13 @@ end
 initial
 begin
 	iInstruction[1] = 1'b1;
-	iInstruction[1] = #820000 1'b0;
+	iInstruction[1] = #880000 1'b0;
 end 
 // iInstruction[ 0 ]
 initial
 begin
 	iInstruction[0] = 1'b1;
-	iInstruction[0] = #820000 1'b0;
+	iInstruction[0] = #880000 1'b0;
 end 
 endmodule
 

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY Uniciclo
+set_global_assignment -name TOP_LEVEL_ENTITY TopDE
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:37:40  APRIL 18, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
@@ -52,6 +52,8 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
 set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name MIF_FILE de1_text.mif
+set_global_assignment -name MIF_FILE de1_data.mif
 set_global_assignment -name VERILOG_FILE TopDE.v
 set_global_assignment -name VERILOG_FILE Parametros.v
 set_global_assignment -name VERILOG_FILE Uniciclo.v
@@ -62,8 +64,6 @@ set_global_assignment -name VERILOG_FILE Registers.v
 set_global_assignment -name VERILOG_FILE ImmGen.v
 set_global_assignment -name QIP_FILE ramI.qip
 set_global_assignment -name QIP_FILE ramD.qip
-set_global_assignment -name MIF_FILE de1_text.mif
-set_global_assignment -name MIF_FILE de1_data.mif
 set_global_assignment -name VECTOR_WAVEFORM_FILE TopDE.vwf
 set_global_assignment -name VERILOG_FILE ALUControl.v
 set_global_assignment -name VERILOG_FILE CPUControl.v

@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "ClockDIV",
+					"strict" : false
+				},
+				{
 					"name" : "PC[0]",
 					"strict" : false
 				},
@@ -260,163 +264,159 @@
 					"strict" : false
 				},
 				{
-					"name" : "regout[0]",
+					"name" : "Regout[0]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[1]",
+					"name" : "Regout[1]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[2]",
+					"name" : "Regout[2]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[3]",
+					"name" : "Regout[3]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[4]",
+					"name" : "Regout[4]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[5]",
+					"name" : "Regout[5]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[6]",
+					"name" : "Regout[6]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[7]",
+					"name" : "Regout[7]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[8]",
+					"name" : "Regout[8]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[9]",
+					"name" : "Regout[9]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[10]",
+					"name" : "Regout[10]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[11]",
+					"name" : "Regout[11]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[12]",
+					"name" : "Regout[12]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[13]",
+					"name" : "Regout[13]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[14]",
+					"name" : "Regout[14]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[15]",
+					"name" : "Regout[15]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[16]",
+					"name" : "Regout[16]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[17]",
+					"name" : "Regout[17]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[18]",
+					"name" : "Regout[18]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[19]",
+					"name" : "Regout[19]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[20]",
+					"name" : "Regout[20]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[21]",
+					"name" : "Regout[21]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[22]",
+					"name" : "Regout[22]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[23]",
+					"name" : "Regout[23]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[24]",
+					"name" : "Regout[24]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[25]",
+					"name" : "Regout[25]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[26]",
+					"name" : "Regout[26]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[27]",
+					"name" : "Regout[27]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[28]",
+					"name" : "Regout[28]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[29]",
+					"name" : "Regout[29]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[30]",
+					"name" : "Regout[30]",
 					"strict" : false
 				},
 				{
-					"name" : "regout[31]",
+					"name" : "Regout[31]",
 					"strict" : false
 				},
 				{
-					"name" : "regin[2]",
+					"name" : "Regin[2]",
 					"strict" : false
 				},
 				{
-					"name" : "regin[3]",
+					"name" : "Regin[3]",
 					"strict" : false
 				},
 				{
-					"name" : "regin[1]",
+					"name" : "Regin[1]",
 					"strict" : false
 				},
 				{
-					"name" : "regin[0]",
+					"name" : "Regin[0]",
 					"strict" : false
 				},
 				{
-					"name" : "regin[4]",
+					"name" : "Regin[4]",
 					"strict" : false
 				},
 				{
-					"name" : "clockCPU",
+					"name" : "CLOCK",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "clockMem",
+					"name" : "Reset",
 					"strict" : false
 				},
 				{

@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim
 vALUControl
-Z1 !s110 1748625319
+Z1 !s110 1748895704
 !i10b 1
 !s100 LP:SEi0obbAUlJZ]6SJ<Y0
 IJC=F[CcBA9=BD<C8_n:M^2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1748625319
+w1748895704
 Z3 8TopDE.vo
 Z4 FTopDE.vo
 Z5 L0 32
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1748625319.000000
+Z7 !s108 1748895704.000000
 Z8 !s107 TopDE.vo|
 Z9 !s90 -work|work|TopDE.vo|
 !i113 1
@@ -33,11 +33,11 @@ n@a@l@u@control
 vALUControl_vlg_vec_tst
 R1
 !i10b 1
-!s100 1bei2X@dAB>MLHEWagVE^3
-I1b>7SVU1:b?WG:Gd^OOka0
+!s100 jaLUC@k^NPFS^iM2[WGoU2
+I<TNaKn=T366[QRLzcCCeN3
 R2
 R0
-w1748625318
+w1748895703
 8ALUControl.vwf.vt
 FALUControl.vwf.vt
 Z12 L0 30
@@ -53,13 +53,13 @@ R10
 R11
 n@a@l@u@control_vlg_vec_tst
 vCPUControl
-Z13 !s110 1748626411
+Z13 !s110 1748895840
 !i10b 1
-!s100 n;4KGj<NO948C=o=Q92T63
-IJjZUN3ZNchW3_`geQz`fX2
+!s100 9z]R<_ST]cYGS1E4E=f@J3
+IhJJ^9Dcn@2^3R7GiHP<be1
 R2
 R0
-Z14 w1748626411
+Z14 w1748895839
 R3
 R4
 R5
@@ -67,7 +67,7 @@ R6
 r1
 !s85 0
 31
-Z15 !s108 1748626411.000000
+Z15 !s108 1748895840.000000
 R8
 R9
 !i113 1
@@ -77,11 +77,11 @@ n@c@p@u@control
 vCPUControl_vlg_vec_tst
 R13
 !i10b 1
-!s100 7VL>Vo=6_PmEdMmRLOHj72
-I3eFBzSeVbzlHf8hBImcQQ1
+!s100 0:ha[UV:a;_Eb@P4`_SH23
+IlM7DB:9<Kg=B`DLR;g]7h2
 R2
 R0
-w1748626410
+R14
 8CPUControl.vwf.vt
 FCPUControl.vwf.vt
 R12
@@ -99,14 +99,14 @@ n@c@p@u@control_vlg_vec_tst
 vhard_block
 R13
 !i10b 1
-!s100 IHD2<PKTYf6jM6^D<3:j33
-I_QL4H>zO_Onc`IHfZ211?1
+!s100 RY@12f8:GX]6E7kh>0;?H0
+I2V1SK<=ME2DlOCad2Yz=A2
 R2
 R0
 R14
 R3
 R4
-L0 989
+L0 1027
 R6
 r1
 !s85 0
@@ -117,3 +117,47 @@ R9
 !i113 1
 R10
 R11
+vTopDE
+Z16 !s110 1748896205
+!i10b 1
+!s100 6EeC_MI4JAfA2>ehe0X1C2
+IX:l4@hlj;7kRPeo`aM2Wl0
+R2
+R0
+w1748896205
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z17 !s108 1748896205.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@top@d@e
+vTopDE_vlg_vec_tst
+R16
+!i10b 1
+!s100 HNZ[?EASO23R0@goVIPb@1
+IQHG=KVcONN:;5kLMISJP@1
+R2
+R0
+w1748896204
+8TopDE.vwf.vt
+FTopDE.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R17
+!s107 TopDE.vwf.vt|
+!s90 -work|work|TopDE.vwf.vt|
+!i113 1
+R10
+R11
+n@top@d@e_vlg_vec_tst

@@ -21,6 +21,7 @@ after 2500 simTimestamp
 run -all
 quit -f
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,6 +40,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
@@ -695,8 +697,8 @@ TRANSITION_LIST("iInstruction[16]")
 		LEVEL 0 FOR 490.0;
 		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 140.0;
-		LEVEL 0 FOR 230.0;
+		LEVEL 1 FOR 220.0;
+		LEVEL 0 FOR 150.0;
 	}
 }
 
@@ -735,8 +737,8 @@ TRANSITION_LIST("iInstruction[13]")
 		LEVEL 0 FOR 290.0;
 		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 140.0;
-		LEVEL 0 FOR 230.0;
+		LEVEL 1 FOR 220.0;
+		LEVEL 0 FOR 150.0;
 	}
 }
 
@@ -781,8 +783,8 @@ TRANSITION_LIST("iInstruction[9]")
 		REPEAT = 1;
 		LEVEL 1 FOR 490.0;
 		LEVEL 0 FOR 60.0;
-		LEVEL 1 FOR 220.0;
-		LEVEL 0 FOR 230.0;
+		LEVEL 1 FOR 300.0;
+		LEVEL 0 FOR 150.0;
 	}
 }
 
@@ -802,8 +804,8 @@ TRANSITION_LIST("iInstruction[7]")
 		REPEAT = 1;
 		LEVEL 1 FOR 490.0;
 		LEVEL 0 FOR 60.0;
-		LEVEL 1 FOR 220.0;
-		LEVEL 0 FOR 230.0;
+		LEVEL 1 FOR 300.0;
+		LEVEL 0 FOR 150.0;
 	}
 }
 
@@ -873,8 +875,8 @@ TRANSITION_LIST("iInstruction[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 770.0;
-		LEVEL 0 FOR 230.0;
+		LEVEL 1 FOR 850.0;
+		LEVEL 0 FOR 150.0;
 	}
 }
 
@@ -883,8 +885,8 @@ TRANSITION_LIST("iInstruction[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 770.0;
-		LEVEL 0 FOR 230.0;
+		LEVEL 1 FOR 850.0;
+		LEVEL 0 FOR 150.0;
 	}
 }
 

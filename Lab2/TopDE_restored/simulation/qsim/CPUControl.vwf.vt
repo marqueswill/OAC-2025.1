@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/30/2025 14:33:30"
+// Generated on "06/02/2025 17:23:58"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          CPUControl
 // 
@@ -35,6 +35,8 @@ reg [31:0] iInstruction;
 wire [1:0] oALUOp;
 wire oALUSrc;
 wire oBranch;
+wire oJal;
+wire oJalr;
 wire oMemRead;
 wire oMemWrite;
 wire oMemtoReg;
@@ -47,6 +49,8 @@ CPUControl i1 (
 	.oALUOp(oALUOp),
 	.oALUSrc(oALUSrc),
 	.oBranch(oBranch),
+	.oJal(oJal),
+	.oJalr(oJalr),
 	.oMemRead(oMemRead),
 	.oMemWrite(oMemWrite),
 	.oMemtoReg(oMemtoReg),
@@ -187,7 +191,7 @@ begin
 	iInstruction[16] = #490000 1'b1;
 	iInstruction[16] = #60000 1'b0;
 	iInstruction[16] = #80000 1'b1;
-	iInstruction[16] = #140000 1'b0;
+	iInstruction[16] = #220000 1'b0;
 end 
 // iInstruction[ 15 ]
 initial
@@ -215,7 +219,7 @@ begin
 	iInstruction[13] = #290000 1'b1;
 	iInstruction[13] = #60000 1'b0;
 	iInstruction[13] = #80000 1'b1;
-	iInstruction[13] = #140000 1'b0;
+	iInstruction[13] = #220000 1'b0;
 end 
 // iInstruction[ 12 ]
 initial
@@ -245,7 +249,7 @@ begin
 	iInstruction[9] = 1'b1;
 	iInstruction[9] = #490000 1'b0;
 	iInstruction[9] = #60000 1'b1;
-	iInstruction[9] = #220000 1'b0;
+	iInstruction[9] = #300000 1'b0;
 end 
 // iInstruction[ 8 ]
 initial
@@ -258,7 +262,7 @@ begin
 	iInstruction[7] = 1'b1;
 	iInstruction[7] = #490000 1'b0;
 	iInstruction[7] = #60000 1'b1;
-	iInstruction[7] = #220000 1'b0;
+	iInstruction[7] = #300000 1'b0;
 end 
 // iInstruction[ 6 ]
 initial
@@ -305,13 +309,13 @@ end
 initial
 begin
 	iInstruction[1] = 1'b1;
-	iInstruction[1] = #770000 1'b0;
+	iInstruction[1] = #850000 1'b0;
 end 
 // iInstruction[ 0 ]
 initial
 begin
 	iInstruction[0] = 1'b1;
-	iInstruction[0] = #770000 1'b0;
+	iInstruction[0] = #850000 1'b0;
 end 
 endmodule
 

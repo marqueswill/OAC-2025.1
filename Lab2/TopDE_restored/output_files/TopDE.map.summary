@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sat May 31 12:30:29 2025
+Analysis & Synthesis Status : Successful - Mon Jun 02 17:29:28 2025
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : TopDE
-Top-level Entity Name : Uniciclo
+Top-level Entity Name : TopDE
 Family : Cyclone IV E
-Total logic elements : 4,187
-    Total combinational functions : 3,177
-    Dedicated logic registers : 1,300
-Total registers : 1300
-Total pins : 104
+Total logic elements : 4,188
+    Total combinational functions : 3,178
+    Dedicated logic registers : 1,301
+Total registers : 1301
+Total pins : 108
 Total virtual pins : 0
 Total memory bits : 65,536
 Embedded Multiplier 9-bit elements : 0

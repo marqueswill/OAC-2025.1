@@ -1,111 +1,222 @@
-|Uniciclo
+|TopDE
+CLOCK => CLOCK.IN1
+Reset => Reset.IN1
+Regin[0] => Regin[0].IN1
+Regin[1] => Regin[1].IN1
+Regin[2] => Regin[2].IN1
+Regin[3] => Regin[3].IN1
+Regin[4] => Regin[4].IN1
+ClockDIV <= ClockDIV.DB_MAX_OUTPUT_PORT_TYPE
+PC[0] <= Uniciclo:UNI1.PC
+PC[1] <= Uniciclo:UNI1.PC
+PC[2] <= Uniciclo:UNI1.PC
+PC[3] <= Uniciclo:UNI1.PC
+PC[4] <= Uniciclo:UNI1.PC
+PC[5] <= Uniciclo:UNI1.PC
+PC[6] <= Uniciclo:UNI1.PC
+PC[7] <= Uniciclo:UNI1.PC
+PC[8] <= Uniciclo:UNI1.PC
+PC[9] <= Uniciclo:UNI1.PC
+PC[10] <= Uniciclo:UNI1.PC
+PC[11] <= Uniciclo:UNI1.PC
+PC[12] <= Uniciclo:UNI1.PC
+PC[13] <= Uniciclo:UNI1.PC
+PC[14] <= Uniciclo:UNI1.PC
+PC[15] <= Uniciclo:UNI1.PC
+PC[16] <= Uniciclo:UNI1.PC
+PC[17] <= Uniciclo:UNI1.PC
+PC[18] <= Uniciclo:UNI1.PC
+PC[19] <= Uniciclo:UNI1.PC
+PC[20] <= Uniciclo:UNI1.PC
+PC[21] <= Uniciclo:UNI1.PC
+PC[22] <= Uniciclo:UNI1.PC
+PC[23] <= Uniciclo:UNI1.PC
+PC[24] <= Uniciclo:UNI1.PC
+PC[25] <= Uniciclo:UNI1.PC
+PC[26] <= Uniciclo:UNI1.PC
+PC[27] <= Uniciclo:UNI1.PC
+PC[28] <= Uniciclo:UNI1.PC
+PC[29] <= Uniciclo:UNI1.PC
+PC[30] <= Uniciclo:UNI1.PC
+PC[31] <= Uniciclo:UNI1.PC
+Instr[0] <= Uniciclo:UNI1.Instr
+Instr[1] <= Uniciclo:UNI1.Instr
+Instr[2] <= Uniciclo:UNI1.Instr
+Instr[3] <= Uniciclo:UNI1.Instr
+Instr[4] <= Uniciclo:UNI1.Instr
+Instr[5] <= Uniciclo:UNI1.Instr
+Instr[6] <= Uniciclo:UNI1.Instr
+Instr[7] <= Uniciclo:UNI1.Instr
+Instr[8] <= Uniciclo:UNI1.Instr
+Instr[9] <= Uniciclo:UNI1.Instr
+Instr[10] <= Uniciclo:UNI1.Instr
+Instr[11] <= Uniciclo:UNI1.Instr
+Instr[12] <= Uniciclo:UNI1.Instr
+Instr[13] <= Uniciclo:UNI1.Instr
+Instr[14] <= Uniciclo:UNI1.Instr
+Instr[15] <= Uniciclo:UNI1.Instr
+Instr[16] <= Uniciclo:UNI1.Instr
+Instr[17] <= Uniciclo:UNI1.Instr
+Instr[18] <= Uniciclo:UNI1.Instr
+Instr[19] <= Uniciclo:UNI1.Instr
+Instr[20] <= Uniciclo:UNI1.Instr
+Instr[21] <= Uniciclo:UNI1.Instr
+Instr[22] <= Uniciclo:UNI1.Instr
+Instr[23] <= Uniciclo:UNI1.Instr
+Instr[24] <= Uniciclo:UNI1.Instr
+Instr[25] <= Uniciclo:UNI1.Instr
+Instr[26] <= Uniciclo:UNI1.Instr
+Instr[27] <= Uniciclo:UNI1.Instr
+Instr[28] <= Uniciclo:UNI1.Instr
+Instr[29] <= Uniciclo:UNI1.Instr
+Instr[30] <= Uniciclo:UNI1.Instr
+Instr[31] <= Uniciclo:UNI1.Instr
+Regout[0] <= Uniciclo:UNI1.regout
+Regout[1] <= Uniciclo:UNI1.regout
+Regout[2] <= Uniciclo:UNI1.regout
+Regout[3] <= Uniciclo:UNI1.regout
+Regout[4] <= Uniciclo:UNI1.regout
+Regout[5] <= Uniciclo:UNI1.regout
+Regout[6] <= Uniciclo:UNI1.regout
+Regout[7] <= Uniciclo:UNI1.regout
+Regout[8] <= Uniciclo:UNI1.regout
+Regout[9] <= Uniciclo:UNI1.regout
+Regout[10] <= Uniciclo:UNI1.regout
+Regout[11] <= Uniciclo:UNI1.regout
+Regout[12] <= Uniciclo:UNI1.regout
+Regout[13] <= Uniciclo:UNI1.regout
+Regout[14] <= Uniciclo:UNI1.regout
+Regout[15] <= Uniciclo:UNI1.regout
+Regout[16] <= Uniciclo:UNI1.regout
+Regout[17] <= Uniciclo:UNI1.regout
+Regout[18] <= Uniciclo:UNI1.regout
+Regout[19] <= Uniciclo:UNI1.regout
+Regout[20] <= Uniciclo:UNI1.regout
+Regout[21] <= Uniciclo:UNI1.regout
+Regout[22] <= Uniciclo:UNI1.regout
+Regout[23] <= Uniciclo:UNI1.regout
+Regout[24] <= Uniciclo:UNI1.regout
+Regout[25] <= Uniciclo:UNI1.regout
+Regout[26] <= Uniciclo:UNI1.regout
+Regout[27] <= Uniciclo:UNI1.regout
+Regout[28] <= Uniciclo:UNI1.regout
+Regout[29] <= Uniciclo:UNI1.regout
+Regout[30] <= Uniciclo:UNI1.regout
+Regout[31] <= Uniciclo:UNI1.regout
+Estado[0] <= <GND>
+Estado[1] <= <GND>
+Estado[2] <= <GND>
+Estado[3] <= <GND>
+
+
+|TopDE|Uniciclo:UNI1
 clockCPU => clockCPU.IN1
 clockMem => clockMem.IN2
 reset => reset.IN1
-PC[0] << PC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[1] << PC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[2] << PC[2].DB_MAX_OUTPUT_PORT_TYPE
-PC[3] << PC[3].DB_MAX_OUTPUT_PORT_TYPE
-PC[4] << PC[4].DB_MAX_OUTPUT_PORT_TYPE
-PC[5] << PC[5].DB_MAX_OUTPUT_PORT_TYPE
-PC[6] << PC[6].DB_MAX_OUTPUT_PORT_TYPE
-PC[7] << PC[7].DB_MAX_OUTPUT_PORT_TYPE
-PC[8] << PC[8].DB_MAX_OUTPUT_PORT_TYPE
-PC[9] << PC[9].DB_MAX_OUTPUT_PORT_TYPE
-PC[10] << PC[10].DB_MAX_OUTPUT_PORT_TYPE
-PC[11] << PC[11].DB_MAX_OUTPUT_PORT_TYPE
-PC[12] << PC[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[13] << PC[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[14] << PC[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[15] << PC[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[16] << PC[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[17] << PC[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[18] << PC[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[19] << PC[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[20] << PC[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[21] << PC[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[22] << PC[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[23] << PC[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[24] << PC[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[25] << PC[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[26] << PC[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[27] << PC[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[28] << PC[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[29] << PC[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[30] << PC[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-PC[31] << PC[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Instr[0] << Instr[0].DB_MAX_OUTPUT_PORT_TYPE
-Instr[1] << Instr[1].DB_MAX_OUTPUT_PORT_TYPE
-Instr[2] << Instr[2].DB_MAX_OUTPUT_PORT_TYPE
-Instr[3] << Instr[3].DB_MAX_OUTPUT_PORT_TYPE
-Instr[4] << Instr[4].DB_MAX_OUTPUT_PORT_TYPE
-Instr[5] << Instr[5].DB_MAX_OUTPUT_PORT_TYPE
-Instr[6] << Instr[6].DB_MAX_OUTPUT_PORT_TYPE
-Instr[7] << Instr[7].DB_MAX_OUTPUT_PORT_TYPE
-Instr[8] << Instr[8].DB_MAX_OUTPUT_PORT_TYPE
-Instr[9] << Instr[9].DB_MAX_OUTPUT_PORT_TYPE
-Instr[10] << Instr[10].DB_MAX_OUTPUT_PORT_TYPE
-Instr[11] << Instr[11].DB_MAX_OUTPUT_PORT_TYPE
-Instr[12] << Instr[12].DB_MAX_OUTPUT_PORT_TYPE
-Instr[13] << Instr[13].DB_MAX_OUTPUT_PORT_TYPE
-Instr[14] << Instr[14].DB_MAX_OUTPUT_PORT_TYPE
-Instr[15] << Instr[15].DB_MAX_OUTPUT_PORT_TYPE
-Instr[16] << Instr[16].DB_MAX_OUTPUT_PORT_TYPE
-Instr[17] << Instr[17].DB_MAX_OUTPUT_PORT_TYPE
-Instr[18] << Instr[18].DB_MAX_OUTPUT_PORT_TYPE
-Instr[19] << Instr[19].DB_MAX_OUTPUT_PORT_TYPE
-Instr[20] << Instr[20].DB_MAX_OUTPUT_PORT_TYPE
-Instr[21] << Instr[21].DB_MAX_OUTPUT_PORT_TYPE
-Instr[22] << Instr[22].DB_MAX_OUTPUT_PORT_TYPE
-Instr[23] << Instr[23].DB_MAX_OUTPUT_PORT_TYPE
-Instr[24] << Instr[24].DB_MAX_OUTPUT_PORT_TYPE
-Instr[25] << Instr[25].DB_MAX_OUTPUT_PORT_TYPE
-Instr[26] << Instr[26].DB_MAX_OUTPUT_PORT_TYPE
-Instr[27] << Instr[27].DB_MAX_OUTPUT_PORT_TYPE
-Instr[28] << Instr[28].DB_MAX_OUTPUT_PORT_TYPE
-Instr[29] << Instr[29].DB_MAX_OUTPUT_PORT_TYPE
-Instr[30] << Instr[30].DB_MAX_OUTPUT_PORT_TYPE
-Instr[31] << Instr[31].DB_MAX_OUTPUT_PORT_TYPE
+PC[0] <= PC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[1] <= PC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[2] <= PC[2].DB_MAX_OUTPUT_PORT_TYPE
+PC[3] <= PC[3].DB_MAX_OUTPUT_PORT_TYPE
+PC[4] <= PC[4].DB_MAX_OUTPUT_PORT_TYPE
+PC[5] <= PC[5].DB_MAX_OUTPUT_PORT_TYPE
+PC[6] <= PC[6].DB_MAX_OUTPUT_PORT_TYPE
+PC[7] <= PC[7].DB_MAX_OUTPUT_PORT_TYPE
+PC[8] <= PC[8].DB_MAX_OUTPUT_PORT_TYPE
+PC[9] <= PC[9].DB_MAX_OUTPUT_PORT_TYPE
+PC[10] <= PC[10].DB_MAX_OUTPUT_PORT_TYPE
+PC[11] <= PC[11].DB_MAX_OUTPUT_PORT_TYPE
+PC[12] <= PC[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[13] <= PC[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[14] <= PC[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[15] <= PC[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[16] <= PC[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[17] <= PC[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[18] <= PC[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[19] <= PC[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[20] <= PC[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[21] <= PC[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[22] <= PC[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[23] <= PC[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[24] <= PC[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[25] <= PC[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[26] <= PC[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[27] <= PC[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[28] <= PC[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[29] <= PC[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[30] <= PC[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC[31] <= PC[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Instr[0] <= Instr[0].DB_MAX_OUTPUT_PORT_TYPE
+Instr[1] <= Instr[1].DB_MAX_OUTPUT_PORT_TYPE
+Instr[2] <= Instr[2].DB_MAX_OUTPUT_PORT_TYPE
+Instr[3] <= Instr[3].DB_MAX_OUTPUT_PORT_TYPE
+Instr[4] <= Instr[4].DB_MAX_OUTPUT_PORT_TYPE
+Instr[5] <= Instr[5].DB_MAX_OUTPUT_PORT_TYPE
+Instr[6] <= Instr[6].DB_MAX_OUTPUT_PORT_TYPE
+Instr[7] <= Instr[7].DB_MAX_OUTPUT_PORT_TYPE
+Instr[8] <= Instr[8].DB_MAX_OUTPUT_PORT_TYPE
+Instr[9] <= Instr[9].DB_MAX_OUTPUT_PORT_TYPE
+Instr[10] <= Instr[10].DB_MAX_OUTPUT_PORT_TYPE
+Instr[11] <= Instr[11].DB_MAX_OUTPUT_PORT_TYPE
+Instr[12] <= Instr[12].DB_MAX_OUTPUT_PORT_TYPE
+Instr[13] <= Instr[13].DB_MAX_OUTPUT_PORT_TYPE
+Instr[14] <= Instr[14].DB_MAX_OUTPUT_PORT_TYPE
+Instr[15] <= Instr[15].DB_MAX_OUTPUT_PORT_TYPE
+Instr[16] <= Instr[16].DB_MAX_OUTPUT_PORT_TYPE
+Instr[17] <= Instr[17].DB_MAX_OUTPUT_PORT_TYPE
+Instr[18] <= Instr[18].DB_MAX_OUTPUT_PORT_TYPE
+Instr[19] <= Instr[19].DB_MAX_OUTPUT_PORT_TYPE
+Instr[20] <= Instr[20].DB_MAX_OUTPUT_PORT_TYPE
+Instr[21] <= Instr[21].DB_MAX_OUTPUT_PORT_TYPE
+Instr[22] <= Instr[22].DB_MAX_OUTPUT_PORT_TYPE
+Instr[23] <= Instr[23].DB_MAX_OUTPUT_PORT_TYPE
+Instr[24] <= Instr[24].DB_MAX_OUTPUT_PORT_TYPE
+Instr[25] <= Instr[25].DB_MAX_OUTPUT_PORT_TYPE
+Instr[26] <= Instr[26].DB_MAX_OUTPUT_PORT_TYPE
+Instr[27] <= Instr[27].DB_MAX_OUTPUT_PORT_TYPE
+Instr[28] <= Instr[28].DB_MAX_OUTPUT_PORT_TYPE
+Instr[29] <= Instr[29].DB_MAX_OUTPUT_PORT_TYPE
+Instr[30] <= Instr[30].DB_MAX_OUTPUT_PORT_TYPE
+Instr[31] <= Instr[31].DB_MAX_OUTPUT_PORT_TYPE
 regin[0] => regin[0].IN1
 regin[1] => regin[1].IN1
 regin[2] => regin[2].IN1
 regin[3] => regin[3].IN1
 regin[4] => regin[4].IN1
-regout[0] << Registers:bancoRegister.port10
-regout[1] << Registers:bancoRegister.port10
-regout[2] << Registers:bancoRegister.port10
-regout[3] << Registers:bancoRegister.port10
-regout[4] << Registers:bancoRegister.port10
-regout[5] << Registers:bancoRegister.port10
-regout[6] << Registers:bancoRegister.port10
-regout[7] << Registers:bancoRegister.port10
-regout[8] << Registers:bancoRegister.port10
-regout[9] << Registers:bancoRegister.port10
-regout[10] << Registers:bancoRegister.port10
-regout[11] << Registers:bancoRegister.port10
-regout[12] << Registers:bancoRegister.port10
-regout[13] << Registers:bancoRegister.port10
-regout[14] << Registers:bancoRegister.port10
-regout[15] << Registers:bancoRegister.port10
-regout[16] << Registers:bancoRegister.port10
-regout[17] << Registers:bancoRegister.port10
-regout[18] << Registers:bancoRegister.port10
-regout[19] << Registers:bancoRegister.port10
-regout[20] << Registers:bancoRegister.port10
-regout[21] << Registers:bancoRegister.port10
-regout[22] << Registers:bancoRegister.port10
-regout[23] << Registers:bancoRegister.port10
-regout[24] << Registers:bancoRegister.port10
-regout[25] << Registers:bancoRegister.port10
-regout[26] << Registers:bancoRegister.port10
-regout[27] << Registers:bancoRegister.port10
-regout[28] << Registers:bancoRegister.port10
-regout[29] << Registers:bancoRegister.port10
-regout[30] << Registers:bancoRegister.port10
-regout[31] << Registers:bancoRegister.port10
+regout[0] <= Registers:bancoRegister.port10
+regout[1] <= Registers:bancoRegister.port10
+regout[2] <= Registers:bancoRegister.port10
+regout[3] <= Registers:bancoRegister.port10
+regout[4] <= Registers:bancoRegister.port10
+regout[5] <= Registers:bancoRegister.port10
+regout[6] <= Registers:bancoRegister.port10
+regout[7] <= Registers:bancoRegister.port10
+regout[8] <= Registers:bancoRegister.port10
+regout[9] <= Registers:bancoRegister.port10
+regout[10] <= Registers:bancoRegister.port10
+regout[11] <= Registers:bancoRegister.port10
+regout[12] <= Registers:bancoRegister.port10
+regout[13] <= Registers:bancoRegister.port10
+regout[14] <= Registers:bancoRegister.port10
+regout[15] <= Registers:bancoRegister.port10
+regout[16] <= Registers:bancoRegister.port10
+regout[17] <= Registers:bancoRegister.port10
+regout[18] <= Registers:bancoRegister.port10
+regout[19] <= Registers:bancoRegister.port10
+regout[20] <= Registers:bancoRegister.port10
+regout[21] <= Registers:bancoRegister.port10
+regout[22] <= Registers:bancoRegister.port10
+regout[23] <= Registers:bancoRegister.port10
+regout[24] <= Registers:bancoRegister.port10
+regout[25] <= Registers:bancoRegister.port10
+regout[26] <= Registers:bancoRegister.port10
+regout[27] <= Registers:bancoRegister.port10
+regout[28] <= Registers:bancoRegister.port10
+regout[29] <= Registers:bancoRegister.port10
+regout[30] <= Registers:bancoRegister.port10
+regout[31] <= Registers:bancoRegister.port10
 
 
-|Uniciclo|Registers:bancoRegister
+|TopDE|Uniciclo:UNI1|Registers:bancoRegister
 iCLK => registers[0][0].CLK
 iCLK => registers[0][1].CLK
 iCLK => registers[0][2].CLK
@@ -3767,7 +3878,7 @@ oRegDisp[30] <= Mux65.DB_MAX_OUTPUT_PORT_TYPE
 oRegDisp[31] <= Mux64.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Uniciclo|ramI:MemINSTR
+|TopDE|Uniciclo:UNI1|ramI:MemINSTR
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -3847,7 +3958,7 @@ q[30] <= altsyncram:altsyncram_component.q_a
 q[31] <= altsyncram:altsyncram_component.q_a
 
 
-|Uniciclo|ramI:MemINSTR|altsyncram:altsyncram_component
+|TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component
 wren_a => altsyncram_r5l1:auto_generated.wren_a
 rden_a => altsyncram_r5l1:auto_generated.rden_a
 wren_b => ~NO_FANOUT~
@@ -3946,7 +4057,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Uniciclo|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated
+|TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated
 address_a[0] => altsyncram_keb2:altsyncram1.address_a[0]
 address_a[1] => altsyncram_keb2:altsyncram1.address_a[1]
 address_a[2] => altsyncram_keb2:altsyncram1.address_a[2]
@@ -4026,7 +4137,7 @@ rden_a => altsyncram_keb2:altsyncram1.rden_a
 wren_a => altsyncram_keb2:altsyncram1.wren_a
 
 
-|Uniciclo|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|altsyncram_keb2:altsyncram1
+|TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|altsyncram_keb2:altsyncram1
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -4957,7 +5068,7 @@ wren_b => ram_block3a30.PORTBWE
 wren_b => ram_block3a31.PORTBWE
 
 
-|Uniciclo|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2
+|TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2
 tck_usr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tck
 address[0] <= ram_rom_addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 address[1] <= ram_rom_addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -5075,7 +5186,7 @@ ir_out[7] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out[7]
 tdo <= sld_jtag_endpoint_adapter:jtag_signal_adapter.tdo
 
 
-|Uniciclo|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter
+|TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter
 raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
 raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
 tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
@@ -5158,7 +5269,7 @@ adapted_ir_out[6] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_im
 adapted_ir_out[7] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[7]
 
 
-|Uniciclo|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+|TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
 raw_tck => adapted_tck.DATAIN
 raw_tms => adapted_tms.DATAIN
 tdi => adapted_tdi.DATAIN
@@ -5241,7 +5352,7 @@ adapted_ir_out[6] => ir_out[6].DATAIN
 adapted_ir_out[7] => ir_out[7].DATAIN
 
 
-|Uniciclo|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
+|TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
 ROM_DATA[0] => Mux3.IN131
 ROM_DATA[1] => Mux2.IN131
 ROM_DATA[2] => Mux1.IN131
@@ -5363,7 +5474,7 @@ TDI => WORD_SR.DATAA
 TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Uniciclo|ramD:MemDADOS
+|TopDE|Uniciclo:UNI1|ramD:MemDADOS
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -5443,7 +5554,7 @@ q[30] <= altsyncram:altsyncram_component.q_a
 q[31] <= altsyncram:altsyncram_component.q_a
 
 
-|Uniciclo|ramD:MemDADOS|altsyncram:altsyncram_component
+|TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component
 wren_a => altsyncram_53l1:auto_generated.wren_a
 rden_a => altsyncram_53l1:auto_generated.rden_a
 wren_b => ~NO_FANOUT~
@@ -5542,7 +5653,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Uniciclo|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated
+|TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated
 address_a[0] => altsyncram_9db2:altsyncram1.address_a[0]
 address_a[1] => altsyncram_9db2:altsyncram1.address_a[1]
 address_a[2] => altsyncram_9db2:altsyncram1.address_a[2]
@@ -5622,7 +5733,7 @@ rden_a => altsyncram_9db2:altsyncram1.rden_a
 wren_a => altsyncram_9db2:altsyncram1.wren_a
 
 
-|Uniciclo|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|altsyncram_9db2:altsyncram1
+|TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|altsyncram_9db2:altsyncram1
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -6553,7 +6664,7 @@ wren_b => ram_block3a30.PORTBWE
 wren_b => ram_block3a31.PORTBWE
 
 
-|Uniciclo|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2
+|TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2
 tck_usr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tck
 address[0] <= ram_rom_addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 address[1] <= ram_rom_addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -6671,7 +6782,7 @@ ir_out[7] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out[7]
 tdo <= sld_jtag_endpoint_adapter:jtag_signal_adapter.tdo
 
 
-|Uniciclo|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter
+|TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter
 raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
 raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
 tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
@@ -6754,7 +6865,7 @@ adapted_ir_out[6] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_im
 adapted_ir_out[7] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[7]
 
 
-|Uniciclo|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+|TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
 raw_tck => adapted_tck.DATAIN
 raw_tms => adapted_tms.DATAIN
 tdi => adapted_tdi.DATAIN
@@ -6837,7 +6948,7 @@ adapted_ir_out[6] => ir_out[6].DATAIN
 adapted_ir_out[7] => ir_out[7].DATAIN
 
 
-|Uniciclo|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
+|TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
 ROM_DATA[0] => Mux3.IN131
 ROM_DATA[1] => Mux2.IN131
 ROM_DATA[2] => Mux1.IN131
@@ -6959,7 +7070,7 @@ TDI => WORD_SR.DATAA
 TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Uniciclo|CPUControl:cpuControl
+|TopDE|Uniciclo:UNI1|CPUControl:cpuControl
 iInstruction[0] => Equal0.IN29
 iInstruction[0] => Equal1.IN29
 iInstruction[0] => Equal2.IN29
@@ -7129,7 +7240,7 @@ oALUOp[0] <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
 oALUOp[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Uniciclo|ALUControl:aluControl
+|TopDE|Uniciclo:UNI1|ALUControl:aluControl
 iALUOp[0] => Mux0.IN5
 iALUOp[0] => Mux1.IN5
 iALUOp[0] => Mux2.IN5
@@ -7243,7 +7354,7 @@ oControl[3] <= <GND>
 oControl[4] <= <GND>
 
 
-|Uniciclo|ImmGen:imGerador
+|TopDE|Uniciclo:UNI1|ImmGen:imGerador
 iInstrucao[0] => Decoder0.IN6
 iInstrucao[1] => Decoder0.IN5
 iInstrucao[2] => Decoder0.IN4
@@ -7332,7 +7443,7 @@ oImm[30] <= oImm.DB_MAX_OUTPUT_PORT_TYPE
 oImm[31] <= oImm.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Uniciclo|ALU:ula
+|TopDE|Uniciclo:UNI1|ALU:ula
 iControl[0] => Mux0.IN31
 iControl[0] => Mux1.IN31
 iControl[0] => Mux2.IN31
