@@ -35,11 +35,11 @@ parameter
 	OPC_JAL        	= 7'b1101111,
 	
 	/* Funct 7 */
-	FUNCT7_ADD			 = 7'b0000000,
-   FUNCT7_SUB         = 7'b0100000,
-	FUNCT7_SLT			 = 7'b0000000,
-	FUNCT7_OR			 = 7'b0000000,
-	FUNCT7_AND			 = 7'b0000000,
+	FUNCT7_ADD			= 7'b0000000,
+   FUNCT7_SUB        = 7'b0100000,
+	FUNCT7_SLT			= 7'b0000000,
+	FUNCT7_OR			= 7'b0000000,
+	FUNCT7_AND			= 7'b0000000,
 	
 	/* Funct 3 */
 	FUNCT3_LW			= 3'b010,
@@ -54,8 +54,8 @@ parameter
 	
 	
 	/* Endereços */
-	TEXT_ADDRESS = 32'h0040_0000,
-	DATA_ADDRESS = 32'h1001_0000,
+	TEXT_ADDRESS  = 32'h0040_0000,
+	DATA_ADDRESS  = 32'h1001_0000,
 	STACK_ADDRESS = 32'h1001_03FC,
 
 

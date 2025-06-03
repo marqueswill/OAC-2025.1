@@ -22,6 +22,7 @@ run -all
 quit -f
 
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -40,6 +41,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 
 </modelsim_script_timing>
@@ -500,9 +502,29 @@ SIGNAL("oRegWrite")
 	PARENT = "";
 }
 
+SIGNAL("oJal")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("oJalr")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 GROUP("outs")
 {
-	MEMBERS = "oALUSrc", "oMemtoReg", "oRegWrite", "oMemRead", "oMemWrite", "oBranch", "oALUOp";
+	MEMBERS = "oALUSrc", "oMemtoReg", "oRegWrite", "oMemRead", "oMemWrite", "oBranch", "oJal", "oJalr", "oALUOp";
 }
 
 TRANSITION_LIST("iInstruction[31]")
@@ -962,6 +984,24 @@ TRANSITION_LIST("oRegWrite")
 	}
 }
 
+TRANSITION_LIST("oJal")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("oJalr")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "iInstruction";
@@ -1299,7 +1339,7 @@ DISPLAY_LINE
 	RADIX = Binary;
 	TREE_INDEX = 33;
 	TREE_LEVEL = 0;
-	CHILDREN = 34, 35, 36, 37, 38, 39, 40;
+	CHILDREN = 34, 35, 36, 37, 38, 39, 40, 41, 42;
 }
 
 DISPLAY_LINE
@@ -1364,13 +1404,33 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "oALUOp";
+	CHANNEL = "oJal";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 40;
 	TREE_LEVEL = 1;
 	PARENT = 33;
-	CHILDREN = 41, 42;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "oJalr";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 41;
+	TREE_LEVEL = 1;
+	PARENT = 33;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "oALUOp";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 42;
+	TREE_LEVEL = 1;
+	PARENT = 33;
+	CHILDREN = 43, 44;
 }
 
 DISPLAY_LINE
@@ -1378,9 +1438,9 @@ DISPLAY_LINE
 	CHANNEL = "oALUOp[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 41;
+	TREE_INDEX = 43;
 	TREE_LEVEL = 2;
-	PARENT = 40;
+	PARENT = 42;
 }
 
 DISPLAY_LINE
@@ -1388,9 +1448,9 @@ DISPLAY_LINE
 	CHANNEL = "oALUOp[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 42;
+	TREE_INDEX = 44;
 	TREE_LEVEL = 2;
-	PARENT = 40;
+	PARENT = 42;
 }
 
 TIME_BAR

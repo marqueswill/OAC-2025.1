@@ -1,20 +1,37 @@
-DEPTH = 16384;
-WIDTH = 32;
-ADDRESS_RADIX = HEX;
-DATA_RADIX = HEX;
-CONTENT
-BEGIN
-00000000 : 00a28293;   % 1: addi t0, t0, 10 %
-00000001 : 00130313;   % 2: addi t1, t1, 1 %
-00000002 : 005322b3;   % 4: slt t0, t1, t0  %
-00000003 : 00637333;   % 5: and t1, t1, t1 # true %
-00000004 : 0062a2b3;   % 7: slt t0, t0, t1  %
-00000005 : 0052e2b3;   % 8: or t0, t0, t0  # false %
-00000006 : 406282b3;   % 10: sub t0, t0, t1 # 9 %
-00000007 : 00512023;   % 11: sw t0, 0(sp) %
-00000008 : 005282b3;   % 13: add t0, t0, t0 # 18 %
-00000009 : 00012283;   % 14: lw t0, 0(sp) %
-0000000a : 064282e7;   % 16: LE1: jalr t0, t0, 100 %
-0000000b : fe528ee3;   % 17: beq t0, t0, LE1 %
-0000000c : ff9ff2ef;   % 18: jal t0, LE1 %
+-- Copyright (C) 2019  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=32;
+DEPTH=16384;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+	0000  :   00A28293;
+	0001  :   00130313;
+	0002  :   005322B3;
+	0003  :   00637333;
+	0004  :   0062A2B3;
+	0005  :   0052E2B3;
+	0006  :   406282B3;
+	0007  :   00512023;
+	0008  :   005282B3;
+	0009  :   00012283;
+	000A  :   FC528CE3;
+	[000B..3FFF]  :   00000000;
 END;

@@ -23,7 +23,7 @@ assign FUNCT7 = {1'b0, iInstruction[31:25]};
 assign FUNCT3 = {1'b0, iInstruction[14:12]};
 assign OPCODE = {1'b0, iInstruction[6:0]};
 
-wire [10:0] outputs;
+wire [9:0] outputs;
 
 assign oALUSrc   = outputs[9];
 assign oMemtoReg = outputs[8];
