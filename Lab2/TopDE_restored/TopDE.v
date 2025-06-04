@@ -23,11 +23,16 @@ module TopDE (
 	initial 
 		ClockDIV <= 1'b1;
 
-	always @(posedge CLOCK) 
-		begin 		
-				ClockDIV <= ~ClockDIV;  //clockDIV metade da frequência do Clock
-		end
-	
+	reg [1:0] counter = 0;
+
+	always @(posedge CLOCK) begin
+		 counter <= counter + 1;
+		 if (counter == 2'b11) begin
+			  ClockDIV <= ~ClockDIV;
+			  counter <= 0;
+		 end
+	end
+		
 
 	
 	Uniciclo UNI1 (

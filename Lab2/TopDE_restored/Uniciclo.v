@@ -56,7 +56,7 @@ always @(posedge clockCPU or posedge reset) begin
 		PC <= TEXT_ADDRESS;
 	else if (oJalr)
 		PC <= (LeituraReg1 + imm) & ~32'd1;         // PC = (R[rs1] + imm) & ~1
-	else if (oJal)
+	else if (oJal)            
 		PC <= PC + imm;                             // PC=PC+{imm, 1’b0} -> o ImmGen coloca o 0
 	else if (oBranch && oZeroAlu)
 		PC <= PC + imm;                             // if(op==op_branch and R[rs1]-R[rs2]==0) then PC=PC+{imm,1’b0}
