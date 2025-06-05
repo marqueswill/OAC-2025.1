@@ -1,0 +1,851 @@
+ -- Copyright (C) 2019  Intel Corporation. All rights reserved.
+ -- Your use of Intel Corporation's design tools, logic functions 
+ -- and other software and tools, and any partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Intel Program License 
+ -- Subscription Agreement, the Intel Quartus Prime License Agreement,
+ -- the Intel FPGA IP License Agreement, or other applicable license
+ -- agreement, including, without limitation, that your use is for
+ -- the sole purpose of programming logic devices manufactured by
+ -- Intel and sold by Intel or its authorized distributors.  Please
+ -- refer to the applicable agreement for further details, at
+ -- https://fpgasoftware.intel.com/eula.
+ -- 
+ -- This is a Quartus Prime output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus Prime input file. This file cannot be used
+ -- to make Quartus Prime pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus Prime help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --                  Bank 1:       2.5V
+ --                  Bank 2:       2.5V
+ --                  Bank 3:       2.5V
+ --                  Bank 4:       2.5V
+ --                  Bank 5:       2.5V
+ --                  Bank 6:       2.5V
+ --                  Bank 7:       2.5V
+ --                  Bank 8:       2.5V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --                  It can also be used to report unused dedicated pins. The connection
+ --                  on the board for unused dedicated pins depends on whether this will
+ --                  be used in a future design. One example is device migration. When
+ --                  using device migration, refer to the device pin-tables. If it is a
+ --                  GND pin in the pin table or if it will not be used in a future design
+ --                  for another purpose the it MUST be connected to GND. If it is an unused
+ --                  dedicated pin, then it can be connected to a valid signal on the board
+ --                  (low, high, or toggling) if that signal is required for a different
+ --                  revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --                  This pin should be connected to GND. It may also be connected  to a
+ --                  valid signal  on the board  (low, high, or toggling)  if that signal
+ --                  is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --                  or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+CHIP  "TopDE"  ASSIGNED TO AN: EP4CE115F29C7
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+VCCIO8                       : A2        : power  :                   : 2.5V    : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
+oImm[28]                     : A4        : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : A5        : power  :                   : 2.5V    : 8         :                
+oEscritaReg[2]               : A6        : output : 2.5 V             :         : 8         : N              
+oEscritaReg[18]              : A7        : output : 2.5 V             :         : 8         : N              
+Regout[23]                   : A8        : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : A9        : power  :                   : 2.5V    : 8         :                
+oEscritaReg[17]              : A10       : output : 2.5 V             :         : 8         : N              
+oEscritaReg[30]              : A11       : output : 2.5 V             :         : 8         : N              
+Regout[24]                   : A12       : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : A13       : power  :                   : 2.5V    : 8         :                
+GND+                         : A14       :        :                   :         : 8         :                
+GND+                         : A15       :        :                   :         : 7         :                
+VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
+oEntradaULA2[20]             : A17       : output : 2.5 V             :         : 7         : N              
+oEntradaULA2[1]              : A18       : output : 2.5 V             :         : 7         : N              
+oImm[12]                     : A19       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : A20       : power  :                   : 2.5V    : 7         :                
+oDadosLidosMemoria[2]        : A21       : output : 2.5 V             :         : 7         : N              
+oNovoPC[21]                  : A22       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A23       :        :                   :         : 7         :                
+VCCIO7                       : A24       : power  :                   : 2.5V    : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A25       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A26       :        :                   :         : 7         :                
+VCCIO7                       : A27       : power  :                   : 2.5V    : 7         :                
+VCCIO2                       : AA1       : power  :                   : 2.5V    : 2         :                
+GND                          : AA2       : gnd    :                   :         :           :                
+oLeituraReg2[9]              : AA3       : output : 2.5 V             :         : 2         : N              
+PC[4]                        : AA4       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA5       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA7       :        :                   :         : 2         :                
+Instr[25]                    : AA8       : output : 2.5 V             :         : 3         : N              
+GNDA1                        : AA9       : gnd    :                   :         :           :                
+oNovoPC[7]                   : AA10      : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AA11      : power  :                   : 2.5V    : 3         :                
+oEscritaReg[5]               : AA12      : output : 2.5 V             :         : 3         : N              
+oLeituraReg1[31]             : AA13      : output : 2.5 V             :         : 3         : N              
+oSaidaULA[9]                 : AA14      : output : 2.5 V             :         : 3         : N              
+oDadosLidosMemoria[7]        : AA15      : output : 2.5 V             :         : 4         : N              
+oNovoPC[0]                   : AA16      : output : 2.5 V             :         : 4         : N              
+oDadosLidosMemoria[9]        : AA17      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AA18      : power  :                   : 2.5V    : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA19      :        :                   :         : 4         :                
+GNDA4                        : AA20      : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA22      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA23      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA24      :        :                   :         : 5         :                
+PC[19]                       : AA25      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA26      :        :                   :         : 5         :                
+GND                          : AA27      : gnd    :                   :         :           :                
+VCCIO5                       : AA28      : power  :                   : 2.5V    : 5         :                
+oLeituraReg2[29]             : AB1       : output : 2.5 V             :         : 2         : N              
+oLeituraReg2[4]              : AB2       : output : 2.5 V             :         : 2         : N              
+oRd[2]                       : AB3       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB5       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB6       :        :                   :         : 2         :                
+Instr[8]                     : AB7       : output : 2.5 V             :         : 3         : N              
+oLeituraReg2[23]             : AB8       : output : 2.5 V             :         : 3         : N              
+oNovoPC[13]                  : AB9       : output : 2.5 V             :         : 3         : N              
+PC[3]                        : AB10      : output : 2.5 V             :         : 3         : N              
+Instr[26]                    : AB11      : output : 2.5 V             :         : 3         : N              
+oEscritaReg[0]               : AB12      : output : 2.5 V             :         : 3         : N              
+oEscritaReg[28]              : AB13      : output : 2.5 V             :         : 3         : N              
+oLeituraReg1[30]             : AB14      : output : 2.5 V             :         : 3         : N              
+oCPUControl[2]               : AB15      : output : 2.5 V             :         : 4         : N              
+oDadosLidosMemoria[8]        : AB16      : output : 2.5 V             :         : 4         : N              
+oLeituraReg2[24]             : AB17      : output : 2.5 V             :         : 4         : N              
+oNovoPC[29]                  : AB18      : output : 2.5 V             :         : 4         : N              
+oNovoPC[8]                   : AB19      : output : 2.5 V             :         : 4         : N              
+oNovoPC[24]                  : AB20      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB22      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB23      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB24      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB25      :        :                   :         : 5         :                
+oDadosLidosMemoria[14]       : AB26      : output : 2.5 V             :         : 5         : N              
+oDadosLidosMemoria[3]        : AB27      : output : 2.5 V             :         : 5         : N              
+oLeituraReg1[29]             : AB28      : output : 2.5 V             :         : 5         : N              
+PC[7]                        : AC1       : output : 2.5 V             :         : 2         : N              
+Instr[11]                    : AC2       : output : 2.5 V             :         : 2         : N              
+oLeituraReg2[6]              : AC3       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC4       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC5       :        :                   :         : 2         :                
+GND                          : AC6       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC7       :        :                   :         : 3         :                
+Regout[22]                   : AC8       : output : 2.5 V             :         : 3         : N              
+GND                          : AC9       : gnd    :                   :         :           :                
+Instr[13]                    : AC10      : output : 2.5 V             :         : 3         : N              
+oLeituraReg1[0]              : AC11      : output : 2.5 V             :         : 3         : N              
+oLeituraReg2[13]             : AC12      : output : 2.5 V             :         : 3         : N              
+GND                          : AC13      : gnd    :                   :         :           :                
+oLeituraReg2[3]              : AC14      : output : 2.5 V             :         : 3         : N              
+oCPUControl[5]               : AC15      : output : 2.5 V             :         : 4         : N              
+GND                          : AC16      : gnd    :                   :         :           :                
+oNovoPC[25]                  : AC17      : output : 2.5 V             :         : 4         : N              
+oImm[9]                      : AC18      : output : 2.5 V             :         : 4         : N              
+oSaidaULA[16]                : AC19      : output : 2.5 V             :         : 4         : N              
+GND                          : AC20      : gnd    :                   :         :           :                
+oDadosLidosMemoria[1]        : AC21      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC22      :        :                   :         : 4         :                
+GND                          : AC23      : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC24      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC25      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC26      :        :                   :         : 5         :                
+oNovoPC[31]                  : AC27      : output : 2.5 V             :         : 5         : N              
+oDadosLidosMemoria[24]       : AC28      : output : 2.5 V             :         : 5         : N              
+Instr[9]                     : AD1       : output : 2.5 V             :         : 2         : N              
+Instr[10]                    : AD2       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD3       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD4       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD5       :        :                   :         : 3         :                
+VCCIO3                       : AD6       : power  :                   : 2.5V    : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD7       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD8       :        :                   :         : 3         :                
+VCCIO3                       : AD9       : power  :                   : 2.5V    : 3         :                
+oLeituraReg2[2]              : AD10      : output : 2.5 V             :         : 3         : N              
+oLeituraReg2[31]             : AD11      : output : 2.5 V             :         : 3         : N              
+Regout[5]                    : AD12      : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AD13      : power  :                   : 2.5V    : 3         :                
+oSaidaULA[11]                : AD14      : output : 2.5 V             :         : 3         : N              
+oDadosLidosMemoria[18]       : AD15      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AD16      : power  :                   : 2.5V    : 4         :                
+oImm[11]                     : AD17      : output : 2.5 V             :         : 4         : N              
+oSaidaULA[13]                : AD18      : output : 2.5 V             :         : 4         : N              
+PC[0]                        : AD19      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AD20      : power  :                   : 2.5V    : 4         :                
+oDadosLidosMemoria[16]       : AD21      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD22      :        :                   :         : 4         :                
+VCCIO4                       : AD23      : power  :                   : 2.5V    : 4         :                
+oSaidaULA[12]                : AD24      : output : 2.5 V             :         : 4         : N              
+oNovoPC[28]                  : AD25      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD26      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD27      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD28      :        :                   :         : 5         :                
+oNovoPC[30]                  : AE1       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE2       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE3       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE4       :        :                   :         : 3         :                
+oRd[0]                       : AE5       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE6       :        :                   :         : 3         :                
+Instr[27]                    : AE7       : output : 2.5 V             :         : 3         : N              
+Instr[24]                    : AE8       : output : 2.5 V             :         : 3         : N              
+Instr[28]                    : AE9       : output : 2.5 V             :         : 3         : N              
+Instr[15]                    : AE10      : output : 2.5 V             :         : 3         : N              
+oDadosLidosMemoria[12]       : AE11      : output : 2.5 V             :         : 3         : N              
+Instr[16]                    : AE12      : output : 2.5 V             :         : 3         : N              
+PC[2]                        : AE13      : output : 2.5 V             :         : 3         : N              
+oLeituraReg2[1]              : AE14      : output : 2.5 V             :         : 3         : N              
+oCPUControl[3]               : AE15      : output : 2.5 V             :         : 4         : N              
+oDadosLidosMemoria[29]       : AE16      : output : 2.5 V             :         : 4         : N              
+oImm[18]                     : AE17      : output : 2.5 V             :         : 4         : N              
+oNovoPC[12]                  : AE18      : output : 2.5 V             :         : 4         : N              
+PC[21]                       : AE19      : output : 2.5 V             :         : 4         : N              
+oImm[14]                     : AE20      : output : 2.5 V             :         : 4         : N              
+oImm[2]                      : AE21      : output : 2.5 V             :         : 4         : N              
+oDadosLidosMemoria[17]       : AE22      : output : 2.5 V             :         : 4         : N              
+oDadosLidosMemoria[20]       : AE23      : output : 2.5 V             :         : 4         : N              
+oNovoPC[2]                   : AE24      : output : 2.5 V             :         : 4         : N              
+oDadosLidosMemoria[26]       : AE25      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE26      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE27      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE28      :        :                   :         : 5         :                
+GND                          : AF1       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF2       :        :                   :         : 2         :                
+oLeituraReg2[28]             : AF3       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF4       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF5       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF6       :        :                   :         : 3         :                
+oDadosLidosMemoria[31]       : AF7       : output : 2.5 V             :         : 3         : N              
+Regout[28]                   : AF8       : output : 2.5 V             :         : 3         : N              
+Regout[12]                   : AF9       : output : 2.5 V             :         : 3         : N              
+Instr[14]                    : AF10      : output : 2.5 V             :         : 3         : N              
+Instr[0]                     : AF11      : output : 2.5 V             :         : 3         : N              
+PC[9]                        : AF12      : output : 2.5 V             :         : 3         : N              
+PC[8]                        : AF13      : output : 2.5 V             :         : 3         : N              
+oLeituraReg1[7]              : AF14      : output : 2.5 V             :         : 3         : N              
+oDadosLidosMemoria[13]       : AF15      : output : 2.5 V             :         : 4         : N              
+oImm[16]                     : AF16      : output : 2.5 V             :         : 4         : N              
+oImm[17]                     : AF17      : output : 2.5 V             :         : 4         : N              
+PC[16]                       : AF18      : output : 2.5 V             :         : 4         : N              
+oSaidaULA[7]                 : AF19      : output : 2.5 V             :         : 4         : N              
+oImm[7]                      : AF20      : output : 2.5 V             :         : 4         : N              
+oImm[10]                     : AF21      : output : 2.5 V             :         : 4         : N              
+oImm[13]                     : AF22      : output : 2.5 V             :         : 4         : N              
+oDadosLidosMemoria[30]       : AF23      : output : 2.5 V             :         : 4         : N              
+PC[15]                       : AF24      : output : 2.5 V             :         : 4         : N              
+oDadosLidosMemoria[27]       : AF25      : output : 2.5 V             :         : 4         : N              
+oDadosLidosMemoria[5]        : AF26      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF27      :        :                   :         : 5         :                
+GND                          : AF28      : gnd    :                   :         :           :                
+VCCIO2                       : AG1       : power  :                   : 2.5V    : 2         :                
+GND                          : AG2       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG3       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG4       :        :                   :         : 3         :                
+GND                          : AG5       : gnd    :                   :         :           :                
+Instr[31]                    : AG6       : output : 2.5 V             :         : 3         : N              
+Instr[2]                     : AG7       : output : 2.5 V             :         : 3         : N              
+oDadosLidosMemoria[10]       : AG8       : output : 2.5 V             :         : 3         : N              
+GND                          : AG9       : gnd    :                   :         :           :                
+Instr[12]                    : AG10      : output : 2.5 V             :         : 3         : N              
+oLeituraReg2[0]              : AG11      : output : 2.5 V             :         : 3         : N              
+oEntradaULA2[8]              : AG12      : output : 2.5 V             :         : 3         : N              
+GND                          : AG13      : gnd    :                   :         :           :                
+GND+                         : AG14      :        :                   :         : 3         :                
+GND+                         : AG15      :        :                   :         : 4         :                
+GND                          : AG16      : gnd    :                   :         :           :                
+oImm[3]                      : AG17      : output : 2.5 V             :         : 4         : N              
+oNovoPC[10]                  : AG18      : output : 2.5 V             :         : 4         : N              
+oNovoPC[19]                  : AG19      : output : 2.5 V             :         : 4         : N              
+GND                          : AG20      : gnd    :                   :         :           :                
+PC[20]                       : AG21      : output : 2.5 V             :         : 4         : N              
+oNovoPC[3]                   : AG22      : output : 2.5 V             :         : 4         : N              
+oImm[0]                      : AG23      : output : 2.5 V             :         : 4         : N              
+GND                          : AG24      : gnd    :                   :         :           :                
+PC[12]                       : AG25      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG26      :        :                   :         : 4         :                
+GND                          : AG27      : gnd    :                   :         :           :                
+VCCIO5                       : AG28      : power  :                   : 2.5V    : 5         :                
+VCCIO3                       : AH2       : power  :                   : 2.5V    : 3         :                
+Instr[7]                     : AH3       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH4       :        :                   :         : 3         :                
+VCCIO3                       : AH5       : power  :                   : 2.5V    : 3         :                
+Instr[3]                     : AH6       : output : 2.5 V             :         : 3         : N              
+oRd[1]                       : AH7       : output : 2.5 V             :         : 3         : N              
+Instr[6]                     : AH8       : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AH9       : power  :                   : 2.5V    : 3         :                
+Instr[1]                     : AH10      : output : 2.5 V             :         : 3         : N              
+PC[10]                       : AH11      : output : 2.5 V             :         : 3         : N              
+oLeituraReg2[7]              : AH12      : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AH13      : power  :                   : 2.5V    : 3         :                
+GND+                         : AH14      :        :                   :         : 3         :                
+GND+                         : AH15      :        :                   :         : 4         :                
+VCCIO4                       : AH16      : power  :                   : 2.5V    : 4         :                
+oCPUControl[9]               : AH17      : output : 2.5 V             :         : 4         : N              
+oNovoPC[6]                   : AH18      : output : 2.5 V             :         : 4         : N              
+oNovoPC[18]                  : AH19      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AH20      : power  :                   : 2.5V    : 4         :                
+oSaidaULA[4]                 : AH21      : output : 2.5 V             :         : 4         : N              
+oImm[1]                      : AH22      : output : 2.5 V             :         : 4         : N              
+oImm[19]                     : AH23      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AH24      : power  :                   : 2.5V    : 4         :                
+oDadosLidosMemoria[4]        : AH25      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH26      :        :                   :         : 4         :                
+VCCIO4                       : AH27      : power  :                   : 2.5V    : 4         :                
+VCCIO1                       : B1        : power  :                   : 2.5V    : 1         :                
+GND                          : B2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
+oImm[21]                     : B4        : output : 2.5 V             :         : 8         : N              
+GND                          : B5        : gnd    :                   :         :           :                
+Regin[4]                     : B6        : input  : 2.5 V             :         : 8         : N              
+oEscritaReg[3]               : B7        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B8        :        :                   :         : 8         :                
+GND                          : B9        : gnd    :                   :         :           :                
+oEscritaReg[15]              : B10       : output : 2.5 V             :         : 8         : N              
+Regout[27]                   : B11       : output : 2.5 V             :         : 8         : N              
+GND                          : B12       : gnd    :                   :         :           :                
+GND                          : B13       : gnd    :                   :         :           :                
+GND+                         : B14       :        :                   :         : 8         :                
+GND+                         : B15       :        :                   :         : 7         :                
+GND                          : B16       : gnd    :                   :         :           :                
+oNovoPC[27]                  : B17       : output : 2.5 V             :         : 7         : N              
+oEntradaULA2[14]             : B18       : output : 2.5 V             :         : 7         : N              
+oEntradaULA2[12]             : B19       : output : 2.5 V             :         : 7         : N              
+GND                          : B20       : gnd    :                   :         :           :                
+oSaidaULA[25]                : B21       : output : 2.5 V             :         : 7         : N              
+oLeituraReg2[26]             : B22       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B23       :        :                   :         : 7         :                
+GND                          : B24       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B25       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B26       :        :                   :         : 7         :                
+GND                          : B27       : gnd    :                   :         :           :                
+VCCIO6                       : B28       : power  :                   : 2.5V    : 6         :                
+GND                          : C1        : gnd    :                   :         :           :                
+Estado[3]                    : C2        : output : 2.5 V             :         : 1         : N              
+oImm[30]                     : C3        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C4        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C5        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8         :                
+oImm[23]                     : C7        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8         :                
+Regout[2]                    : C9        : output : 2.5 V             :         : 8         : N              
+Regin[0]                     : C10       : input  : 2.5 V             :         : 8         : N              
+oLeituraReg2[22]             : C11       : output : 2.5 V             :         : 8         : N              
+Regout[18]                   : C12       : output : 2.5 V             :         : 8         : N              
+oEscritaReg[24]              : C13       : output : 2.5 V             :         : 8         : N              
+Regout[6]                    : C14       : output : 2.5 V             :         : 8         : N              
+ClockDIV                     : C15       : output : 2.5 V             :         : 7         : N              
+oLeituraReg1[18]             : C16       : output : 2.5 V             :         : 7         : N              
+oLeituraReg1[5]              : C17       : output : 2.5 V             :         : 7         : N              
+oLeituraReg1[8]              : C18       : output : 2.5 V             :         : 7         : N              
+oLeituraReg2[10]             : C19       : output : 2.5 V             :         : 7         : N              
+oLeituraReg1[13]             : C20       : output : 2.5 V             :         : 7         : N              
+oSaidaULA[30]                : C21       : output : 2.5 V             :         : 7         : N              
+oSaidaULA[22]                : C22       : output : 2.5 V             :         : 7         : N              
+oSaidaULA[15]                : C23       : output : 2.5 V             :         : 7         : N              
+oSaidaULA[1]                 : C24       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C25       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C26       :        :                   :         : 7         :                
+oSaidaULA[26]                : C27       : output : 2.5 V             :         : 6         : N              
+GND                          : C28       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D2        :        :                   :         : 1         :                
+GND                          : D3        : gnd    :                   :         :           :                
+oImm[31]                     : D4        : output : 2.5 V             :         : 8         : N              
+oImm[25]                     : D5        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D7        :        :                   :         : 8         :                
+oImm[26]                     : D8        : output : 2.5 V             :         : 8         : N              
+Regout[25]                   : D9        : output : 2.5 V             :         : 8         : N              
+oEscritaReg[19]              : D10       : output : 2.5 V             :         : 8         : N              
+Regout[16]                   : D11       : output : 2.5 V             :         : 8         : N              
+Regout[11]                   : D12       : output : 2.5 V             :         : 8         : N              
+oLeituraReg1[11]             : D13       : output : 2.5 V             :         : 8         : N              
+Regout[10]                   : D14       : output : 2.5 V             :         : 8         : N              
+oLeituraReg1[27]             : D15       : output : 2.5 V             :         : 7         : N              
+oEntradaULA2[9]              : D16       : output : 2.5 V             :         : 7         : N              
+oEntradaULA2[6]              : D17       : output : 2.5 V             :         : 7         : N              
+oSaidaULA[20]                : D18       : output : 2.5 V             :         : 7         : N              
+oEntradaULA2[5]              : D19       : output : 2.5 V             :         : 7         : N              
+oSaidaULA[18]                : D20       : output : 2.5 V             :         : 7         : N              
+oNovoPC[26]                  : D21       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D22       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D23       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D24       :        :                   :         : 7         :                
+oLeituraReg2[20]             : D25       : output : 2.5 V             :         : 7         : N              
+oSaidaULA[19]                : D26       : output : 2.5 V             :         : 6         : N              
+oNovoPC[4]                   : D27       : output : 2.5 V             :         : 6         : N              
+oLeituraReg2[21]             : D28       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E1        :        :                   :         : 1         :                
+~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E2        : input  : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 1         :                
+oImm[22]                     : E4        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E5        :        :                   :         : 8         :                
+VCCIO8                       : E6        : power  :                   : 2.5V    : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
+VCCIO8                       : E9        : power  :                   : 2.5V    : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 8         :                
+oEscritaReg[8]               : E11       : output : 2.5 V             :         : 8         : N              
+Regout[31]                   : E12       : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : E13       : power  :                   : 2.5V    : 8         :                
+oEscritaReg[26]              : E14       : output : 2.5 V             :         : 8         : N              
+oLeituraReg1[3]              : E15       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : E16       : power  :                   : 2.5V    : 7         :                
+oLeituraReg1[24]             : E17       : output : 2.5 V             :         : 7         : N              
+oSaidaULA[23]                : E18       : output : 2.5 V             :         : 7         : N              
+oNovoPC[14]                  : E19       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : E20       : power  :                   : 2.5V    : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E21       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E22       :        :                   :         : 7         :                
+VCCIO7                       : E23       : power  :                   : 2.5V    : 7         :                
+oLeituraReg1[23]             : E24       : output : 2.5 V             :         : 7         : N              
+oEscritaReg[31]              : E25       : output : 2.5 V             :         : 7         : N              
+oNovoPC[15]                  : E26       : output : 2.5 V             :         : 6         : N              
+oSaidaULA[17]                : E27       : output : 2.5 V             :         : 6         : N              
+oSaidaULA[31]                : E28       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F2        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1         :                
+~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F4        : input  : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 1         :                
+GND                          : F6        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 8         :                
+Estado[1]                    : F8        : output : 2.5 V             :         : 8         : N              
+GND                          : F9        : gnd    :                   :         :           :                
+oCPUControl[0]               : F10       : output : 2.5 V             :         : 8         : N              
+oEscritaReg[16]              : F11       : output : 2.5 V             :         : 8         : N              
+oEscritaReg[14]              : F12       : output : 2.5 V             :         : 8         : N              
+GND                          : F13       : gnd    :                   :         :           :                
+oEscritaReg[23]              : F14       : output : 2.5 V             :         : 8         : N              
+oEscritaReg[25]              : F15       : output : 2.5 V             :         : 7         : N              
+GND                          : F16       : gnd    :                   :         :           :                
+oLeituraReg1[22]             : F17       : output : 2.5 V             :         : 7         : N              
+oSaidaULA[27]                : F18       : output : 2.5 V             :         : 7         : N              
+oNovoPC[22]                  : F19       : output : 2.5 V             :         : 7         : N              
+GND                          : F20       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F21       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F22       :        :                   :         : 7         :                
+GND                          : F23       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F24       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F25       :        :                   :         : 6         :                
+oLeituraReg2[27]             : F26       : output : 2.5 V             :         : 6         : N              
+oSaidaULA[0]                 : F27       : output : 2.5 V             :         : 6         : N              
+oSaidaULA[29]                : F28       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G2        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1         :                
+oImm[24]                     : G4        : output : 2.5 V             :         : 1         : N              
+Estado[0]                    : G5        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G6        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G9        :        :                   :         : 8         :                
+oCPUControl[4]               : G10       : output : 2.5 V             :         : 8         : N              
+Regout[29]                   : G11       : output : 2.5 V             :         : 8         : N              
+oEscritaReg[12]              : G12       : output : 2.5 V             :         : 8         : N              
+oEscritaReg[4]               : G13       : output : 2.5 V             :         : 8         : N              
+oEscritaReg[1]               : G14       : output : 2.5 V             :         : 8         : N              
+oEntradaULA2[25]             : G15       : output : 2.5 V             :         : 7         : N              
+oLeituraReg1[12]             : G16       : output : 2.5 V             :         : 7         : N              
+oLeituraReg1[6]              : G17       : output : 2.5 V             :         : 7         : N              
+oLeituraReg1[10]             : G18       : output : 2.5 V             :         : 7         : N              
+oLeituraReg1[16]             : G19       : output : 2.5 V             :         : 7         : N              
+oNovoPC[17]                  : G20       : output : 2.5 V             :         : 7         : N              
+oEntradaULA2[15]             : G21       : output : 2.5 V             :         : 7         : N              
+oCPUControl[1]               : G22       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G23       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G24       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G25       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G26       :        :                   :         : 6         :                
+oLeituraReg1[9]              : G27       : output : 2.5 V             :         : 6         : N              
+oEscritaReg[21]              : G28       : output : 2.5 V             :         : 6         : N              
+VCCIO1                       : H1        : power  :                   : 2.5V    : 1         :                
+GND                          : H2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H4        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H5        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H6        :        :                   :         : 1         :                
+oImm[20]                     : H7        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H8        :        :                   :         : 8         :                
+GNDA3                        : H9        : gnd    :                   :         :           :                
+oImm[29]                     : H10       : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : H11       : power  :                   : 2.5V    : 8         :                
+oLeituraReg1[17]             : H12       : output : 2.5 V             :         : 8         : N              
+oEscritaReg[29]              : H13       : output : 2.5 V             :         : 8         : N              
+Regout[17]                   : H14       : output : 2.5 V             :         : 8         : N              
+oLeituraReg1[2]              : H15       : output : 2.5 V             :         : 7         : N              
+oEntradaULA2[30]             : H16       : output : 2.5 V             :         : 7         : N              
+oEntradaULA2[10]             : H17       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : H18       : power  :                   : 2.5V    : 7         :                
+oEntradaULA2[4]              : H19       : output : 2.5 V             :         : 7         : N              
+GNDA2                        : H20       : gnd    :                   :         :           :                
+oNovoPC[23]                  : H21       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H22       :        :                   :         : 6         :                
+Estado[2]                    : H23       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H24       :        :                   :         : 6         :                
+oLeituraReg2[15]             : H25       : output : 2.5 V             :         : 6         : N              
+PC[27]                       : H26       : output : 2.5 V             :         : 6         : N              
+GND                          : H27       : gnd    :                   :         :           :                
+VCCIO6                       : H28       : power  :                   : 2.5V    : 6         :                
+CLOCK                        : J1        : input  : 2.5 V             :         : 1         : N              
+GND                          : J2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J4        :        :                   :         : 1         :                
+oEscritaReg[20]              : J5        : output : 2.5 V             :         : 1         : N              
+oEscritaReg[22]              : J6        : output : 2.5 V             :         : 1         : N              
+oEscritaReg[7]               : J7        : output : 2.5 V             :         : 1         : N              
+VCCA3                        : J8        : power  :                   : 2.5V    :           :                
+VCCD_PLL3                    : J9        : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J10       :        :                   :         : 8         :                
+GND                          : J11       : gnd    :                   :         :           :                
+Regout[7]                    : J12       : output : 2.5 V             :         : 8         : N              
+Regout[3]                    : J13       : output : 2.5 V             :         : 8         : N              
+Regout[19]                   : J14       : output : 2.5 V             :         : 8         : N              
+oEntradaULA2[24]             : J15       : output : 2.5 V             :         : 7         : N              
+oLeituraReg1[25]             : J16       : output : 2.5 V             :         : 7         : N              
+oEntradaULA2[2]              : J17       : output : 2.5 V             :         : 7         : N              
+GND                          : J18       : gnd    :                   :         :           :                
+oLeituraReg1[20]             : J19       : output : 2.5 V             :         : 7         : N              
+VCCD_PLL2                    : J20       : power  :                   : 1.2V    :           :                
+VCCA2                        : J21       : power  :                   : 2.5V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J22       :        :                   :         : 6         :                
+oNovoPC[5]                   : J23       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J24       :        :                   :         : 6         :                
+oLeituraReg2[17]             : J25       : output : 2.5 V             :         : 6         : N              
+oEntradaULA2[11]             : J26       : output : 2.5 V             :         : 6         : N              
+Regin[2]                     : J27       : input  : 2.5 V             :         : 6         : N              
+Regin[3]                     : J28       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K2        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K4        :        :                   :         : 1         :                
+VCCIO1                       : K5        : power  :                   : 2.5V    : 1         :                
+GND                          : K6        : gnd    :                   :         :           :                
+oEscritaReg[10]              : K7        : output : 2.5 V             :         : 1         : N              
+oEscritaReg[13]              : K8        : output : 2.5 V             :         : 1         : N              
+VCCINT                       : K9        : power  :                   : 1.2V    :           :                
+GND                          : K10       : gnd    :                   :         :           :                
+VCCINT                       : K11       : power  :                   : 1.2V    :           :                
+GND                          : K12       : gnd    :                   :         :           :                
+VCCINT                       : K13       : power  :                   : 1.2V    :           :                
+GND                          : K14       : gnd    :                   :         :           :                
+VCCINT                       : K15       : power  :                   : 1.2V    :           :                
+GND                          : K16       : gnd    :                   :         :           :                
+VCCINT                       : K17       : power  :                   : 1.2V    :           :                
+GND                          : K18       : gnd    :                   :         :           :                
+VCCINT                       : K19       : power  :                   : 1.2V    :           :                
+GND                          : K20       : gnd    :                   :         :           :                
+oNovoPC[1]                   : K21       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K22       :        :                   :         : 6         :                
+GND                          : K23       : gnd    :                   :         :           :                
+VCCIO6                       : K24       : power  :                   : 2.5V    : 6         :                
+oSaidaULA[21]                : K25       : output : 2.5 V             :         : 6         : N              
+oImm[6]                      : K26       : output : 2.5 V             :         : 6         : N              
+oDadosLidosMemoria[19]       : K27       : output : 2.5 V             :         : 6         : N              
+oEntradaULA2[29]             : K28       : output : 2.5 V             :         : 6         : N              
+Regout[21]                   : L1        : output : 2.5 V             :         : 1         : N              
+Instr[20]                    : L2        : output : 2.5 V             :         : 1         : N              
+oImm[27]                     : L3        : output : 2.5 V             :         : 1         : N              
+oSaidaULA[24]                : L4        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L5        :        :                   :         : 1         :                
+Regout[14]                   : L6        : output : 2.5 V             :         : 1         : N              
+oEscritaReg[27]              : L7        : output : 2.5 V             :         : 1         : N              
+Regin[1]                     : L8        : input  : 2.5 V             :         : 1         : N              
+GND                          : L9        : gnd    :                   :         :           :                
+VCCINT                       : L10       : power  :                   : 1.2V    :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+VCCINT                       : L12       : power  :                   : 1.2V    :           :                
+GND                          : L13       : gnd    :                   :         :           :                
+VCCINT                       : L14       : power  :                   : 1.2V    :           :                
+GND                          : L15       : gnd    :                   :         :           :                
+VCCINT                       : L16       : power  :                   : 1.2V    :           :                
+GND                          : L17       : gnd    :                   :         :           :                
+VCCINT                       : L18       : power  :                   : 1.2V    :           :                
+GND                          : L19       : gnd    :                   :         :           :                
+VCCINT                       : L20       : power  :                   : 1.2V    :           :                
+oSaidaULA[14]                : L21       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L22       :        :                   :         : 6         :                
+oLeituraReg1[26]             : L23       : output : 2.5 V             :         : 6         : N              
+oEntradaULA2[22]             : L24       : output : 2.5 V             :         : 6         : N              
+oLeituraReg1[1]              : L25       : output : 2.5 V             :         : 6         : N              
+oLeituraReg1[14]             : L26       : output : 2.5 V             :         : 6         : N              
+oLeituraReg1[19]             : L27       : output : 2.5 V             :         : 6         : N              
+oEntradaULA2[3]              : L28       : output : 2.5 V             :         : 6         : N              
+Instr[17]                    : M1        : output : 2.5 V             :         : 1         : N              
+Regout[30]                   : M2        : output : 2.5 V             :         : 1         : N              
+oEscritaReg[9]               : M3        : output : 2.5 V             :         : 1         : N              
+oEscritaReg[11]              : M4        : output : 2.5 V             :         : 1         : N              
+oLeituraReg1[28]             : M5        : output : 2.5 V             :         : 1         : N              
+nSTATUS                      : M6        :        :                   :         : 1         :                
+Instr[21]                    : M7        : output : 2.5 V             :         : 1         : N              
+Regout[20]                   : M8        : output : 2.5 V             :         : 1         : N              
+VCCINT                       : M9        : power  :                   : 1.2V    :           :                
+GND                          : M10       : gnd    :                   :         :           :                
+VCCINT                       : M11       : power  :                   : 1.2V    :           :                
+GND                          : M12       : gnd    :                   :         :           :                
+VCCINT                       : M13       : power  :                   : 1.2V    :           :                
+GND                          : M14       : gnd    :                   :         :           :                
+VCCINT                       : M15       : power  :                   : 1.2V    :           :                
+GND                          : M16       : gnd    :                   :         :           :                
+VCCINT                       : M17       : power  :                   : 1.2V    :           :                
+GND                          : M18       : gnd    :                   :         :           :                
+VCCINT                       : M19       : power  :                   : 1.2V    :           :                
+GND                          : M20       : gnd    :                   :         :           :                
+oDadosLidosMemoria[23]       : M21       : output : 2.5 V             :         : 6         : N              
+MSEL2                        : M22       :        :                   :         : 6         :                
+oEntradaULA2[16]             : M23       : output : 2.5 V             :         : 6         : N              
+oEntradaULA2[17]             : M24       : output : 2.5 V             :         : 6         : N              
+oLeituraReg1[4]              : M25       : output : 2.5 V             :         : 6         : N              
+oEntradaULA2[23]             : M26       : output : 2.5 V             :         : 6         : N              
+oLeituraReg1[15]             : M27       : output : 2.5 V             :         : 6         : N              
+oLeituraReg1[21]             : M28       : output : 2.5 V             :         : 6         : N              
+VCCIO1                       : N1        : power  :                   : 2.5V    : 1         :                
+GND                          : N2        : gnd    :                   :         :           :                
+oEscritaReg[6]               : N3        : output : 2.5 V             :         : 1         : N              
+Regout[26]                   : N4        : output : 2.5 V             :         : 1         : N              
+VCCIO1                       : N5        : power  :                   : 2.5V    : 1         :                
+GND                          : N6        : gnd    :                   :         :           :                
+~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : N7        : input  : 2.5 V             :         : 1         : N              
+Regout[9]                    : N8        : output : 2.5 V             :         : 1         : N              
+GND                          : N9        : gnd    :                   :         :           :                
+VCCINT                       : N10       : power  :                   : 1.2V    :           :                
+GND                          : N11       : gnd    :                   :         :           :                
+VCCINT                       : N12       : power  :                   : 1.2V    :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+VCCINT                       : N14       : power  :                   : 1.2V    :           :                
+GND                          : N15       : gnd    :                   :         :           :                
+VCCINT                       : N16       : power  :                   : 1.2V    :           :                
+GND                          : N17       : gnd    :                   :         :           :                
+VCCINT                       : N18       : power  :                   : 1.2V    :           :                
+GND                          : N19       : gnd    :                   :         :           :                
+VCCINT                       : N20       : power  :                   : 1.2V    :           :                
+oEntradaULA2[27]             : N21       : output : 2.5 V             :         : 6         : N              
+MSEL0                        : N22       :        :                   :         : 6         :                
+GND                          : N23       : gnd    :                   :         :           :                
+VCCIO6                       : N24       : power  :                   : 2.5V    : 6         :                
+oEntradaULA2[21]             : N25       : output : 2.5 V             :         : 6         : N              
+oEntradaULA2[28]             : N26       : output : 2.5 V             :         : 6         : N              
+GND                          : N27       : gnd    :                   :         :           :                
+VCCIO6                       : N28       : power  :                   : 2.5V    : 6         :                
+Regout[4]                    : P1        : output : 2.5 V             :         : 1         : N              
+Regout[15]                   : P2        : output : 2.5 V             :         : 1         : N              
+~ALTERA_DCLK~                : P3        : output : 2.5 V             :         : 1         : N              
+nCONFIG                      : P4        :        :                   :         : 1         :                
+altera_reserved_tck          : P5        : input  : 2.5 V             :         : 1         : N              
+altera_reserved_tdo          : P6        : output : 2.5 V             :         : 1         : N              
+altera_reserved_tdi          : P7        : input  : 2.5 V             :         : 1         : N              
+altera_reserved_tms          : P8        : input  : 2.5 V             :         : 1         : N              
+VCCINT                       : P9        : power  :                   : 1.2V    :           :                
+GND                          : P10       : gnd    :                   :         :           :                
+VCCINT                       : P11       : power  :                   : 1.2V    :           :                
+GND                          : P12       : gnd    :                   :         :           :                
+VCCINT                       : P13       : power  :                   : 1.2V    :           :                
+GND                          : P14       : gnd    :                   :         :           :                
+VCCINT                       : P15       : power  :                   : 1.2V    :           :                
+GND                          : P16       : gnd    :                   :         :           :                
+VCCINT                       : P17       : power  :                   : 1.2V    :           :                
+GND                          : P18       : gnd    :                   :         :           :                
+VCCINT                       : P19       : power  :                   : 1.2V    :           :                
+GND                          : P20       : gnd    :                   :         :           :                
+oEntradaULA2[19]             : P21       : output : 2.5 V             :         : 5         : N              
+MSEL3                        : P22       :        :                   :         : 6         :                
+MSEL1                        : P23       :        :                   :         : 6         :                
+CONF_DONE                    : P24       :        :                   :         : 6         :                
+oEntradaULA2[0]              : P25       : output : 2.5 V             :         : 6         : N              
+oEntradaULA2[13]             : P26       : output : 2.5 V             :         : 6         : N              
+oEntradaULA2[7]              : P27       : output : 2.5 V             :         : 6         : N              
+~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : P28       : output : 2.5 V             :         : 6         : N              
+oLeituraReg2[19]             : R1        : output : 2.5 V             :         : 2         : N              
+Regout[13]                   : R2        : output : 2.5 V             :         : 2         : N              
+oLeituraReg2[14]             : R3        : output : 2.5 V             :         : 2         : N              
+Regout[1]                    : R4        : output : 2.5 V             :         : 2         : N              
+Instr[19]                    : R5        : output : 2.5 V             :         : 2         : N              
+oRd[3]                       : R6        : output : 2.5 V             :         : 2         : N              
+oLeituraReg2[30]             : R7        : output : 2.5 V             :         : 2         : N              
+nCE                          : R8        :        :                   :         : 1         :                
+GND                          : R9        : gnd    :                   :         :           :                
+VCCINT                       : R10       : power  :                   : 1.2V    :           :                
+GND                          : R11       : gnd    :                   :         :           :                
+VCCINT                       : R12       : power  :                   : 1.2V    :           :                
+GND                          : R13       : gnd    :                   :         :           :                
+VCCINT                       : R14       : power  :                   : 1.2V    :           :                
+GND                          : R15       : gnd    :                   :         :           :                
+VCCINT                       : R16       : power  :                   : 1.2V    :           :                
+GND                          : R17       : gnd    :                   :         :           :                
+VCCINT                       : R18       : power  :                   : 1.2V    :           :                
+GND                          : R19       : gnd    :                   :         :           :                
+VCCINT                       : R20       : power  :                   : 1.2V    :           :                
+oEntradaULA2[31]             : R21       : output : 2.5 V             :         : 5         : N              
+oEntradaULA2[18]             : R22       : output : 2.5 V             :         : 5         : N              
+PC[14]                       : R23       : output : 2.5 V             :         : 5         : N              
+oImm[4]                      : R24       : output : 2.5 V             :         : 5         : N              
+PC[23]                       : R25       : output : 2.5 V             :         : 5         : N              
+oDadosLidosMemoria[0]        : R26       : output : 2.5 V             :         : 5         : N              
+oEntradaULA2[26]             : R27       : output : 2.5 V             :         : 5         : N              
+PC[17]                       : R28       : output : 2.5 V             :         : 5         : N              
+VCCIO2                       : T1        : power  :                   : 2.5V    : 2         :                
+GND                          : T2        : gnd    :                   :         :           :                
+Instr[22]                    : T3        : output : 2.5 V             :         : 2         : N              
+Regout[0]                    : T4        : output : 2.5 V             :         : 2         : N              
+VCCIO2                       : T5        : power  :                   : 2.5V    : 2         :                
+GND                          : T6        : gnd    :                   :         :           :                
+Instr[4]                     : T7        : output : 2.5 V             :         : 2         : N              
+oLeituraReg2[12]             : T8        : output : 2.5 V             :         : 2         : N              
+VCCINT                       : T9        : power  :                   : 1.2V    :           :                
+GND                          : T10       : gnd    :                   :         :           :                
+VCCINT                       : T11       : power  :                   : 1.2V    :           :                
+GND                          : T12       : gnd    :                   :         :           :                
+VCCINT                       : T13       : power  :                   : 1.2V    :           :                
+GND                          : T14       : gnd    :                   :         :           :                
+VCCINT                       : T15       : power  :                   : 1.2V    :           :                
+GND                          : T16       : gnd    :                   :         :           :                
+VCCINT                       : T17       : power  :                   : 1.2V    :           :                
+GND                          : T18       : gnd    :                   :         :           :                
+VCCINT                       : T19       : power  :                   : 1.2V    :           :                
+GND                          : T20       : gnd    :                   :         :           :                
+oNovoPC[16]                  : T21       : output : 2.5 V             :         : 5         : N              
+oSaidaULA[28]                : T22       : output : 2.5 V             :         : 5         : N              
+GND                          : T23       : gnd    :                   :         :           :                
+VCCIO5                       : T24       : power  :                   : 2.5V    : 5         :                
+PC[28]                       : T25       : output : 2.5 V             :         : 5         : N              
+PC[29]                       : T26       : output : 2.5 V             :         : 5         : N              
+GND                          : T27       : gnd    :                   :         :           :                
+VCCIO5                       : T28       : power  :                   : 2.5V    : 5         :                
+Instr[23]                    : U1        : output : 2.5 V             :         : 2         : N              
+PC[5]                        : U2        : output : 2.5 V             :         : 2         : N              
+Instr[18]                    : U3        : output : 2.5 V             :         : 2         : N              
+Regout[8]                    : U4        : output : 2.5 V             :         : 2         : N              
+PC[11]                       : U5        : output : 2.5 V             :         : 2         : N              
+oNovoPC[11]                  : U6        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U7        :        :                   :         : 2         :                
+oCPUControl[7]               : U8        : output : 2.5 V             :         : 2         : N              
+GND                          : U9        : gnd    :                   :         :           :                
+VCCINT                       : U10       : power  :                   : 1.2V    :           :                
+GND                          : U11       : gnd    :                   :         :           :                
+VCCINT                       : U12       : power  :                   : 1.2V    :           :                
+GND                          : U13       : gnd    :                   :         :           :                
+VCCINT                       : U14       : power  :                   : 1.2V    :           :                
+GND                          : U15       : gnd    :                   :         :           :                
+VCCINT                       : U16       : power  :                   : 1.2V    :           :                
+GND                          : U17       : gnd    :                   :         :           :                
+VCCINT                       : U18       : power  :                   : 1.2V    :           :                
+GND                          : U19       : gnd    :                   :         :           :                
+VCCINT                       : U20       : power  :                   : 1.2V    :           :                
+oLeituraReg2[18]             : U21       : output : 2.5 V             :         : 5         : N              
+PC[13]                       : U22       : output : 2.5 V             :         : 5         : N              
+oSaidaULA[6]                 : U23       : output : 2.5 V             :         : 5         : N              
+oDadosLidosMemoria[25]       : U24       : output : 2.5 V             :         : 5         : N              
+oSaidaULA[3]                 : U25       : output : 2.5 V             :         : 5         : N              
+PC[1]                        : U26       : output : 2.5 V             :         : 5         : N              
+oSaidaULA[5]                 : U27       : output : 2.5 V             :         : 5         : N              
+oImm[15]                     : U28       : output : 2.5 V             :         : 5         : N              
+Instr[29]                    : V1        : output : 2.5 V             :         : 2         : N              
+oLeituraReg2[25]             : V2        : output : 2.5 V             :         : 2         : N              
+oLeituraReg2[16]             : V3        : output : 2.5 V             :         : 2         : N              
+Instr[5]                     : V4        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V6        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V8        :        :                   :         : 2         :                
+VCCINT                       : V9        : power  :                   : 1.2V    :           :                
+GND                          : V10       : gnd    :                   :         :           :                
+VCCINT                       : V11       : power  :                   : 1.2V    :           :                
+GND                          : V12       : gnd    :                   :         :           :                
+VCCINT                       : V13       : power  :                   : 1.2V    :           :                
+GND                          : V14       : gnd    :                   :         :           :                
+VCCINT                       : V15       : power  :                   : 1.2V    :           :                
+GND                          : V16       : gnd    :                   :         :           :                
+VCCINT                       : V17       : power  :                   : 1.2V    :           :                
+GND                          : V18       : gnd    :                   :         :           :                
+VCCINT                       : V19       : power  :                   : 1.2V    :           :                
+GND                          : V20       : gnd    :                   :         :           :                
+PC[25]                       : V21       : output : 2.5 V             :         : 5         : N              
+oSaidaULA[2]                 : V22       : output : 2.5 V             :         : 5         : N              
+PC[18]                       : V23       : output : 2.5 V             :         : 5         : N              
+oImm[8]                      : V24       : output : 2.5 V             :         : 5         : N              
+PC[24]                       : V25       : output : 2.5 V             :         : 5         : N              
+oImm[5]                      : V26       : output : 2.5 V             :         : 5         : N              
+oDadosLidosMemoria[22]       : V27       : output : 2.5 V             :         : 5         : N              
+PC[31]                       : V28       : output : 2.5 V             :         : 5         : N              
+oLeituraReg2[8]              : W1        : output : 2.5 V             :         : 2         : N              
+Instr[30]                    : W2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 2         :                
+VCCIO2                       : W5        : power  :                   : 2.5V    : 2         :                
+GND                          : W6        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W7        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 2         :                
+GND                          : W9        : gnd    :                   :         :           :                
+VCCINT                       : W10       : power  :                   : 1.2V    :           :                
+GND                          : W11       : gnd    :                   :         :           :                
+VCCINT                       : W12       : power  :                   : 1.2V    :           :                
+GND                          : W13       : gnd    :                   :         :           :                
+VCCINT                       : W14       : power  :                   : 1.2V    :           :                
+GND                          : W15       : gnd    :                   :         :           :                
+VCCINT                       : W16       : power  :                   : 1.2V    :           :                
+GND                          : W17       : gnd    :                   :         :           :                
+VCCINT                       : W18       : power  :                   : 1.2V    :           :                
+GND                          : W19       : gnd    :                   :         :           :                
+VCCINT                       : W20       : power  :                   : 1.2V    :           :                
+oDadosLidosMemoria[11]       : W21       : output : 2.5 V             :         : 5         : N              
+PC[22]                       : W22       : output : 2.5 V             :         : 5         : N              
+GND                          : W23       : gnd    :                   :         :           :                
+VCCIO5                       : W24       : power  :                   : 2.5V    : 5         :                
+oNovoPC[20]                  : W25       : output : 2.5 V             :         : 5         : N              
+oLeituraReg2[11]             : W26       : output : 2.5 V             :         : 5         : N              
+PC[26]                       : W27       : output : 2.5 V             :         : 5         : N              
+PC[30]                       : W28       : output : 2.5 V             :         : 5         : N              
+GND+                         : Y1        :        :                   :         : 2         :                
+Reset                        : Y2        : input  : 2.5 V             :         : 2         : N              
+PC[6]                        : Y3        : output : 2.5 V             :         : 2         : N              
+oRd[4]                       : Y4        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y5        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y6        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y7        :        :                   :         : 2         :                
+VCCA1                        : Y8        : power  :                   : 2.5V    :           :                
+VCCD_PLL1                    : Y9        : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y10       :        :                   :         : 3         :                
+GND                          : Y11       : gnd    :                   :         :           :                
+oDadosLidosMemoria[6]        : Y12       : output : 2.5 V             :         : 3         : N              
+oSaidaULA[10]                : Y13       : output : 2.5 V             :         : 3         : N              
+oSaidaULA[8]                 : Y14       : output : 2.5 V             :         : 3         : N              
+oLeituraReg2[5]              : Y15       : output : 2.5 V             :         : 3         : N              
+oNovoPC[9]                   : Y16       : output : 2.5 V             :         : 4         : N              
+oDadosLidosMemoria[28]       : Y17       : output : 2.5 V             :         : 4         : N              
+GND                          : Y18       : gnd    :                   :         :           :                
+oDadosLidosMemoria[15]       : Y19       : output : 2.5 V             :         : 4         : N              
+VCCD_PLL4                    : Y20       : power  :                   : 1.2V    :           :                
+VCCA4                        : Y21       : power  :                   : 2.5V    :           :                
+oDadosLidosMemoria[21]       : Y22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y23       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y24       :        :                   :         : 5         :                
+oCPUControl[6]               : Y25       : output : 2.5 V             :         : 5         : N              
+oCPUControl[8]               : Y26       : output : 2.5 V             :         : 5         : N              
+GND+                         : Y27       :        :                   :         : 5         :                
+GND+                         : Y28       :        :                   :         : 5         :                

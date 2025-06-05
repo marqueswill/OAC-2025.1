@@ -35,11 +35,11 @@ parameter
 	OPC_JAL        	= 7'b1101111,
 	
 	/* Funct 7 */
-	FUNCT7_ADD			 = 7'b0000000,
-   FUNCT7_SUB         = 7'b0100000,
-	FUNCT7_SLT			 = 7'b0000000,
-	FUNCT7_OR			 = 7'b0000000,
-	FUNCT7_AND			 = 7'b0000000,
+	FUNCT7_ADD			= 7'b0000000,
+   FUNCT7_SUB        = 7'b0100000,
+	FUNCT7_SLT			= 7'b0000000,
+	FUNCT7_OR			= 7'b0000000,
+	FUNCT7_AND			= 7'b0000000,
 	
 	/* Funct 3 */
 	FUNCT3_LW			= 3'b010,
@@ -54,8 +54,22 @@ parameter
 	
 	
 	/* Endereços */
-	TEXT_ADDRESS = 32'h0040_0000,
-	DATA_ADDRESS = 32'h1001_0000,
-	STACK_ADDRESS = 32'h1001_03FC;
+	TEXT_ADDRESS  = 32'h0040_0000,
+	DATA_ADDRESS  = 32'h1001_0000,
+	STACK_ADDRESS = 32'h1001_03FC,
+
+
+	/* IDS (OPCODE_FUNCT3_FUNCT7)*/
+	IDADD  = 20'h33_0_00,
+	IDADDI = 20'h13_0_XX,
+	IDAND  = 20'h33_7_00,
+	IDBEQ  = 20'h63_0_XX,
+	IDJAL  = 20'h6F_X_XX,
+	IDJALR = 20'h67_0_XX,
+	IDLW   = 20'h03_2_XX,
+	IDOR   = 20'h33_6_00,
+	IDSLT  = 20'h33_2_00,
+	IDSUB  = 20'h33_0_20,
+	IDSW   = 20'h23_2_XX;
 
 `endif
