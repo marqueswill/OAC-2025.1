@@ -8,18 +8,7 @@ module Uniciclo (
 	output reg   [31:0] PC,
 	output logic [31:0] Instr,
 	input  logic [4:0]  regin,
-	output logic [31:0] regout, //apagar daqui pra baixo
-	output logic [31:0] oSaidaULA,
-	output logic [31:0] oEntradaULA2,
-	output logic [31:0] oLeituraReg1,
-	output logic [31:0] oLeituraReg2,
-	output logic [31:0] oDadosLidosMemoria,
-	output logic [31:0] oEscritaReg,
-	output logic [10:0] oCPUControl,
-	output logic [4:0]  oRd,
-	output logic [31:0] oNovoPC,
-	output logic [31:0] oImm
-
+	output logic [31:0] regout
 );
 	
 	
@@ -40,18 +29,7 @@ wire [4:0] AluControl;
 
 //******************************************
 
-assign oSaidaULA          = SaidaULA;
-assign oEntradaULA2       = EntradaULA2;
-assign oLeituraReg1       = LeituraReg1;
-assign oLeituraReg2       = LeituraReg2;
-assign oDadosLidosMemoria = DadosLidosMemoria;
-assign oEscritaReg        = EscritaReg;
-assign oCPUControl        = {oALUOrg, oMem2Reg, oEscreveReg, LeMem, EscreveMem, oBranch, oJal, oJalr, oALUOp};
-assign oRd                = Instr[11:7];
-assign oImm					  = imm;
-assign oNovoPC = novoPC;
 assign ProxInst = PC + 32'd4;
-
 always @(*) begin
 		if (oJalr)
 			novoPC <= (LeituraReg1 + imm) & ~32'd1;
