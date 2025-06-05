@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TopDE
-Wed Jun 04 16:55:13 2025
+Thu Jun 05 14:24:36 2025
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -58,16 +58,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 04 16:55:13 2025       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 05 14:24:35 2025       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; TopDE                                       ;
 ; Top-level Entity Name              ; TopDE                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 3,940                                       ;
-;     Total combinational functions  ; 2,962                                       ;
+; Total logic elements               ; 3,968                                       ;
+;     Total combinational functions  ; 2,990                                       ;
 ;     Dedicated logic registers      ; 1,271                                       ;
 ; Total registers                    ; 1271                                        ;
-; Total pins                         ; 347                                         ;
+; Total pins                         ; 379                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 65,536                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -236,31 +236,31 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 3,940         ;
+; Estimated Total logic elements              ; 3,968         ;
 ;                                             ;               ;
-; Total combinational functions               ; 2962          ;
+; Total combinational functions               ; 2990          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 2303          ;
-;     -- 3 input functions                    ; 503           ;
-;     -- <=2 input functions                  ; 156           ;
+;     -- 4 input functions                    ; 2334          ;
+;     -- 3 input functions                    ; 501           ;
+;     -- <=2 input functions                  ; 155           ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 2734          ;
+;     -- normal mode                          ; 2762          ;
 ;     -- arithmetic mode                      ; 228           ;
 ;                                             ;               ;
 ; Total registers                             ; 1271          ;
 ;     -- Dedicated logic registers            ; 1271          ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
-; I/O pins                                    ; 347           ;
+; I/O pins                                    ; 379           ;
 ; Total memory bits                           ; 65536         ;
 ;                                             ;               ;
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; ClockDIV~reg0 ;
 ; Maximum fan-out                             ; 1026          ;
-; Total fan-out                               ; 18361         ;
-; Average fan-out                             ; 3.67          ;
+; Total fan-out                               ; 18480         ;
+; Average fan-out                             ; 3.63          ;
 +---------------------------------------------+---------------+
 
 
@@ -269,12 +269,12 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                               ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |TopDE                                                                                                                                  ; 2962 (4)            ; 1271 (3)                  ; 65536       ; 0            ; 0       ; 0         ; 347  ; 0            ; |TopDE                                                                                                                                                                                                                                                                                                                                            ; TopDE                             ; work         ;
-;    |Uniciclo:UNI1|                                                                                                                      ; 2785 (260)          ; 1156 (32)                 ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Uniciclo:UNI1                                                                                                                                                                                                                                                                                                                              ; Uniciclo                          ; work         ;
+; |TopDE                                                                                                                                  ; 2990 (4)            ; 1271 (3)                  ; 65536       ; 0            ; 0       ; 0         ; 379  ; 0            ; |TopDE                                                                                                                                                                                                                                                                                                                                            ; TopDE                             ; work         ;
+;    |Uniciclo:UNI1|                                                                                                                      ; 2813 (290)          ; 1156 (32)                 ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Uniciclo:UNI1                                                                                                                                                                                                                                                                                                                              ; Uniciclo                          ; work         ;
 ;       |ALU:ula|                                                                                                                         ; 201 (201)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Uniciclo:UNI1|ALU:ula                                                                                                                                                                                                                                                                                                                      ; ALU                               ; work         ;
-;       |ALUControl:aluControl|                                                                                                           ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Uniciclo:UNI1|ALUControl:aluControl                                                                                                                                                                                                                                                                                                        ; ALUControl                        ; work         ;
+;       |ALUControl:aluControl|                                                                                                           ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Uniciclo:UNI1|ALUControl:aluControl                                                                                                                                                                                                                                                                                                        ; ALUControl                        ; work         ;
 ;       |CPUControl:cpuControl|                                                                                                           ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Uniciclo:UNI1|CPUControl:cpuControl                                                                                                                                                                                                                                                                                                        ; CPUControl                        ; work         ;
-;       |ImmGen:imGerador|                                                                                                                ; 47 (47)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Uniciclo:UNI1|ImmGen:imGerador                                                                                                                                                                                                                                                                                                             ; ImmGen                            ; work         ;
+;       |ImmGen:imGerador|                                                                                                                ; 46 (46)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Uniciclo:UNI1|ImmGen:imGerador                                                                                                                                                                                                                                                                                                             ; ImmGen                            ; work         ;
 ;       |Registers:bancoRegister|                                                                                                         ; 2069 (2069)         ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Uniciclo:UNI1|Registers:bancoRegister                                                                                                                                                                                                                                                                                                      ; Registers                         ; work         ;
 ;       |ramD:MemDADOS|                                                                                                                   ; 92 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Uniciclo:UNI1|ramD:MemDADOS                                                                                                                                                                                                                                                                                                                ; ramD                              ; work         ;
 ;          |altsyncram:altsyncram_component|                                                                                              ; 92 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                ; altsyncram                        ; work         ;
@@ -373,10 +373,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 1271  ;
 ; Number of registers using Synchronous Clear  ; 22    ;
-; Number of registers using Synchronous Load   ; 65    ;
+; Number of registers using Synchronous Load   ; 36    ;
 ; Number of registers using Asynchronous Clear ; 1133  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1193  ;
+; Number of registers using Clock Enable       ; 1191  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -411,20 +411,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |TopDE|Uniciclo:UNI1|PC[26]                                                                                                                                                                    ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[3]                                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[5]                                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[19]                                               ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[2]                                                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[6]                                                ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[9]                                                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[6]                                                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[7]                                                ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
 ; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |TopDE|Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
 ; 26:1               ; 4 bits    ; 68 LEs        ; 52 LEs               ; 16 LEs                 ; Yes        ; |TopDE|Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |TopDE|Uniciclo:UNI1|ImmGen:imGerador|Selector13                                                                                                                                               ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TopDE|Uniciclo:UNI1|ALUControl:aluControl|Mux2                                                                                                                                                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TopDE|Uniciclo:UNI1|EscritaReg[1]                                                                                                                                                             ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |TopDE|Uniciclo:UNI1|oNovoPC[10]                                                                                                                                                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TopDE|Uniciclo:UNI1|EscritaReg[12]                                                                                                                                                            ;
 ; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |TopDE|Uniciclo:UNI1|ALU:ula|Selector26                                                                                                                                                        ;
 ; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |TopDE|Uniciclo:UNI1|Registers:bancoRegister|Mux14                                                                                                                                             ;
 ; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |TopDE|Uniciclo:UNI1|Registers:bancoRegister|Mux38                                                                                                                                             ;
@@ -651,29 +651,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 401                         ;
+; boundary_port         ; 433                         ;
 ; cycloneiii_ff         ; 1159                        ;
-;     CLR               ; 17                          ;
-;     CLR SLD           ; 29                          ;
+;     CLR               ; 48                          ;
 ;     ENA               ; 72                          ;
-;     ENA CLR           ; 1008                        ;
+;     ENA CLR           ; 1006                        ;
 ;     ENA CLR SLD       ; 20                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 2795                        ;
+; cycloneiii_lcell_comb ; 2824                        ;
 ;     arith             ; 220                         ;
 ;         2 data inputs ; 65                          ;
 ;         3 data inputs ; 155                         ;
-;     normal            ; 2575                        ;
+;     normal            ; 2604                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 26                          ;
-;         2 data inputs ; 30                          ;
-;         3 data inputs ; 278                         ;
-;         4 data inputs ; 2240                        ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 276                         ;
+;         4 data inputs ; 2271                        ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 18.70                       ;
-; Average LUT depth     ; 11.86                       ;
+; Max LUT depth         ; 20.70                       ;
+; Average LUT depth     ; 13.23                       ;
 +-----------------------+-----------------------------+
 
 
@@ -692,7 +691,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Wed Jun 04 16:54:55 2025
+    Info: Processing started: Thu Jun 05 14:24:18 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopDE -c TopDE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -720,12 +719,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file alucont
 Info (12021): Found 1 design units, including 1 entities, in source file cpucontrol.v
     Info (12023): Found entity 1: CPUControl File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/CPUControl.v Line: 5
 Info (12127): Elaborating entity "TopDE" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at TopDE.v(29): truncated value with size 32 to match size of target (2) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 29
+Warning (10230): Verilog HDL assignment warning at TopDE.v(31): truncated value with size 32 to match size of target (2) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 31
 Warning (10034): Output port "Estado" at TopDE.v(10) has no driver File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 10
-Info (12128): Elaborating entity "Uniciclo" for hierarchy "Uniciclo:UNI1" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 55
-Critical Warning (10237): Verilog HDL warning at Uniciclo.v(53): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 53
-Info (12128): Elaborating entity "Registers" for hierarchy "Uniciclo:UNI1|Registers:bancoRegister" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 95
-Info (12128): Elaborating entity "ramI" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 106
+Info (12128): Elaborating entity "Uniciclo" for hierarchy "Uniciclo:UNI1" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 59
+Info (12128): Elaborating entity "Registers" for hierarchy "Uniciclo:UNI1|Registers:bancoRegister" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 102
+Info (12128): Elaborating entity "ramI" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 113
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v Line: 89
 Info (12130): Elaborated megafunction instantiation "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v Line: 89
 Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v Line: 89
@@ -750,6 +748,8 @@ Info (12128): Elaborating entity "altsyncram_r5l1" for hierarchy "Uniciclo:UNI1|
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_keb2.tdf
     Info (12023): Found entity 1: altsyncram_keb2 File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_keb2.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_keb2" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|altsyncram_keb2:altsyncram1" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 38
+Warning (113028): 16378 out of 16384 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/de1_text.mif Line: 1
+    Warning (113027): Addresses ranging from 6 to 16383 are not initialized File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/de1_text.mif Line: 1
 Critical Warning (127004): Memory depth (1024) in the design file differs from memory depth (16384) in the Memory Initialization File "C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/de1_text.mif" -- truncated remaining initial content value to fit RAM File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v Line: 89
 Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
 Info (12130): Elaborated megafunction instantiation "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
@@ -765,7 +765,7 @@ Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "ramD" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 115
+Info (12128): Elaborating entity "ramD" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 122
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramD.v Line: 89
 Info (12130): Elaborated megafunction instantiation "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramD.v Line: 89
 Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramD.v Line: 89
@@ -804,15 +804,15 @@ Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:
     Info (12134): Parameter "SHIFT_COUNT_BITS" = "6"
     Info (12134): Parameter "WIDTH_WORD" = "32"
     Info (12134): Parameter "WIDTHAD" = "10"
-Info (12128): Elaborating entity "CPUControl" for hierarchy "Uniciclo:UNI1|CPUControl:cpuControl" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 131
+Info (12128): Elaborating entity "CPUControl" for hierarchy "Uniciclo:UNI1|CPUControl:cpuControl" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 138
 Warning (10230): Verilog HDL assignment warning at CPUControl.v(51): truncated value with size 32 to match size of target (10) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/CPUControl.v Line: 51
-Info (12128): Elaborating entity "ALUControl" for hierarchy "Uniciclo:UNI1|ALUControl:aluControl" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 139
+Info (12128): Elaborating entity "ALUControl" for hierarchy "Uniciclo:UNI1|ALUControl:aluControl" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 146
 Warning (10230): Verilog HDL assignment warning at ALUControl.v(30): truncated value with size 32 to match size of target (5) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ALUControl.v Line: 30
 Warning (10230): Verilog HDL assignment warning at ALUControl.v(33): truncated value with size 32 to match size of target (5) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ALUControl.v Line: 33
-Info (12128): Elaborating entity "ImmGen" for hierarchy "Uniciclo:UNI1|ImmGen:imGerador" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 147
-Info (12128): Elaborating entity "ALU" for hierarchy "Uniciclo:UNI1|ALU:ula" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 165
+Info (12128): Elaborating entity "ImmGen" for hierarchy "Uniciclo:UNI1|ImmGen:imGerador" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 154
+Info (12128): Elaborating entity "ALU" for hierarchy "Uniciclo:UNI1|ALU:ula" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 172
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.06.04.16:55:03 Progress: Loading sldbdf28158/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.06.05.14:24:26 Progress: Loading sldbdf28158/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -836,7 +836,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Registers.v Line: 48
+Info (13000): Registers with preset signals will power-up high File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 68
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Estado[0]" is stuck at GND File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 10
@@ -847,16 +847,16 @@ Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (144001): Generated suppressed messages file C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/output_files/TopDE.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4392 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4483 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 341 output pins
-    Info (21061): Implemented 3976 logic cells
+    Info (21059): Implemented 373 output pins
+    Info (21061): Implemented 4035 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4923 megabytes
-    Info: Processing ended: Wed Jun 04 16:55:13 2025
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4921 megabytes
+    Info: Processing ended: Thu Jun 05 14:24:36 2025
     Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+

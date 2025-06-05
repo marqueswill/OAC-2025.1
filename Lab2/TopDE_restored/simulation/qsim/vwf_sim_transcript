@@ -26,9 +26,11 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Jun 04 16:05:59 2025
+    Info: Processing started: Thu Jun 05 14:25:04 2025
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TopDE -c TopDE --vector_source=C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Waveform1.vwf --testbench_file=C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/Waveform1.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+s
 
 Completed successfully. 
 
@@ -55,13 +57,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Jun 04 16:06:00 2025
+    Info: Processing started: Thu Jun 05 14:25:05 2025
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/ TopDE -c TopDE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file TopDE.vo in folder "C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4675 megabytes
-    Info: Processing ended: Wed Jun 04 16:06:01 2025
+    Info: Peak virtual memory: 4672 megabytes
+    Info: Processing ended: Thu Jun 05 14:25:06 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -81,32 +83,32 @@ Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
+
 # do TopDE.do
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:06:02 on Jun 04,2025
+# Start time: 14:25:06 on Jun 05,2025
 # vlog -work work TopDE.vo 
 # -- Compiling module TopDE
 
 # 
 # Top level modules:
 # 	TopDE
-# End time: 16:06:02 on Jun 04,2025, Elapsed time: 0:00:00
+# End time: 14:25:06 on Jun 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:06:02 on Jun 04,2025
+# Start time: 14:25:07 on Jun 05,2025
 # vlog -work work Waveform1.vwf.vt 
+
 # -- Compiling module TopDE_vlg_vec_tst
 # 
 # Top level modules:
 # 	TopDE_vlg_vec_tst
-# End time: 16:06:02 on Jun 04,2025, Elapsed time: 0:00:00
+# End time: 14:25:07 on Jun 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.TopDE_vlg_vec_tst 
-# Start time: 16:06:02 on Jun 04,2025
+# Start time: 14:25:07 on Jun 05,2025
 # Loading work.TopDE_vlg_vec_tst
 # Loading work.TopDE
 # Loading altera_ver.dffeas
@@ -120,20 +122,20 @@ Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cycloneive_ver.cycloneive_ram_block
 # Loading cycloneive_ver.cycloneive_ram_register
 # Loading cycloneive_ver.cycloneive_ram_pulse_generator
-# ** Warning: (vsim-3017) Waveform1.vwf.vt(53): [TFMPC] - Too few port connections. Expected 21, found 17.
+# ** Warning: (vsim-3017) Waveform1.vwf.vt(54): [TFMPC] - Too few port connections. Expected 22, found 18.
 #    Time: 0 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1 File: TopDE.vo
-# ** Warning: (vsim-3722) Waveform1.vwf.vt(53): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
-# ** Warning: (vsim-3722) Waveform1.vwf.vt(53): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
-# ** Warning: (vsim-3722) Waveform1.vwf.vt(53): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
-# ** Warning: (vsim-3722) Waveform1.vwf.vt(53): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# ** Warning: (vsim-3722) Waveform1.vwf.vt(54): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Warning: (vsim-3722) Waveform1.vwf.vt(54): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) Waveform1.vwf.vt(54): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) Waveform1.vwf.vt(54): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 13066 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 13046 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#25
 
-# ** Note: $finish    : Waveform1.vwf.vt(75)
-#    Time: 4 us  Iteration: 0  Instance: /TopDE_vlg_vec_tst
-# End time: 16:06:03 on Jun 04,2025, Elapsed time: 0:00:01
+# ** Note: $finish    : Waveform1.vwf.vt(77)
+#    Time: 16 us  Iteration: 0  Instance: /TopDE_vlg_vec_tst
+# End time: 14:25:07 on Jun 05,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 6
 
 Completed successfully. 
@@ -146,7 +148,7 @@ Reading C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/sim
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/TopDE_20250604160603.sim.vwf
+Writing the resulting VWF to C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/TopDE_20250605142507.sim.vwf
 
 Finished VCD to VWF conversion.
 

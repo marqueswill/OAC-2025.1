@@ -1,3 +1,2 @@
-Info (10281): Verilog HDL Declaration information at Uniciclo.v(40): object "CPUControl" differs only in case from object "cpuControl" in the same scope File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 40
-Info (10281): Verilog HDL Declaration information at Uniciclo.v(36): object "AluControl" differs only in case from object "aluControl" in the same scope File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 36
+Info (10281): Verilog HDL Declaration information at Uniciclo.v(38): object "AluControl" differs only in case from object "aluControl" in the same scope File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 38
 Warning (10268): Verilog HDL information at Registers.v(37): always construct contains both blocking and non-blocking assignments File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Registers.v Line: 37

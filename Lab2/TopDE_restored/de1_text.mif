@@ -1,38 +1,13 @@
--- Copyright (C) 2019  Intel Corporation. All rights reserved.
--- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and any partner logic 
--- functions, and any output files from any of the foregoing 
--- (including device programming or simulation files), and any 
--- associated documentation or information are expressly subject 
--- to the terms and conditions of the Intel Program License 
--- Subscription Agreement, the Intel Quartus Prime License Agreement,
--- the Intel FPGA IP License Agreement, or other applicable license
--- agreement, including, without limitation, that your use is for
--- the sole purpose of programming logic devices manufactured by
--- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details, at
--- https://fpgasoftware.intel.com/eula.
-
--- Quartus Prime generated Memory Initialization File (.mif)
-
-WIDTH=32;
-DEPTH=16384;
-
-ADDRESS_RADIX=HEX;
-DATA_RADIX=HEX;
-
-CONTENT BEGIN
-	0000  :   00A00293;
-	0001  :   00F30313;
-	0002  :   00512023;
-	0003  :   0062A2B3;
-	0004  :   0052F2B3;
-	0005  :   00012283;
-	0006  :   005322B3;
-	0007  :   0052E2B3;
-	0008  :   00012283;
-	0009  :   405302B3;
-	000A  :   005282B3;
-	000B  :   FD5FF2EF;
-	[000C..3FFF]  :   00000000;
+DEPTH = 16384;
+WIDTH = 32;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+00000000 : 00428293;   % 2: addi t0, t0, 4 %
+00000001 : 010003ef;   % 3: jal t2, le2 %
+00000002 : 00128293;   % 4: addi t0, t0, 1 %
+00000003 : 00530313;   % 5: addi t1, t1, 5 %
+00000004 : 00628463;   % 6: beq t0, t1, end %
+00000005 : 00038067;   % 8: jr t2 %
 END;

@@ -16,7 +16,9 @@ module TopDE (
 	output logic [31:0] oEscritaReg,
 	output logic [9:0] oCPUControl,
 	output logic [4:0] oRd,
-	output logic [31:0] oImm
+	output logic [31:0] oImm, 
+	output logic [31:0] oNovoPC
+	
 );
 	
 		
@@ -51,7 +53,9 @@ module TopDE (
 		.oEscritaReg(oEscritaReg),
 		.oCPUControl(oCPUControl),
 		.oRd(oRd),
-		.oImm(oImm)
+		.oImm(oImm),
+		.oNovoPC(oNovoPC)
+
 	);
 
 					

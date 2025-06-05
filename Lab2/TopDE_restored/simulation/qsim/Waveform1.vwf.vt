@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/04/2025 16:06:00"
+// Generated on "06/05/2025 14:25:05"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          TopDE
 // 
@@ -46,6 +46,7 @@ wire [31:0] oEscritaReg;
 wire [31:0] oImm;
 wire [31:0] oLeituraReg1;
 wire [31:0] oLeituraReg2;
+wire [31:0] oNovoPC;
 wire [4:0] oRd;
 wire [31:0] oSaidaULA;
 
@@ -67,28 +68,35 @@ TopDE i1 (
 	.oImm(oImm),
 	.oLeituraReg1(oLeituraReg1),
 	.oLeituraReg2(oLeituraReg2),
+	.oNovoPC(oNovoPC),
 	.oRd(oRd),
 	.oSaidaULA(oSaidaULA)
 );
 initial 
 begin 
-#4000000 $finish;
+#16000000 $finish;
 end 
 
 // Reset
 initial
 begin
 	Reset = 1'b0;
-	Reset = #10000 1'b1;
-	Reset = #30000 1'b0;
+	Reset = #120000 1'b1;
+	Reset = #40000 1'b0;
 end 
 
 // CLOCK
-always
+initial
 begin
+	CLOCK = 1'b1;
+	# 20000;
+	repeat(399)
+	begin
+		CLOCK = 1'b0;
+		CLOCK = #20000 1'b1;
+		# 20000;
+	end
 	CLOCK = 1'b0;
-	CLOCK = #10000 1'b1;
-	#10000;
 end 
 // Regin[ 4 ]
 initial

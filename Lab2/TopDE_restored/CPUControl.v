@@ -31,8 +31,8 @@ assign oRegWrite = outputs[7];
 assign oMemRead  = outputs[6];
 assign oMemWrite = outputs[5];
 assign oBranch   = outputs[4];
-assign oJalr     = outputs[3];
-assign oJal      = outputs[2];
+assign oJal      = outputs[3];
+assign oJalr     = outputs[2];
 assign oALUOp    = outputs[1:0];
 
 always @(*) begin

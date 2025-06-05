@@ -8,7 +8,7 @@ module Uniciclo (
 	output reg   [31:0] PC,
 	output logic [31:0] Instr,
 	input  logic [4:0]  regin,
-	output logic [31:0] regout,
+	output logic [31:0] regout, //apagar daqui pra baixo
 	output logic [31:0] oSaidaULA,
 	output logic [31:0] oEntradaULA2,
 	output logic [31:0] oLeituraReg1,
@@ -17,7 +17,9 @@ module Uniciclo (
 	output logic [31:0] oEscritaReg,
 	output logic [10:0] oCPUControl,
 	output logic [4:0]  oRd,
+	output logic [31:0] oNovoPC,
 	output logic [31:0] oImm
+
 );
 	
 	
@@ -27,7 +29,7 @@ initial begin
 	regout <= 32'b0;
 end
 		
-wire [31:0] EntradaULA2, SaidaULA, DadosLidosMemoria, imm, ProxInst;
+wire [31:0] EntradaULA2, SaidaULA, DadosLidosMemoria, imm, ProxInst, novoPC;
 wire [31:0] EscritaReg, LeituraReg1, LeituraReg2;
 
 
@@ -37,32 +39,37 @@ wire [4:0] AluControl;
 
 
 //******************************************
-wire [9:0] CPUControl;
+
 assign oSaidaULA          = SaidaULA;
 assign oEntradaULA2       = EntradaULA2;
 assign oLeituraReg1       = LeituraReg1;
 assign oLeituraReg2       = LeituraReg2;
 assign oDadosLidosMemoria = DadosLidosMemoria;
 assign oEscritaReg        = EscritaReg;
-assign oCPUControl        = {oALUOrg, oMem2Reg, oEscreveReg, LeMem, EscreveMem, oBranch, oJalr, oJal, oALUOp};
+assign oCPUControl        = {oALUOrg, oMem2Reg, oEscreveReg, LeMem, EscreveMem, oBranch, oJal, oJalr, oALUOp};
 assign oRd                = Instr[11:7];
 assign oImm					  = imm;
- 
+assign oNovoPC = novoPC;
+assign ProxInst = PC + 32'd4;
+
+always @(*) begin
+		if (oJalr)
+			novoPC <= (LeituraReg1 + imm) & ~32'd1;
+		else if ((oBranch && oZeroAlu) || oJal)
+			novoPC <= PC + imm;
+		else
+			novoPC <= ProxInst;
+end
 
 always @(posedge clockCPU or posedge reset) begin
-	ProxInst <= PC + 32'd4;
-	
-	if (reset) 
+	if (reset) begin
 		PC <= TEXT_ADDRESS;
-	else if (oJalr)
-		PC <= (LeituraReg1 + imm) & ~32'd1;         // PC = (R[rs1] + imm) & ~1
-	else if (oJal)            
-		PC <= PC + imm;                             // PC=PC+{imm, 1’b0} -> o ImmGen coloca o 0
-	else if (oBranch && oZeroAlu)
-		PC <= PC + imm;                             // if(op==op_branch and R[rs1]-R[rs2]==0) then PC=PC+{imm,1’b0}
-	else
-		PC <= ProxInst;
+	end else begin
+		PC <= novoPC;
+	end
 end
+
+
 
 
 //Banco de registradores
