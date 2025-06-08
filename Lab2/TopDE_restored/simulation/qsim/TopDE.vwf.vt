@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/05/2025 14:48:07"
+// Generated on "06/07/2025 19:35:15"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          TopDE
 // 
@@ -57,20 +57,20 @@ begin
 #16000000 $finish;
 end 
 
-// CLOCK
-always
-begin
-	CLOCK = 1'b0;
-	CLOCK = #10000 1'b1;
-	#10000;
-end 
-
 // Reset
 initial
 begin
 	Reset = 1'b0;
 	Reset = #40000 1'b1;
 	Reset = #40000 1'b0;
+end 
+
+// CLOCK
+always
+begin
+	CLOCK = 1'b0;
+	CLOCK = #5000 1'b1;
+	#5000;
 end 
 // Regin[ 4 ]
 initial
@@ -80,22 +80,22 @@ end
 // Regin[ 3 ]
 initial
 begin
-	Regin[3] = 1'b0;
+	Regin[3] = 1'b1;
 end 
 // Regin[ 2 ]
 initial
 begin
-	Regin[2] = 1'b1;
+	Regin[2] = 1'b0;
 end 
 // Regin[ 1 ]
 initial
 begin
-	Regin[1] = 1'b0;
+	Regin[1] = 1'b1;
 end 
 // Regin[ 0 ]
 initial
 begin
-	Regin[0] = 1'b1;
+	Regin[0] = 1'b0;
 end 
 endmodule
 

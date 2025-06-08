@@ -61,6 +61,7 @@ always @(*) begin
 		EscritaReg <= SaidaULA;
 end
 
+
 Registers bancoRegister(
     .iCLK(clockCPU),
     .iRST(reset),

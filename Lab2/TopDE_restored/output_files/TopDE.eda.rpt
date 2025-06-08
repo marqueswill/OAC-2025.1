@@ -1,5 +1,5 @@
 EDA Netlist Writer report for TopDE
-Thu Jun 05 15:07:59 2025
+Sat Jun 07 19:35:18 2025
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Jun 05 15:07:59 2025 ;
+; EDA Netlist Writer Status ; Successful - Sat Jun 07 19:35:18 2025 ;
 ; Revision Name             ; TopDE                                 ;
-; Top-level Entity Name     ; ALU                                   ;
+; Top-level Entity Name     ; TopDE                                 ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -51,7 +51,8 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                                            ; Setting                   ;
 +---------------------------------------------------------------------------------------------------+---------------------------+
 ; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate functional simulation netlist                                                            ; On                        ;
+; Generate functional simulation netlist                                                            ; Off                       ;
+; Time scale                                                                                        ; 1 ps                      ;
 ; Truncate long hierarchy paths                                                                     ; Off                       ;
 ; Map illegal HDL characters                                                                        ; Off                       ;
 ; Flatten buses into individual nodes                                                               ; Off                       ;
@@ -66,13 +67,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                     ;
-+------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                ;
-+------------------------------------------------------------------------------------------------+
-; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//TopDE.vo ;
-+------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                            ;
++-----------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                       ;
++-----------------------------------------------------------------------------------------------------------------------+
+; C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//TopDE_7_1200mv_85c_slow.vo     ;
+; C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//TopDE_7_1200mv_0c_slow.vo      ;
+; C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//TopDE_min_1200mv_0c_fast.vo    ;
+; C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//TopDE.vo                       ;
+; C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//TopDE_7_1200mv_85c_v_slow.sdo  ;
+; C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//TopDE_7_1200mv_0c_v_slow.sdo   ;
+; C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//TopDE_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//TopDE_v.sdo                    ;
++-----------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -95,14 +103,21 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Jun 05 15:07:58 2025
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/ TopDE -c TopDE
+    Info: Processing started: Sat Jun 07 19:35:15 2025
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory=C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/ TopDE -c TopDE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file TopDE.vo in folder "C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_7_1200mv_85c_slow.vo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_7_1200mv_0c_slow.vo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_min_1200mv_0c_fast.vo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE.vo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_7_1200mv_85c_v_slow.sdo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_7_1200mv_0c_v_slow.sdo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_min_1200mv_0c_v_fast.sdo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_v.sdo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4655 megabytes
-    Info: Processing ended: Thu Jun 05 15:07:59 2025
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 4702 megabytes
+    Info: Processing ended: Sat Jun 07 19:35:18 2025
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
 
 

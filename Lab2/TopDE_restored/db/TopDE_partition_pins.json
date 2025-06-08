@@ -4,411 +4,435 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "oResult[0]",
+					"name" : "ClockDIV",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[1]",
+					"name" : "PC[0]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[2]",
+					"name" : "PC[1]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[3]",
+					"name" : "PC[2]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[4]",
+					"name" : "PC[3]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[5]",
+					"name" : "PC[4]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[6]",
+					"name" : "PC[5]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[7]",
+					"name" : "PC[6]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[8]",
+					"name" : "PC[7]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[9]",
+					"name" : "PC[8]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[10]",
+					"name" : "PC[9]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[11]",
+					"name" : "PC[10]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[12]",
+					"name" : "PC[11]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[13]",
+					"name" : "PC[12]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[14]",
+					"name" : "PC[13]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[15]",
+					"name" : "PC[14]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[16]",
+					"name" : "PC[15]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[17]",
+					"name" : "PC[16]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[18]",
+					"name" : "PC[17]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[19]",
+					"name" : "PC[18]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[20]",
+					"name" : "PC[19]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[21]",
+					"name" : "PC[20]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[22]",
+					"name" : "PC[21]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[23]",
+					"name" : "PC[22]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[24]",
+					"name" : "PC[23]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[25]",
+					"name" : "PC[24]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[26]",
+					"name" : "PC[25]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[27]",
+					"name" : "PC[26]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[28]",
+					"name" : "PC[27]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[29]",
+					"name" : "PC[28]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[30]",
+					"name" : "PC[29]",
 					"strict" : false
 				},
 				{
-					"name" : "oResult[31]",
+					"name" : "PC[30]",
 					"strict" : false
 				},
 				{
-					"name" : "oZero",
+					"name" : "PC[31]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[0]",
+					"name" : "Instr[0]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[0]",
+					"name" : "Instr[1]",
 					"strict" : false
 				},
 				{
-					"name" : "iControl[2]",
+					"name" : "Instr[2]",
 					"strict" : false
 				},
 				{
-					"name" : "iControl[0]",
+					"name" : "Instr[3]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[31]",
+					"name" : "Instr[4]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[31]",
+					"name" : "Instr[5]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[30]",
+					"name" : "Instr[6]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[30]",
+					"name" : "Instr[7]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[29]",
+					"name" : "Instr[8]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[29]",
+					"name" : "Instr[9]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[28]",
+					"name" : "Instr[10]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[28]",
+					"name" : "Instr[11]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[27]",
+					"name" : "Instr[12]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[27]",
+					"name" : "Instr[13]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[26]",
+					"name" : "Instr[14]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[26]",
+					"name" : "Instr[15]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[25]",
+					"name" : "Instr[16]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[25]",
+					"name" : "Instr[17]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[24]",
+					"name" : "Instr[18]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[24]",
+					"name" : "Instr[19]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[23]",
+					"name" : "Instr[20]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[23]",
+					"name" : "Instr[21]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[22]",
+					"name" : "Instr[22]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[22]",
+					"name" : "Instr[23]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[21]",
+					"name" : "Instr[24]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[21]",
+					"name" : "Instr[25]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[20]",
+					"name" : "Instr[26]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[20]",
+					"name" : "Instr[27]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[19]",
+					"name" : "Instr[28]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[19]",
+					"name" : "Instr[29]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[18]",
+					"name" : "Instr[30]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[18]",
+					"name" : "Instr[31]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[17]",
+					"name" : "Regout[0]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[17]",
+					"name" : "Regout[1]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[16]",
+					"name" : "Regout[2]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[16]",
+					"name" : "Regout[3]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[15]",
+					"name" : "Regout[4]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[15]",
+					"name" : "Regout[5]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[14]",
+					"name" : "Regout[6]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[14]",
+					"name" : "Regout[7]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[13]",
+					"name" : "Regout[8]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[13]",
+					"name" : "Regout[9]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[12]",
+					"name" : "Regout[10]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[12]",
+					"name" : "Regout[11]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[11]",
+					"name" : "Regout[12]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[11]",
+					"name" : "Regout[13]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[10]",
+					"name" : "Regout[14]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[10]",
+					"name" : "Regout[15]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[9]",
+					"name" : "Regout[16]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[9]",
+					"name" : "Regout[17]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[8]",
+					"name" : "Regout[18]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[8]",
+					"name" : "Regout[19]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[7]",
+					"name" : "Regout[20]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[7]",
+					"name" : "Regout[21]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[6]",
+					"name" : "Regout[22]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[6]",
+					"name" : "Regout[23]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[5]",
+					"name" : "Regout[24]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[5]",
+					"name" : "Regout[25]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[4]",
+					"name" : "Regout[26]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[4]",
+					"name" : "Regout[27]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[3]",
+					"name" : "Regout[28]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[3]",
+					"name" : "Regout[29]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[2]",
+					"name" : "Regout[30]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[2]",
+					"name" : "Regout[31]",
 					"strict" : false
 				},
 				{
-					"name" : "iA[1]",
+					"name" : "Regin[2]",
 					"strict" : false
 				},
 				{
-					"name" : "iB[1]",
+					"name" : "Regin[3]",
 					"strict" : false
 				},
 				{
-					"name" : "iControl[3]",
+					"name" : "Regin[1]",
 					"strict" : false
 				},
 				{
-					"name" : "iControl[4]",
+					"name" : "Regin[0]",
 					"strict" : false
 				},
 				{
-					"name" : "iControl[1]",
+					"name" : "Regin[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
 					"strict" : false
 				}
 			]
