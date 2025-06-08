@@ -1,0 +1,251 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim
+vALU
+Z1 !s110 1749146879
+!i10b 1
+!s100 OR458m[__DoGSIQR7gdgL0
+IejTQCRIgWnlPKYLaQGUiI2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1749146879
+Z4 8TopDE.vo
+Z5 FTopDE.vo
+Z6 L0 32
+Z7 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z8 !s108 1749146879.000000
+Z9 !s107 TopDE.vo|
+Z10 !s90 -work|work|TopDE.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@a@l@u
+vALU_vlg_vec_tst
+R1
+!i10b 1
+!s100 UzC^>]oQbYLMdYmY_h>`^0
+IZM]3`YP[Um`bO[HC9UUH;2
+R2
+R0
+w1749146878
+8ALU.vwf.vt
+FALU.vwf.vt
+Z13 L0 30
+R7
+r1
+!s85 0
+31
+R8
+!s107 ALU.vwf.vt|
+!s90 -work|work|ALU.vwf.vt|
+!i113 1
+R11
+R12
+n@a@l@u_vlg_vec_tst
+vALUControl
+Z14 !s110 1748895704
+!i10b 1
+!s100 LP:SEi0obbAUlJZ]6SJ<Y0
+IJC=F[CcBA9=BD<C8_n:M^2
+R2
+R0
+w1748895704
+R4
+R5
+R6
+R7
+r1
+!s85 0
+31
+Z15 !s108 1748895704.000000
+R9
+R10
+!i113 1
+R11
+R12
+n@a@l@u@control
+vALUControl_vlg_vec_tst
+R14
+!i10b 1
+!s100 jaLUC@k^NPFS^iM2[WGoU2
+I<TNaKn=T366[QRLzcCCeN3
+R2
+R0
+w1748895703
+8ALUControl.vwf.vt
+FALUControl.vwf.vt
+R13
+R7
+r1
+!s85 0
+31
+R15
+!s107 ALUControl.vwf.vt|
+!s90 -work|work|ALUControl.vwf.vt|
+!i113 1
+R11
+R12
+n@a@l@u@control_vlg_vec_tst
+vCPUControl
+Z16 !s110 1748969119
+!i10b 1
+!s100 9z]R<_ST]cYGS1E4E=f@J3
+IhJJ^9Dcn@2^3R7GiHP<be1
+R2
+R0
+w1748969119
+R4
+R5
+R6
+R7
+r1
+!s85 0
+31
+Z17 !s108 1748969119.000000
+R9
+R10
+!i113 1
+R11
+R12
+n@c@p@u@control
+vCPUControl_vlg_vec_tst
+R16
+!i10b 1
+!s100 0:ha[UV:a;_Eb@P4`_SH23
+IlM7DB:9<Kg=B`DLR;g]7h2
+R2
+R0
+w1748969118
+8CPUControl.vwf.vt
+FCPUControl.vwf.vt
+R13
+R7
+r1
+!s85 0
+31
+R17
+!s107 CPUControl.vwf.vt|
+!s90 -work|work|CPUControl.vwf.vt|
+!i113 1
+R11
+R12
+n@c@p@u@control_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 n7d]PYThLA^@MG3OjQn_c3
+I:_f>]UZoZBD3_>l`:e3:?2
+R2
+R0
+R3
+R4
+R5
+L0 6278
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vTopDE
+!s110 1749335718
+!i10b 1
+!s100 [bGFn52j1W>TifIE>ica70
+ILJ1hXfUbM0Mbo]7o^c8N82
+R2
+Z18 dC:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim
+w1749335717
+R4
+R5
+R6
+R7
+r1
+!s85 0
+31
+Z19 !s108 1749335718.000000
+R9
+R10
+!i113 1
+R11
+R12
+n@top@d@e
+vTopDE_vlg_vec_tst
+!s110 1749335719
+!i10b 1
+!s100 enZaRG6bWo=YjOnYSGVlR2
+IQZC@O>Y1HSE[]KVgAh@Fm1
+R2
+R18
+w1749335715
+8TopDE.vwf.vt
+FTopDE.vwf.vt
+R13
+R7
+r1
+!s85 0
+31
+R19
+!s107 TopDE.vwf.vt|
+!s90 -work|work|TopDE.vwf.vt|
+!i113 1
+R11
+R12
+n@top@d@e_vlg_vec_tst
+vUniciclo
+Z20 !s110 1749139832
+!i10b 1
+!s100 K4UJf]:b0;b:>9R]Qemb32
+IMDNWH57T<XGNJB]z30hSo3
+R2
+R0
+w1749139831
+R4
+R5
+R6
+R7
+r1
+!s85 0
+31
+Z21 !s108 1749139832.000000
+R9
+R10
+!i113 1
+R11
+R12
+n@uniciclo
+vUniciclo_vlg_vec_tst
+R20
+!i10b 1
+!s100 =aJ^VTT7hVe_Mngjl^6R03
+IbElNi4C[No^R1K>G4Fc?c0
+R2
+R0
+w1749139830
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+R13
+R7
+r1
+!s85 0
+31
+R21
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+n@uniciclo_vlg_vec_tst

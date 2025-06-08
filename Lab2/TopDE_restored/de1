@@ -1,0 +1,28 @@
+Address     Code        Basic                        Line Source
+
+0x00400000  0x00a00513  addi x10,x0,10               3    	addi a0,x0,10    #aqui vc bota qual número da sequência vc quer 
+0x00400004  0x00100293  addi x5,x0,1                 5    	addi t0, x0, 1
+0x00400008  0x00000433  add x8,x0,x0                 6    	add s0, x0, x0
+0x0040000c  0x008000ef  jal x1,8                     8    	jal ra, Fibonacci
+0x00400010  0x0440006f  jal x0,68                    9    	j print
+0x00400014  0x00a2a333  slt x6,x5,x10                13   	slt t1, t0, a0
+0x00400018  0x02030c63  beq x6,x0,56                 14           beq t1, x0, CasoBase
+0x0040001c  0xff810113  addi x2,x2,-8                15   	addi sp, sp, -8
+0x00400020  0x00112023  sw x1,0(x2)                  16   	sw ra, 0(sp)
+0x00400024  0x00a12223  sw x10,4(x2)                 17   	sw a0, 4(sp)
+0x00400028  0xfff50513  addi x10,x10,-1              18   	addi a0, a0, -1
+0x0040002c  0xfe9ff0ef  jal x1,-24                   19   	jal ra, Fibonacci
+0x00400030  0x00412583  lw x11,4(x2)                 21   	lw a1, 4(sp)
+0x00400034  0x00a12223  sw x10,4(x2)                 22   	sw a0, 4(sp)
+0x00400038  0xffe58513  addi x10,x11,-2              23   	addi a0, a1, -2
+0x0040003c  0xfd9ff0ef  jal x1,-40                   24   	jal ra, Fibonacci
+0x00400040  0x00412583  lw x11,4(x2)                 25   	lw a1, 4(sp)
+0x00400044  0x00b50533  add x10,x10,x11              26   	add a0, a0, a1
+0x00400048  0x00012083  lw x1,0(x2)                  27   	lw ra, 0(sp)
+0x0040004c  0x00810113  addi x2,x2,8                 28   	addi sp, sp, 8 
+0x00400050  0x00008067  jalr x0,x1,0                 31   	jalr x0,x1,0
+0x00400054  0x00a002b3  add x5,x0,x10                35   	add t0, x0, a0
+0x00400058  0x03630313  addi x6,x6,54                36   	addi t1, t1, 54
+0x0040005c  0x406282b3  sub x5,x5,x6                 37   	sub t0, t0, t1 # 1
+0x00400060  0x0052f2b3  and x5,x5,x5                 38   	and t0, t0, t0 # 1
+0x00400064  0x0052e2b3  or x5,x5,x5                  39   	or  t0, t0, t0 # 1

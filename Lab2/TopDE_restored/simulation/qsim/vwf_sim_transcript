@@ -1,0 +1,228 @@
+Determining the location of the ModelSim executable...
+
+Using: c:/intelfpga_lite/19.1/modelsim_ase/win32aloem/
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TopDE -c TopDE --vector_source="C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.vwf" --testbench_file="C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/TopDE.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Copyright (C) 2019  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Sat Jun 07 19:35:14 2025
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TopDE -c TopDE --vector_source=C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.vwf --testbench_file=C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/TopDE.vwf.vt
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the timing simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/" TopDE -c TopDE
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Copyright (C) 2019  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Sat Jun 07 19:35:15 2025
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory=C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/ TopDE -c TopDE
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file TopDE_7_1200mv_85c_slow.vo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_7_1200mv_0c_slow.vo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_min_1200mv_0c_fast.vo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE.vo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_7_1200mv_85c_v_slow.sdo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_7_1200mv_0c_v_slow.sdo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_min_1200mv_0c_v_fast.sdo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TopDE_v.sdo in folder "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4702 megabytes
+    Info: Processing ended: Sat Jun 07 19:35:18 2025
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/TopDE.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+c:/intelfpga_lite/19.1/modelsim_ase/win32aloem//vsim -c -do TopDE.do
+
+Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+# do TopDE.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Jun 07,2025
+# vlog -work work TopDE.vo 
+# -- Compiling module TopDE
+
+# 
+# Top level modules:
+# 	TopDE
+# End time: 19:35:18 on Jun 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:35:18 on Jun 07,2025
+# vlog -work work TopDE.vwf.vt 
+# -- Compiling module TopDE_vlg_vec_tst
+
+# 
+# Top level modules:
+# 	TopDE_vlg_vec_tst
+# End time: 19:35:19 on Jun 07,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+
+# vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.TopDE_vlg_vec_tst 
+# Start time: 19:35:19 on Jun 07,2025
+# Loading work.TopDE_vlg_vec_tst
+# Loading work.TopDE
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_jtag
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# 
+# Loading instances from TopDE_v.sdo
+# ** Warning: (vsim-3017) TopDE.vwf.vt(44): [TFMPC] - Too few port connections. Expected 12, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1 File: TopDE.vo
+# ** Warning: (vsim-3722) TopDE.vwf.vt(44): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Warning: (vsim-3722) TopDE.vwf.vt(44): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) TopDE.vwf.vt(44): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) TopDE.vwf.vt(44): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: Design size of 12563 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# Loading timing data from TopDE_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst File: TopDE.vwf.vt
+
+# after#25
+
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:8445 ps, d:8461 ps, 222 ps );
+#    Time: 8461 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a18 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:658436 ps, d:658645 ps, 222 ps );
+#    Time: 658645 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:738440 ps, d:738480 ps, 222 ps );
+#    Time: 738480 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:898445 ps, d:898577 ps, 222 ps );
+#    Time: 898577 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a18 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:978440 ps, d:978480 ps, 222 ps );
+#    Time: 978480 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:1058450 ps, d:1058466 ps, 222 ps );
+#    Time: 1058466 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:1218436 ps, d:1218645 ps, 222 ps );
+#    Time: 1218645 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:1298440 ps, d:1298480 ps, 222 ps );
+#    Time: 1298480 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:1458445 ps, d:1458577 ps, 222 ps );
+#    Time: 1458577 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a18 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:1538440 ps, d:1538480 ps, 222 ps );
+#    Time: 1538480 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:1778436 ps, d:1778645 ps, 222 ps );
+#    Time: 1778645 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:1858440 ps, d:1858480 ps, 222 ps );
+#    Time: 1858480 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:2018445 ps, d:2018577 ps, 222 ps );
+#    Time: 2018577 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a18 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:2098440 ps, d:2098480 ps, 222 ps );
+#    Time: 2098480 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:2178450 ps, d:2178466 ps, 222 ps );
+#    Time: 2178466 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 /datain_a_register
+# Simulation time: 705917 ps
+
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:2338436 ps, d:2338645 ps, 222 ps );
+#    Time: 2338645 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:2418440 ps, d:2418480 ps, 222 ps );
+#    Time: 2418480 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:2578445 ps, d:2578577 ps, 222 ps );
+#    Time: 2578577 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a18 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:2658440 ps, d:2658480 ps, 222 ps );
+#    Time: 2658480 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:2898436 ps, d:2898645 ps, 222 ps );
+#    Time: 2898645 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:2978440 ps, d:2978480 ps, 222 ps );
+#    Time: 2978480 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:3138445 ps, d:3138577 ps, 222 ps );
+#    Time: 3138577 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a18 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:3218440 ps, d:3218480 ps, 222 ps );
+#    Time: 3218480 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:3298450 ps, d:3298466 ps, 222 ps );
+#    Time: 3298466 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:3628446 ps, d:3628460 ps, 222 ps );
+#    Time: 3628460 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a0 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:3628430 ps, d:3628470 ps, 222 ps );
+#    Time: 3628470 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a9 /addr_a_register
+
+# ** Error: /build/swbuild/SJ/nightly/19.1std/670/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4543): $hold( posedge clk &&& reset:3778440 ps, d:3778480 ps, 222 ps );
+#    Time: 3778480 ps  Iteration: 0  Instance: /TopDE_vlg_vec_tst/i1/\UNI1|MemDADOS|altsyncram_component|auto_generated|altsyncram1|ram_block3a27 /datain_a_register
+# Simulation time: 705917 ps
+
+# ** Note: $finish    : TopDE.vwf.vt(57)
+#    Time: 16 us  Iteration: 0  Instance: /TopDE_vlg_vec_tst
+# End time: 19:35:26 on Jun 07,2025, Elapsed time: 0:00:07
+# Errors: 27, Warnings: 6
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.vwf...
+
+Reading C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/TopDE.msim.vcd...
+
+Processing channel transitions... 
+
+Writing the resulting VWF to C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/simulation/qsim/TopDE_20250607193526.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.
