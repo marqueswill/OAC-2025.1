@@ -259,8 +259,8 @@ always @(posedge iCLK or posedge iRST) begin
 				end
 				4'd11:
 				begin
-					 regEstado <= 4'd0; // Estado 11
-					 EscrevePC<=1;
+					 regEstado <= 4'd12; // Estado 11
+					 EscrevePC<=0;
 					 EscrevePCCond<=0;
 						IouD<=0;
 						LeMem<=0;
@@ -272,6 +272,23 @@ always @(posedge iCLK or posedge iRST) begin
 						OrigBULA<=2'b10;
 						ALUOp<=2'b00;
 						EscreveReg<=1;
+						EscrevePCB<=0;
+				end
+				4'd12:
+				begin
+					 regEstado <= 4'd0; // Estado 12
+					 EscrevePC<=1;
+					 EscrevePCCond<=0;
+						IouD<=0;
+						LeMem<=0;
+						EscreveMem<=0;
+						EscreveIR<=0;
+						Mem2Reg<=2'b01;
+						OrigPC<=1;
+						OrigAULA<=2'b01;
+						OrigBULA<=2'b10;
+						ALUOp<=2'b00;
+						EscreveReg<=0;
 						EscrevePCB<=0;
 				end
             default: 
