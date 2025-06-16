@@ -62,6 +62,26 @@
 				{
 					"name" : "regin[0]",
 					"strict" : false
+				},
+				{
+					"name" : "clockMem",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
 				}
 			]
 		}

@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Jun 10 17:20:24 2025
+Analysis & Synthesis Status : Successful - Mon Jun 16 17:39:22 2025
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : TopDE
 Top-level Entity Name : Multiciclo
 Family : Cyclone IV E
-Total logic elements : 2
-    Total combinational functions : 2
-    Dedicated logic registers : 0
-Total registers : 0
+Total logic elements : 391
+    Total combinational functions : 361
+    Dedicated logic registers : 244
+Total registers : 244
 Total pins : 108
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 65,536
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

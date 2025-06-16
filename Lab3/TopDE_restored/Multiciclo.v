@@ -29,14 +29,12 @@ assign RS2    = InstReg[24:20];
 assign RD     = InstReg[11:7];
 
 
-wire [31:0] wPCNext, wEndereco, wDadoEscritaReg, wImm, wEntrada1ULA, wEntrada2ULA, wDadoMem, wDado1, wDado2;
+wire [31:0] wPCNext, wEndereco, wDadoEscritaReg, wImm, wEntrada1ULA, wEntrada2ULA, wInstReg, wMemReg, wDadoMem, wDado1, wDado2;
 wire wEscrevePCCond, wEscrevePC, wIouD, wEscreveMem, wLeMem, wEscreveIR;
 wire wOrigPC, wEscrevePCB, wEscreveReg, wZero;
 wire [1:0] wMem2Reg, wALUOp, wOrigAULA, wOrigBULA;
 wire [4:0] oALUControl;
 
-
-// wire [3:0] proximo; lógica interna do controle
 
 initial
 	begin
@@ -51,7 +49,7 @@ initial
 //******************************************
 // Aqui vai o seu código do seu processador
 
-// SEQUENCIAL
+// SEQUENCIAL /////////
 
 // PC
 always @(posedge clockCPU or posedge reset)
@@ -82,7 +80,7 @@ always @(posedge clockCPU or posedge reset)
 
 
 
-// BLOCOS
+// Controle CPU
 CPUControl controle_multiciclo (	
 	.iClock(clockCPU),
 	.iInstruction(InstReg),
@@ -142,9 +140,12 @@ ALU ula(
     .oZero(wZero)
 );
 
+// Memória
+ramI MemC (.address(wEndereco[11:2]), .clock(clockMem), .data(B), .wren(wEscreveMem & ~wEndereco[28]), .q(wInstReg));
+ramD MemD (.address(wEndereco[11:2]), .clock(clockMem), .data(B), .wren(wEscreveMem &  wEndereco[28]), .q(wMemReg));
+///////////////
 
-// MUXES
-
+// MUXES //////
 // Origem PC
 always @(*) begin
 	if (wOrigPC)
@@ -192,14 +193,15 @@ always @(*) begin
 		wEntrada2ULA <= B;
 end
 
-//wire [31:0] wIouD, MemData, rmem;
-//wire EscreveMem;
-//assign EscreveMem = 1'b0;
-//ramI MemC (.address(wIouD[11:2]), .clock(clockMem), .data(B), .wren(EscreveMem & ~wIouD[28]), .q(Instr));
-//ramD MemD (.address(wIouD[11:2]), .clock(clockMem), .data(B), .wren(EscreveMem & wIouD[28]), .q(MemData));
-//assign rmem = wIouD[28]? MemData : Instr;
+// tecnicamente dá pra se livrar desse mux
+always @(*) begin
+	if (wEndereco[28])
+		wDadoMem <= wMemReg;
+	else
+		wDadoMem <= wInstReg;
+end
 
-	
+///////////////
 //*****************************************
 	
 			
