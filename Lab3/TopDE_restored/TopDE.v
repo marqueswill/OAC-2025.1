@@ -15,23 +15,11 @@ module TopDE (
 	output logic [31:0] oA,
 	output logic [31:0] oB,
 	output logic [31:0] oInstReg,
-	output logic [31:0] oMemReg
+	output logic [31:0] oMemReg,
+	output logic [31:0] oAdress
 );
 
-/*
-initial 
-	ClockDIV <= 1'b1;
 
-reg [1:0] counter = 0;
-
-always @(posedge CLOCK) begin
-	counter <= counter + 1;
-	if (counter == 2'b11) begin
-		ClockDIV <= ~ClockDIV;
-		counter <= 0;
-	end
-end
-*/
 
 Multiciclo MULT1 (
 	.clockCPU(CLOCK), 
@@ -49,7 +37,8 @@ Multiciclo MULT1 (
 	.oA(oA),
 	.oB(oB),
 	.oInstReg(oInstReg),
-	.oMemReg(oMemReg)
+	.oMemReg(oMemReg),
+	.oAdress(oAdress)
 );
 
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TopDE
-Sat Jun 21 13:46:20 2025
+Sat Jun 21 18:02:11 2025
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -61,16 +61,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jun 21 13:46:20 2025       ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 21 18:02:11 2025       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; TopDE                                       ;
 ; Top-level Entity Name              ; TopDE                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,047                                       ;
-;     Total combinational functions  ; 2,967                                       ;
+; Total logic elements               ; 4,061                                       ;
+;     Total combinational functions  ; 2,982                                       ;
 ;     Dedicated logic registers      ; 1,476                                       ;
 ; Total registers                    ; 1476                                        ;
-; Total pins                         ; 300                                         ;
+; Total pins                         ; 332                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 65,536                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -236,31 +236,31 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 4,047       ;
+; Estimated Total logic elements              ; 4,061       ;
 ;                                             ;             ;
-; Total combinational functions               ; 2967        ;
+; Total combinational functions               ; 2982        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 2353        ;
-;     -- 3 input functions                    ; 462         ;
-;     -- <=2 input functions                  ; 152         ;
+;     -- 4 input functions                    ; 2361        ;
+;     -- 3 input functions                    ; 497         ;
+;     -- <=2 input functions                  ; 124         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 2830        ;
+;     -- normal mode                          ; 2845        ;
 ;     -- arithmetic mode                      ; 137         ;
 ;                                             ;             ;
 ; Total registers                             ; 1476        ;
 ;     -- Dedicated logic registers            ; 1476        ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 300         ;
+; I/O pins                                    ; 332         ;
 ; Total memory bits                           ; 65536       ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; CLOCK~input ;
 ; Maximum fan-out                             ; 1296        ;
-; Total fan-out                               ; 18740       ;
-; Average fan-out                             ; 3.66        ;
+; Total fan-out                               ; 19043       ;
+; Average fan-out                             ; 3.67        ;
 +---------------------------------------------+-------------+
 
 
@@ -269,12 +269,12 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                               ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |TopDE                                                                                                                                  ; 2967 (1)            ; 1476 (0)                  ; 65536       ; 0            ; 0       ; 0         ; 300  ; 0            ; |TopDE                                                                                                                                                                                                                                                                                                                                            ; TopDE                             ; work         ;
-;    |Multiciclo:MULT1|                                                                                                                   ; 2794 (293)          ; 1364 (224)                ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1                                                                                                                                                                                                                                                                                                                           ; Multiciclo                        ; work         ;
-;       |ALU:ula|                                                                                                                         ; 193 (193)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1|ALU:ula                                                                                                                                                                                                                                                                                                                   ; ALU                               ; work         ;
+; |TopDE                                                                                                                                  ; 2982 (1)            ; 1476 (0)                  ; 65536       ; 0            ; 0       ; 0         ; 332  ; 0            ; |TopDE                                                                                                                                                                                                                                                                                                                                            ; TopDE                             ; work         ;
+;    |Multiciclo:MULT1|                                                                                                                   ; 2809 (312)          ; 1364 (224)                ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1                                                                                                                                                                                                                                                                                                                           ; Multiciclo                        ; work         ;
+;       |ALU:ula|                                                                                                                         ; 196 (196)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1|ALU:ula                                                                                                                                                                                                                                                                                                                   ; ALU                               ; work         ;
 ;       |ALUControl:aluControl|                                                                                                           ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1|ALUControl:aluControl                                                                                                                                                                                                                                                                                                     ; ALUControl                        ; work         ;
-;       |ControleMulticiclo:controle_multiciclo|                                                                                          ; 35 (35)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1|ControleMulticiclo:controle_multiciclo                                                                                                                                                                                                                                                                                    ; ControleMulticiclo                ; work         ;
-;       |ImmGen:imGerador|                                                                                                                ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1|ImmGen:imGerador                                                                                                                                                                                                                                                                                                          ; ImmGen                            ; work         ;
+;       |ControleMulticiclo:controle_multiciclo|                                                                                          ; 29 (29)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1|ControleMulticiclo:controle_multiciclo                                                                                                                                                                                                                                                                                    ; ControleMulticiclo                ; work         ;
+;       |ImmGen:imGerador|                                                                                                                ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1|ImmGen:imGerador                                                                                                                                                                                                                                                                                                          ; ImmGen                            ; work         ;
 ;       |Registers:bancoRegister|                                                                                                         ; 2066 (2066)         ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1|Registers:bancoRegister                                                                                                                                                                                                                                                                                                   ; Registers                         ; work         ;
 ;       |ramD:MemD|                                                                                                                       ; 93 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1|ramD:MemD                                                                                                                                                                                                                                                                                                                 ; ramD                              ; work         ;
 ;          |altsyncram:altsyncram_component|                                                                                              ; 93 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
@@ -402,7 +402,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Total registers                              ; 1476  ;
 ; Number of registers using Synchronous Clear  ; 22    ;
-; Number of registers using Synchronous Load   ; 37    ;
+; Number of registers using Synchronous Load   ; 36    ;
 ; Number of registers using Asynchronous Clear ; 1181  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1383  ;
@@ -415,7 +415,7 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Multiciclo:MULT1|PC[22]                                                                                                                                                                                                                                                                                                         ; 4       ;
+; Multiciclo:MULT1|PC[22]                                                                                                                                                                                                                                                                                                         ; 5       ;
 ; Multiciclo:MULT1|Registers:bancoRegister|registers[2][2]                                                                                                                                                                                                                                                                        ; 3       ;
 ; Multiciclo:MULT1|Registers:bancoRegister|registers[2][3]                                                                                                                                                                                                                                                                        ; 3       ;
 ; Multiciclo:MULT1|Registers:bancoRegister|registers[2][4]                                                                                                                                                                                                                                                                        ; 3       ;
@@ -428,7 +428,7 @@ Encoding Type:  One-Hot
 ; Multiciclo:MULT1|Registers:bancoRegister|registers[2][16]                                                                                                                                                                                                                                                                       ; 3       ;
 ; Multiciclo:MULT1|Registers:bancoRegister|registers[3][28]                                                                                                                                                                                                                                                                       ; 3       ;
 ; Multiciclo:MULT1|Registers:bancoRegister|registers[2][28]                                                                                                                                                                                                                                                                       ; 3       ;
-; Multiciclo:MULT1|PCBack[22]                                                                                                                                                                                                                                                                                                     ; 1       ;
+; Multiciclo:MULT1|PCBack[22]                                                                                                                                                                                                                                                                                                     ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; Total number of inverted registers = 16                                                                                                                                                                                                                                                                                         ;         ;
@@ -440,28 +440,28 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[5]                                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopDE|Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[5]                                     ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopDE|Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[31]                                               ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                     ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopDE|Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[1]                                                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[7]                                                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[9]                                                ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|A[31]                                                                                                                                                                 ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|B[7]                                                                                                                                                                  ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |TopDE|Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[1]                                                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[8]                                                ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3] ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|A[0]                                                                                                                                                                  ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |TopDE|Multiciclo:MULT1|B[0]                                                                                                                                                                  ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |TopDE|Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
 ; 26:1               ; 4 bits    ; 68 LEs        ; 52 LEs               ; 16 LEs                 ; Yes        ; |TopDE|Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|ALUControl:aluControl|Mux2                                                                                                                                            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|ImmGen:imGerador|Selector13                                                                                                                                           ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |TopDE|Multiciclo:MULT1|ALU:ula|Selector29                                                                                                                                                    ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|wEntrada1ULA[4]                                                                                                                                                       ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|wEntrada2ULA[23]                                                                                                                                                      ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|wDadoEscritaReg[8]                                                                                                                                                    ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|wEntrada2ULA[10]                                                                                                                                                      ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|Registers:bancoRegister|Mux64                                                                                                                                         ;
-; 130:1              ; 4 bits    ; 344 LEs       ; 12 LEs               ; 332 LEs                ; No         ; |TopDE|Multiciclo:MULT1|wEntrada2ULA[3]                                                                                                                                                       ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |TopDE|Multiciclo:MULT1|wEntrada2ULA[12]                                                                                                                                                      ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |TopDE|Multiciclo:MULT1|ALU:ula|Selector30                                                                                                                                                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|wEntrada1ULA[28]                                                                                                                                                      ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|wEntrada2ULA[31]                                                                                                                                                      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|wDadoEscritaReg[17]                                                                                                                                                   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|wEntrada2ULA[5]                                                                                                                                                       ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |TopDE|Multiciclo:MULT1|Registers:bancoRegister|Mux93                                                                                                                                         ;
+; 130:1              ; 4 bits    ; 344 LEs       ; 12 LEs               ; 332 LEs                ; No         ; |TopDE|Multiciclo:MULT1|wEntrada2ULA[4]                                                                                                                                                       ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |TopDE|Multiciclo:MULT1|wEntrada2ULA[15]                                                                                                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -686,6 +686,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                      ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; wren ; Input ; Info     ; Explicitly unconnected                                                                                                                       ;
 ; rden ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -715,27 +716,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 354                         ;
+; boundary_port         ; 386                         ;
 ; cycloneiii_ff         ; 1364                        ;
 ;     CLR               ; 64                          ;
 ;     ENA               ; 232                         ;
-;     ENA CLR           ; 1037                        ;
-;     ENA CLR SLD       ; 21                          ;
+;     ENA CLR           ; 1038                        ;
+;     ENA CLR SLD       ; 20                          ;
 ;     ENA SCLR          ; 10                          ;
-; cycloneiii_lcell_comb ; 2800                        ;
+; cycloneiii_lcell_comb ; 2816                        ;
 ;     arith             ; 129                         ;
 ;         2 data inputs ; 36                          ;
 ;         3 data inputs ; 93                          ;
-;     normal            ; 2671                        ;
+;     normal            ; 2687                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 24                          ;
-;         2 data inputs ; 56                          ;
-;         3 data inputs ; 300                         ;
-;         4 data inputs ; 2290                        ;
+;         1 data inputs ; 25                          ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 335                         ;
+;         4 data inputs ; 2298                        ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 5.24                        ;
+; Max LUT depth         ; 18.40                       ;
+; Average LUT depth     ; 5.48                        ;
 +-----------------------+-----------------------------+
 
 
@@ -754,7 +755,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sat Jun 21 13:46:05 2025
+    Info: Processing started: Sat Jun 21 18:01:56 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopDE -c TopDE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -785,24 +786,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file control
     Info (12023): Found entity 1: ControleMulticiclo File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/ControleMulticiclo.v Line: 5
 Info (12127): Elaborating entity "TopDE" for the top level hierarchy
 Warning (10034): Output port "ClockDIV" at TopDE.v(8) has no driver File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 8
-Info (12128): Elaborating entity "Multiciclo" for hierarchy "Multiciclo:MULT1" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 53
-Warning (10036): Verilog HDL or VHDL warning at Multiciclo.v(28): object "OPCODE" assigned a value but never read File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 28
-Warning (10036): Verilog HDL or VHDL warning at Multiciclo.v(29): object "FUNCT7" assigned a value but never read File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 29
-Warning (10036): Verilog HDL or VHDL warning at Multiciclo.v(30): object "FUNCT3" assigned a value but never read File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 30
-Warning (10034): Output port "oPCBack" at Multiciclo.v(15) has no driver File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 15
-Warning (10034): Output port "oSaidaULA" at Multiciclo.v(16) has no driver File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 16
-Warning (10034): Output port "oA" at Multiciclo.v(17) has no driver File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 17
-Warning (10034): Output port "oB" at Multiciclo.v(18) has no driver File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 18
-Warning (10034): Output port "oInstReg" at Multiciclo.v(19) has no driver File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 19
-Warning (10034): Output port "oMemReg" at Multiciclo.v(21) has no driver File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 21
-Info (12128): Elaborating entity "ControleMulticiclo" for hierarchy "Multiciclo:MULT1|ControleMulticiclo:controle_multiciclo" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 106
-Info (12128): Elaborating entity "ALUControl" for hierarchy "Multiciclo:MULT1|ALUControl:aluControl" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 113
+Info (12128): Elaborating entity "Multiciclo" for hierarchy "Multiciclo:MULT1" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 42
+Warning (10036): Verilog HDL or VHDL warning at Multiciclo.v(37): object "FUNCT7" assigned a value but never read File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 37
+Warning (10036): Verilog HDL or VHDL warning at Multiciclo.v(38): object "FUNCT3" assigned a value but never read File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 38
+Info (12128): Elaborating entity "ControleMulticiclo" for hierarchy "Multiciclo:MULT1|ControleMulticiclo:controle_multiciclo" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 117
+Info (12128): Elaborating entity "ALUControl" for hierarchy "Multiciclo:MULT1|ALUControl:aluControl" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 124
 Warning (10230): Verilog HDL assignment warning at ALUControl.v(30): truncated value with size 32 to match size of target (5) File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/ALUControl.v Line: 30
 Warning (10230): Verilog HDL assignment warning at ALUControl.v(33): truncated value with size 32 to match size of target (5) File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/ALUControl.v Line: 33
-Info (12128): Elaborating entity "Registers" for hierarchy "Multiciclo:MULT1|Registers:bancoRegister" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 132
-Info (12128): Elaborating entity "ImmGen" for hierarchy "Multiciclo:MULT1|ImmGen:imGerador" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 138
-Info (12128): Elaborating entity "ALU" for hierarchy "Multiciclo:MULT1|ALU:ula" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 147
-Info (12128): Elaborating entity "ramI" for hierarchy "Multiciclo:MULT1|ramI:MemC" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 150
+Info (12128): Elaborating entity "Registers" for hierarchy "Multiciclo:MULT1|Registers:bancoRegister" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 143
+Info (12128): Elaborating entity "ImmGen" for hierarchy "Multiciclo:MULT1|ImmGen:imGerador" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 149
+Info (12128): Elaborating entity "ALU" for hierarchy "Multiciclo:MULT1|ALU:ula" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 158
+Info (12128): Elaborating entity "ramI" for hierarchy "Multiciclo:MULT1|ramI:MemC" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 161
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/ramI.v Line: 89
 Info (12130): Elaborated megafunction instantiation "Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/ramI.v Line: 89
 Info (12133): Instantiated megafunction "Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/ramI.v Line: 89
@@ -827,8 +821,8 @@ Info (12128): Elaborating entity "altsyncram_r5l1" for hierarchy "Multiciclo:MUL
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_keb2.tdf
     Info (12023): Found entity 1: altsyncram_keb2 File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/db/altsyncram_keb2.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_keb2" for hierarchy "Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|altsyncram_keb2:altsyncram1" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/db/altsyncram_r5l1.tdf Line: 38
-Warning (113028): 16377 out of 16384 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/de1_text.mif Line: 1
-    Warning (113027): Addresses ranging from 7 to 16383 are not initialized File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/de1_text.mif Line: 1
+Warning (113028): 16369 out of 16384 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/de1_text.mif Line: 1
+    Warning (113027): Addresses ranging from 15 to 16383 are not initialized File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/de1_text.mif Line: 1
 Critical Warning (127004): Memory depth (1024) in the design file differs from memory depth (16384) in the Memory Initialization File "C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/de1_text.mif" -- truncated remaining initial content value to fit RAM File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/ramI.v Line: 89
 Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
 Info (12130): Elaborated megafunction instantiation "Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
@@ -844,7 +838,7 @@ Info (12133): Instantiated megafunction "Multiciclo:MULT1|ramI:MemC|altsyncram:a
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "Multiciclo:MULT1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "ramD" for hierarchy "Multiciclo:MULT1|ramD:MemD" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 151
+Info (12128): Elaborating entity "ramD" for hierarchy "Multiciclo:MULT1|ramD:MemD" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 162
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/ramD.v Line: 89
 Info (12130): Elaborated megafunction instantiation "Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/ramD.v Line: 89
 Info (12133): Instantiated megafunction "Multiciclo:MULT1|ramD:MemD|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/ramD.v Line: 89
@@ -884,7 +878,7 @@ Info (12133): Instantiated megafunction "Multiciclo:MULT1|ramD:MemD|altsyncram:a
     Info (12134): Parameter "WIDTH_WORD" = "32"
     Info (12134): Parameter "WIDTHAD" = "10"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.06.21.13:46:13 Progress: Loading sldbdf28158/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.06.21.18:02:04 Progress: Loading sldbdf28158/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -908,217 +902,25 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 67
+Info (13000): Registers with preset signals will power-up high File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/Multiciclo.v Line: 75
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ClockDIV" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 8
-    Warning (13410): Pin "oPCBack[0]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[1]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[2]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[3]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[4]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[5]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[6]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[7]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[8]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[9]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[10]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[11]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[12]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[13]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[14]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[15]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[16]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[17]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[18]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[19]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[20]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[21]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[22]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[23]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[24]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[25]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[26]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[27]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[28]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[29]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[30]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oPCBack[31]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 13
-    Warning (13410): Pin "oSaidaULA[0]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[1]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[2]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[3]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[4]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[5]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[6]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[7]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[8]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[9]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[10]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[11]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[12]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[13]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[14]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[15]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[16]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[17]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[18]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[19]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[20]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[21]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[22]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[23]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[24]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[25]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[26]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[27]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[28]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[29]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[30]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oSaidaULA[31]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 14
-    Warning (13410): Pin "oA[0]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[1]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[2]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[3]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[4]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[5]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[6]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[7]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[8]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[9]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[10]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[11]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[12]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[13]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[14]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[15]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[16]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[17]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[18]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[19]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[20]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[21]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[22]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[23]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[24]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[25]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[26]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[27]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[28]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[29]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[30]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oA[31]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 15
-    Warning (13410): Pin "oB[0]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[1]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[2]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[3]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[4]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[5]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[6]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[7]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[8]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[9]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[10]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[11]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[12]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[13]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[14]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[15]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[16]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[17]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[18]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[19]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[20]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[21]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[22]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[23]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[24]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[25]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[26]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[27]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[28]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[29]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[30]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oB[31]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 16
-    Warning (13410): Pin "oInstReg[0]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[1]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[2]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[3]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[4]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[5]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[6]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[7]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[8]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[9]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[10]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[11]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[12]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[13]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[14]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[15]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[16]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[17]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[18]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[19]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[20]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[21]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[22]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[23]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[24]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[25]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[26]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[27]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[28]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[29]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[30]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oInstReg[31]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 17
-    Warning (13410): Pin "oMemReg[0]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[1]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[2]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[3]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[4]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[5]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[6]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[7]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[8]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[9]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[10]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[11]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[12]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[13]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[14]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[15]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[16]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[17]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[18]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[19]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[20]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[21]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[22]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[23]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[24]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[25]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[26]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[27]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[28]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[29]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[30]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
-    Warning (13410): Pin "oMemReg[31]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/TopDE.v Line: 19
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab3/TopDE_restored/output_files/TopDE.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4484 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4530 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 294 output pins
-    Info (21061): Implemented 4115 logic cells
+    Info (21059): Implemented 326 output pins
+    Info (21061): Implemented 4129 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 214 warnings
-    Info: Peak virtual memory: 4854 megabytes
-    Info: Processing ended: Sat Jun 21 13:46:20 2025
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Sat Jun 21 18:02:11 2025
     Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +------------------------------------------+

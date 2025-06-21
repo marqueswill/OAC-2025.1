@@ -60,19 +60,19 @@ module ControleMulticiclo(
 	always @(*) begin
 		case (pr_state)
 			ST_FETCH: begin
-				EscreveIR     <= 1'b1;  //ok
-				EscrevePC     <= 1'b1;  //ok
+				EscreveIR     <= 1'b0;  
+				EscrevePC     <= 1'b0;
 				EscrevePCCond <= 1'b0;
-				EscrevePCBack <= 1'b1;  //ok
-				OrigAULA      <= 2'b10; //ok
-				OrigBULA      <= 2'b01; //ok
+				EscrevePCBack <= 1'b0;  
+				OrigAULA      <= 2'b00;
+				OrigBULA      <= 2'b00; 
 				Mem2Reg       <= 2'b00;
-				OrigPC        <= 1'b0;  //ok
-				IouD          <= 1'b0;  //ok
+				OrigPC        <= 1'b0;  
+				IouD          <= 1'b0;  
 				EscreveReg    <= 1'b0;
 				EscreveMem    <= 1'b0;
-				LeMem         <= 1'b1;  //ok
-				ALUOp         <= 2'b00; //ok
+				LeMem         <= 1'b1;  
+				ALUOp         <= 2'b00;
 				nx_state      <= ST_FETCH1;
 			end
 			

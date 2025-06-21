@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/21/2025 13:47:09"
+// Generated on "06/21/2025 18:03:00"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          TopDE
 // 
@@ -40,6 +40,7 @@ wire [31:0] Instr;
 wire [31:0] PC;
 wire [31:0] Regout;
 wire [31:0] oA;
+wire [31:0] oAdress;
 wire [31:0] oB;
 wire [31:0] oInstReg;
 wire [31:0] oMemReg;
@@ -58,6 +59,7 @@ TopDE i1 (
 	.Regout(Regout),
 	.Reset(Reset),
 	.oA(oA),
+	.oAdress(oAdress),
 	.oB(oB),
 	.oInstReg(oInstReg),
 	.oMemReg(oMemReg),
@@ -66,27 +68,27 @@ TopDE i1 (
 );
 initial 
 begin 
-#1000000 $finish;
+#16000000 $finish;
 end 
 
 // Reset
 initial
 begin
 	Reset = 1'b0;
-	Reset = #40000 1'b1;
-	Reset = #40000 1'b0;
+	Reset = #100000 1'b1;
+	Reset = #100000 1'b0;
 end 
 
 // CLOCK
 initial
 begin
 	CLOCK = 1'b1;
-	# 5000;
-	repeat(99)
+	# 25000;
+	repeat(319)
 	begin
 		CLOCK = 1'b0;
-		CLOCK = #5000 1'b1;
-		# 5000;
+		CLOCK = #25000 1'b1;
+		# 25000;
 	end
 	CLOCK = 1'b0;
 end 
@@ -103,7 +105,7 @@ end
 // Regin[ 2 ]
 initial
 begin
-	Regin[2] = 1'b0;
+	Regin[2] = 1'b1;
 end 
 // Regin[ 1 ]
 initial
@@ -113,7 +115,7 @@ end
 // Regin[ 0 ]
 initial
 begin
-	Regin[0] = 1'b0;
+	Regin[0] = 1'b1;
 end 
 endmodule
 

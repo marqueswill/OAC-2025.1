@@ -17,12 +17,20 @@ module Multiciclo (
 	output logic [31:0] oA,
 	output logic [31:0] oB,
 	output logic [31:0] oInstReg,
-	output logic [31:0] oMemReg
+	output logic [31:0] oMemReg,
+	output logic [31:0] oAdress
 );
 	
 
 
 reg  [31:0] PCBack, SaidaULA, A, B, InstReg, MemReg;
+assign oPCBack    = PCBack;
+assign oSaidaULA  = SaidaULA;
+assign oA         = A;
+assign oB         = B;
+assign oInstReg   = InstReg;
+assign oMemReg    = MemReg;
+assign oAdress    = wEndereco;
 
 wire [4:0] RS1, RS2, RD;
 wire [7:0] OPCODE;
@@ -72,7 +80,10 @@ always @(posedge clockCPU or posedge reset)
 
 			// Program Counter
 			if ((wZero && wEscrevePCCond) || wEscrevePC)
-				PC <= wPCNext;
+				if (OPCODE == OPC_JALR)
+					PC <= wPCNext & ~32'd1;
+				else
+					PC <= wPCNext;
 			
 			// Escrita IR
 			if (wEscreveIR)
@@ -86,7 +97,7 @@ always @(posedge clockCPU or posedge reset)
 // Controle CPU
 //CPUControl controle_multiciclo (	
 ControleMulticiclo controle_multiciclo (	
-	.iCLK(clockMem),
+	.iCLK(clockCPU),
 	.iRST(reset),
 	.iInstruction(InstReg),
 	.EscrevePCCond(wEscrevePCCond), 
@@ -147,7 +158,7 @@ ALU ula(
 );
 
 // Memória
-ramI MemC (.address(wEndereco[11:2]), .clock(clockMem), .data(B), .wren(wEscreveMem & ~wEndereco[28]), .q(wInstReg));
+ramI MemC (.address(wEndereco[11:2]), .clock(clockMem), .data(B), .wren(/*wEscreveMem & ~wEndereco[28]*/), .q(wInstReg));
 ramD MemD (.address(wEndereco[11:2]), .clock(clockMem), .data(B), .wren(wEscreveMem &  wEndereco[28]), .q(wMemReg));
 ///////////////
 
