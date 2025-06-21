@@ -1,0 +1,19 @@
+
+State Machine - |TopDE|Multiciclo:MULT1|ControleMulticiclo:controle_multiciclo|pr_state
+Name pr_state.ST_ADDI pr_state.ST_JALR1 pr_state.ST_JALR pr_state.ST_JAL pr_state.ST_BRANCH pr_state.ST_ULAREGWRITE pr_state.ST_RTYPE pr_state.ST_SW1 pr_state.ST_SW pr_state.ST_LW2 pr_state.ST_LW1 pr_state.ST_LW pr_state.ST_LWSW pr_state.ST_DECODE pr_state.ST_FETCH1 pr_state.ST_FETCH 
+pr_state.ST_FETCH 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+pr_state.ST_FETCH1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+pr_state.ST_DECODE 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+pr_state.ST_LWSW 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+pr_state.ST_LW 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+pr_state.ST_LW1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+pr_state.ST_LW2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+pr_state.ST_SW 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+pr_state.ST_SW1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+pr_state.ST_RTYPE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+pr_state.ST_ULAREGWRITE 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+pr_state.ST_BRANCH 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+pr_state.ST_JAL 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+pr_state.ST_JALR 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+pr_state.ST_JALR1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+pr_state.ST_ADDI 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

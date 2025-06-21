@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/05/2025 14:48:07"
+// Generated on "06/20/2025 17:30:56"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          TopDE
 // 
@@ -39,6 +39,18 @@ wire [3:0] Estado;
 wire [31:0] Instr;
 wire [31:0] PC;
 wire [31:0] Regout;
+wire [31:0] oDado1;
+wire [31:0] oDado2;
+wire [31:0] oDadoEscritaReg;
+wire [31:0] oDadoMem;
+wire [31:0] oEndereco;
+wire [31:0] oEntrada1ULA;
+wire [31:0] oEntrada2ULA;
+wire [31:0] oImm;
+wire [31:0] oInstReg;
+wire [31:0] oMemReg;
+wire [31:0] oPCNext;
+wire [31:0] oSaidaULA;
 
 // assign statements (if any)                          
 TopDE i1 (
@@ -50,7 +62,19 @@ TopDE i1 (
 	.PC(PC),
 	.Regin(Regin),
 	.Regout(Regout),
-	.Reset(Reset)
+	.Reset(Reset),
+	.oDado1(oDado1),
+	.oDado2(oDado2),
+	.oDadoEscritaReg(oDadoEscritaReg),
+	.oDadoMem(oDadoMem),
+	.oEndereco(oEndereco),
+	.oEntrada1ULA(oEntrada1ULA),
+	.oEntrada2ULA(oEntrada2ULA),
+	.oImm(oImm),
+	.oInstReg(oInstReg),
+	.oMemReg(oMemReg),
+	.oPCNext(oPCNext),
+	.oSaidaULA(oSaidaULA)
 );
 initial 
 begin 
@@ -58,11 +82,17 @@ begin
 end 
 
 // CLOCK
-always
+initial
 begin
+	CLOCK = 1'b1;
+	# 10000;
+	repeat(799)
+	begin
+		CLOCK = 1'b0;
+		CLOCK = #10000 1'b1;
+		# 10000;
+	end
 	CLOCK = 1'b0;
-	CLOCK = #10000 1'b1;
-	#10000;
 end 
 
 // Reset

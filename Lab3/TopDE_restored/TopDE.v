@@ -7,57 +7,49 @@ module TopDE (
 	input  logic [4:0]  Regin,
 	output logic        ClockDIV,
 	output logic [31:0] PC, Instr, Regout,
-	output logic [3:0]  Estado
+	output logic [3:0]  Estado,
+
+	// Saídas dos registradores internos do Multiciclo
+	output logic [31:0] oPCBack,
+	output logic [31:0] oSaidaULA,
+	output logic [31:0] oA,
+	output logic [31:0] oB,
+	output logic [31:0] oInstReg,
+	output logic [31:0] oMemReg
 );
-	
-		
+
+/*
 initial 
 	ClockDIV <= 1'b1;
 
 reg [1:0] counter = 0;
 
 always @(posedge CLOCK) begin
-	 counter <= counter + 1;
-	 if (counter == 2'b11) begin
-		  ClockDIV <= ~ClockDIV;
-		  counter <= 0;
-	 end
+	counter <= counter + 1;
+	if (counter == 2'b11) begin
+		ClockDIV <= ~ClockDIV;
+		counter <= 0;
+	end
 end
-	
-
-/*
-Uniciclo UNI1 (
-	.clockCPU(ClockDIV),
-	.clockMem(CLOCK),
-	.reset(Reset),
-	.PC(PC),
-	.Instr(Instr),
-	.regin(Regin),
-	.regout(Regout)
-);
 */
-				
+
 Multiciclo MULT1 (
-	.clockCPU(ClockDIV), 
+	.clockCPU(CLOCK), 
 	.clockMem(CLOCK), 
 	.reset(Reset), 
 	.PC(PC), 
 	.Instr(Instr), 
 	.regin(Regin), 
 	.regout(Regout), 
-	.estado(Estado)
+	.estado(Estado),
+
+	// Conexão das saídas internas
+	.oPCBack(oPCBack),
+	.oSaidaULA(oSaidaULA),
+	.oA(oA),
+	.oB(oB),
+	.oInstReg(oInstReg),
+	.oMemReg(oMemReg)
 );
-	
-/*					
-Pipeline PIP1 (
-	.clockCPU(ClockDIV), 
-	.clockMem(CLOCK), 
-	.reset(Reset),
-	.PC(PC), 
-	.Instr(Instr), 
-	.regin(Regin), 
-	.regout(Regout)
-);
-*/
-	
+
 endmodule

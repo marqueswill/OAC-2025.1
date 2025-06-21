@@ -9,7 +9,15 @@ module Multiciclo (
 	output logic [31:0] Instr,
 	input  logic [4:0]  regin,
 	output logic [31:0] regout,
-	output logic [3:0]  estado
+	output logic [3:0]  estado,
+	
+	// Saídas para os registradores internos (prefixo o)
+	output logic [31:0] oPCBack,
+	output logic [31:0] oSaidaULA,
+	output logic [31:0] oA,
+	output logic [31:0] oB,
+	output logic [31:0] oInstReg,
+	output logic [31:0] oMemReg
 );
 	
 
@@ -29,26 +37,22 @@ assign RS2    = InstReg[24:20];
 assign RD     = InstReg[11:7];
 
 
-wire [31:0] wPCNext, wEndereco, wDadoEscritaReg, wImm, wEntrada1ULA, wEntrada2ULA, wInstReg, wMemReg, wDadoMem, wDado1, wDado2;
-wire wEscrevePCCond, wEscrevePC, wIouD, wEscreveMem, wLeMem, wEscreveIR;
-wire wOrigPC, wEscrevePCB, wEscreveReg, wZero;
+wire [31:0] wPCNext, wEndereco, wDadoEscritaReg, wImm, wEntrada1ULA, wEntrada2ULA, wSaidaULA, wInstReg, wMemReg, wDadoMem, wDado1, wDado2;
+wire wEscrevePCCond, wEscrevePC, wIouD, wEscreveMem, wLeMem, wEscreveIR, wOrigPC, wEscrevePCBack, wEscreveReg, wZero;
 wire [1:0] wMem2Reg, wALUOp, wOrigAULA, wOrigBULA;
 wire [4:0] oALUControl;
 
 
-initial
-	begin
-		PC     <= 32'h0040_0000;
-		PCBack <= 32'h0040_0000;
-		Instr  <= 32'b0;
-		regout <= 32'b0;
-	end
+initial begin
+	PC     <= 32'h0040_0000;
+	PCBack <= 32'h0040_0000;
+	Instr  <= 32'b0;
+	regout <= 32'b0;
+end
 
-
+assign Instr = InstReg;
 
 //******************************************
-// Aqui vai o seu código do seu processador
-
 // SEQUENCIAL /////////
 
 // PC
@@ -57,32 +61,33 @@ always @(posedge clockCPU or posedge reset)
 		begin
 			PC     <= TEXT_ADDRESS;
 			PCBack <= TEXT_ADDRESS;
-			estado <= 4'b0000;
 		end 
-	else begin
-		A 			<= wDado1;
-		B        <= wDado2;
-		SaidaULA <= wSaidaULA;
-		PCBack   <= PC;
+	else 
+		begin
+			A 			<= wDado1;
+			B        <= wDado2;
+			SaidaULA <= wSaidaULA;
+			PCBack   <= PC;
+			MemReg   <= wMemReg; //leitura sempre habilitada
+
+			// Program Counter
+			if ((wZero && wEscrevePCCond) || wEscrevePC)
+				PC <= wPCNext;
+			
+			// Escrita IR
+			if (wEscreveIR)
+				InstReg <= wInstReg;
 		
-		// Program Counter
-		if ((wZero && wEscrevePCCond)|| wEscrevePC)
-			PC <= wPCNext;
-		
-		// Leitura memória
-		if (wEscreveIR)
-			InstReg <= wDadoMem;
-		else
-			MemReg  <= wDadoMem;
-	
-	end
+		end
 
 
 
 
 // Controle CPU
-CPUControl controle_multiciclo (	
-	.iClock(clockCPU),
+//CPUControl controle_multiciclo (	
+ControleMulticiclo controle_multiciclo (	
+	.iCLK(clockMem),
+	.iRST(reset),
 	.iInstruction(InstReg),
 	.EscrevePCCond(wEscrevePCCond), 
 	.EscrevePC(wEscrevePC), 
@@ -92,11 +97,12 @@ CPUControl controle_multiciclo (
 	.EscreveIR(wEscreveIR),
 	.OrigPC(wOrigPC), 
 	.ALUOp(wALUOp), 
-	.OrigAUla(wOrigAUla), 
-	.OrigBUla(wOrigBUla),
-	.EscrevePCB(wEscrevePCB), 
+	.OrigAULA(wOrigAULA), 
+	.OrigBULA(wOrigBULA),
+	.EscrevePCBack(wEscrevePCBack), 
 	.EscreveReg(wEscreveReg), 
-	.Mem2Reg(wMem2Reg)
+	.Mem2Reg(wMem2Reg),
+	.Estado(estado)
 ); 
 
 //Controle da ULA
@@ -153,14 +159,13 @@ always @(*) begin
 	else 
 		wPCNext <= wSaidaULA;
 end
-
+ 
 // Ler Inst ou Mem
 always @(*) begin
 	if (wIouD)
 		wEndereco <= SaidaULA;
 	else
 		wEndereco <= PC;
-	
 end
 
 // Dado escrita registrador (mem, pc ou ula)
@@ -193,13 +198,7 @@ always @(*) begin
 		wEntrada2ULA <= B;
 end
 
-// tecnicamente dá pra se livrar desse mux
-always @(*) begin
-	if (wEndereco[28])
-		wDadoMem <= wMemReg;
-	else
-		wDadoMem <= wInstReg;
-end
+
 
 ///////////////
 //*****************************************

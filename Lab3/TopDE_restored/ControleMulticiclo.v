@@ -1,0 +1,366 @@
+`ifndef PARAM
+	`include "Parametros.v"
+`endif
+
+module ControleMulticiclo(
+	input  [31:0] iInstruction,
+	input  iCLK, iRST,
+	output EscrevePC,
+	output EscrevePCCond,
+	output IouD,
+	output LeMem,
+	output EscreveMem,
+	output EscreveIR,
+	output [1:0] Mem2Reg,
+	output OrigPC,
+	output [1:0] OrigAULA,
+	output [1:0] OrigBULA,
+	output [1:0] ALUOp,
+	output EscreveReg,
+	output EscrevePCBack,
+	output [3:0] Estado
+);
+
+	parameter
+		ST_FETCH  		= 4'd0,
+		ST_FETCH1 		= 4'd1,
+		ST_DECODE 		= 4'd2,
+		ST_LWSW   		= 4'd3,
+		ST_LW     		= 4'd4,
+		ST_LW1    		= 4'd5,
+		ST_LW2    		= 4'd6,
+		ST_SW		 		= 4'd7,
+		ST_SW1    		= 4'd8,
+		ST_RTYPE  		= 4'd9,
+		ST_ULAREGWRITE = 4'd10,
+		ST_BRANCH		= 4'd11,
+		ST_JAL			= 4'd12,
+		ST_JALR			= 4'd13,
+		ST_JALR1			= 4'd14,
+		ST_ADDI			= 4'd15;
+
+	wire [6:0] OPCODE;
+	assign OPCODE = iInstruction[6:0];
+
+	wire [3:0] nx_state;
+	reg  [3:0] pr_state;
+	 
+	assign Estado = pr_state;
+
+	initial 
+		pr_state <= ST_FETCH;
+		
+	always @(posedge iCLK or posedge iRST) begin
+		if (iRST)
+			pr_state <= ST_FETCH;
+		else
+			pr_state <= nx_state;
+	end
+
+	always @(*) begin
+		case (pr_state)
+			ST_FETCH: begin
+				EscreveIR     <= 1'b1;  //ok
+				EscrevePC     <= 1'b1;  //ok
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b1;  //ok
+				OrigAULA      <= 2'b10; //ok
+				OrigBULA      <= 2'b01; //ok
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b0;  //ok
+				IouD          <= 1'b0;  //ok
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b1;  //ok
+				ALUOp         <= 2'b00; //ok
+				nx_state      <= ST_FETCH1;
+			end
+			
+			ST_FETCH1: begin
+				EscreveIR     <= 1'b1;  //ok
+				EscrevePC     <= 1'b1;  //ok
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b1;  //ok
+				OrigAULA      <= 2'b10; //ok
+				OrigBULA      <= 2'b01; //ok
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b0;  //ok
+				IouD          <= 1'b0;  //ok
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b1;  //ok
+				ALUOp         <= 2'b00; //ok
+				nx_state      <= ST_DECODE;
+			end
+			
+			ST_DECODE: begin
+				EscreveIR     <= 1'b0;			
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b00; //ok
+				OrigBULA      <= 2'b10; //ok
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b0;
+				IouD          <= 1'b0;
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b00; //ok
+				case (OPCODE)
+					OPC_LOAD  : nx_state <= ST_LWSW;
+					OPC_STORE : nx_state <= ST_LWSW;
+					OPC_RTYPE : nx_state <= ST_RTYPE;
+					OPC_BRANCH: nx_state <= ST_BRANCH;
+					OPC_JAL   : nx_state <= ST_JAL;
+					OPC_JALR  : nx_state <= ST_JALR;
+					OPC_OPIMM : nx_state <= ST_ADDI;
+					default   : nx_state <= ST_FETCH;
+				endcase
+
+			end
+			
+			ST_LWSW: begin
+				EscreveIR     <= 1'b0;
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b01; //ok
+				OrigBULA      <= 2'b10; //ok
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b0;
+				IouD          <= 1'b0;
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b00; //ok
+				case (OPCODE)
+					OPC_LOAD  : nx_state <= ST_LW;
+					OPC_STORE : nx_state <= ST_SW;
+					default   : nx_state <= ST_FETCH;
+				endcase
+			end
+			
+			ST_LW: begin
+				EscreveIR     <= 1'b0;
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b00;
+				OrigBULA      <= 2'b00;
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b0;
+				IouD          <= 1'b1;  //ok
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b1;  //ok
+				ALUOp         <= 2'b00;
+				nx_state      <= ST_LW1;
+			end
+			
+			ST_LW1: begin
+				EscreveIR     <= 1'b0;
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b00;
+				OrigBULA      <= 2'b00;
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b0;
+				IouD          <= 1'b1;  //ok
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b1;  //ok
+				ALUOp         <= 2'b00;
+				nx_state      <= ST_LW2;
+			end
+			
+			ST_LW2: begin
+				EscreveIR     <= 1'b0;	
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b00;
+				OrigBULA      <= 2'b00;
+				Mem2Reg       <= 2'b10; //ok
+				OrigPC        <= 1'b0;
+				IouD          <= 1'b0;
+				EscreveReg    <= 1'b1;  //ok
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b00;
+				nx_state      <= ST_FETCH;
+			end
+			
+			ST_SW: begin
+				EscreveIR     <= 1'b0;
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b00;
+				OrigBULA      <= 2'b00;
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b0;
+				IouD          <= 1'b1;  //ok
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b1;  //ok
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b00;
+				nx_state      <= ST_SW1;
+			end
+			
+			ST_SW1: begin
+				EscreveIR     <= 1'b0;
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b00;
+				OrigBULA      <= 2'b00;
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b0;
+				IouD          <= 1'b1;  //ok
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b1;  //ok
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b00;
+				nx_state      <= ST_FETCH;
+			end
+			
+			ST_RTYPE: begin
+				EscreveIR     <= 1'b0;	
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b01; //ok
+				OrigBULA      <= 2'b00; //ok
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b0;
+				IouD          <= 1'b0;
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b10; //ok
+				nx_state      <= ST_ULAREGWRITE;
+			end
+			
+			ST_ULAREGWRITE: begin
+				EscreveIR     <= 1'b0;			
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b00;
+				OrigBULA      <= 2'b00;
+				Mem2Reg       <= 2'b00; //ok
+				OrigPC        <= 1'b0;
+				IouD          <= 1'b0;
+				EscreveReg    <= 1'b1;  //ok
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b00;
+				nx_state      <= ST_FETCH;
+			end
+			
+			ST_BRANCH: begin
+				EscreveIR     <= 1'b0;
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b1;  //ok
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b01; //ok
+				OrigBULA      <= 2'b00; //ok
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b1;  //ok
+				IouD          <= 1'b0;
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b01; //ok
+				nx_state      <= ST_FETCH;
+			end
+			
+			ST_JAL: begin
+				EscreveIR     <= 1'b0;
+				EscrevePC     <= 1'b1;  //ok
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b00;
+				OrigBULA      <= 2'b00;
+				Mem2Reg       <= 2'b01; //ok
+				OrigPC        <= 1'b1;  //ok
+				IouD          <= 1'b0;
+				EscreveReg    <= 1'b1;  //ok
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b00;
+				nx_state      <= ST_FETCH;
+			end
+			
+			ST_JALR: begin
+				EscreveIR     <= 1'b0;
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b01; //ok
+				OrigBULA      <= 2'b10; //ok
+				Mem2Reg       <= 2'b01; //ok
+				OrigPC        <= 1'b0;
+				IouD          <= 1'b0;
+				EscreveReg    <= 1'b1;  //ok
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b00;
+				nx_state      <= ST_JALR1;
+			end
+			
+			ST_JALR1: begin
+				EscreveIR     <= 1'b0;
+				EscrevePC     <= 1'b1;  //ok
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b00;
+				OrigBULA      <= 2'b00;
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b1;  //ok (imm + rs1) - feito na etapa anterior
+				IouD          <= 1'b0;
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b00;
+				nx_state      <= ST_FETCH;
+			end
+			
+			ST_ADDI: begin
+				EscreveIR     <= 1'b0;
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b01; //ok
+				OrigBULA      <= 2'b10; //ok
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b0; 
+				IouD          <= 1'b0;
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b00; //ok
+				nx_state      <= ST_ULAREGWRITE;
+			end
+			
+			default: begin
+				EscreveIR     <= 1'b0;			
+				EscrevePC     <= 1'b0;
+				EscrevePCCond <= 1'b0;
+				EscrevePCBack <= 1'b0;
+				OrigAULA      <= 2'b00;
+				OrigBULA      <= 2'b00;
+				Mem2Reg       <= 2'b00;
+				OrigPC        <= 1'b0;
+				IouD          <= 1'b0;
+				EscreveReg    <= 1'b0;
+				EscreveMem    <= 1'b0;
+				LeMem         <= 1'b0;
+				ALUOp         <= 2'b00;
+				nx_state      <= ST_FETCH;	
+			end
+		endcase
+	end
+endmodule
