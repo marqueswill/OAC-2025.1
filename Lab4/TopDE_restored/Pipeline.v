@@ -15,10 +15,10 @@ module Pipeline (
 	//reg [31:0] IF_ID, ID_EX, EX_MEM, MEM_WB;
 	
 	
-//Registradores principais
+//Registrador IF
 	logic [31:0] instr_IF;
 
-//Registradores IF/ID
+//Registrador IF/ID
 	logic [31:0] IF_ID_instr, IF_ID_pc;
 	
 	initial begin
@@ -67,7 +67,7 @@ always @(posedge clockCPU or posedge reset) begin
 		IF_ID_instr <= instr_IF;
 		IF_ID_pc    <= PC;
 	end
-	// else: mantém o valor atual (stall)
+	// else mantém o valor atual (stall)
 end
 
 	//Saídas de depuração
@@ -162,7 +162,6 @@ always @(posedge clockCPU or posedge reset) begin
 		ID_EX_Jalr      <= 0;
 		ID_EX_ALUOp     <= 0;
 	end else begin
-		// ✅ Sempre propaga dados
 		ID_EX_pc        <= IF_ID_pc;
 		ID_EX_imm       <= imm_ID;
 		ID_EX_rs1_val   <= LeituraReg1;
@@ -172,7 +171,7 @@ always @(posedge clockCPU or posedge reset) begin
 		ID_EX_rs2       <= IF_ID_instr[24:20];
 		ID_EX_rd        <= IF_ID_instr[11:7];
 
-		// Mas os sinais de controle são afetados pelo stall
+		//sinais de controle são afetados pelo stall
 		if (hazard_stall) begin
 			ID_EX_ALUSrc    <= 0;
 			ID_EX_MemtoReg  <= 0;
@@ -204,7 +203,7 @@ end
 		
 wire [4:0] ALUControl_EX;
 
-//Instancia o ALUControl para decodificar a operação
+//Instancia o ALUControl
 ALUControl aluControl (
     .iALUOp(ID_EX_ALUOp),
     .iInstruction(ID_EX_instr), 
