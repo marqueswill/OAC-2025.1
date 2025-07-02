@@ -1,5 +1,9 @@
 Analysis & Synthesis report for TopDE
+<<<<<<< Updated upstream
 Sat Jun 07 18:59:17 2025
+=======
+Fri Jun 06 15:39:35 2025
+>>>>>>> Stashed changes
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -56,7 +60,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis Status        ; Successful - Sat Jun 07 18:59:17 2025       ;
+=======
+; Analysis & Synthesis Status        ; Successful - Fri Jun 06 15:39:35 2025       ;
+>>>>>>> Stashed changes
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; TopDE                                       ;
 ; Top-level Entity Name              ; TopDE                                       ;
@@ -169,7 +177,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
+<<<<<<< Updated upstream
 ; Maximum used               ; 6           ;
+=======
+; Maximum used               ; 14          ;
+>>>>>>> Stashed changes
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
@@ -178,6 +190,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
+<<<<<<< Updated upstream
 +----------------------------+-------------+
 
 
@@ -224,6 +237,57 @@ https://fpgasoftware.intel.com/eula.
 ; db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
 ; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                  ;             ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+=======
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-14        ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                      ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                            ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; de1_text.mif                                                       ; yes             ; User Memory Initialization File              ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/de1_text.mif                                                       ;             ;
+; de1_data.mif                                                       ; yes             ; User Memory Initialization File              ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/de1_data.mif                                                       ;             ;
+; TopDE.v                                                            ; yes             ; User Verilog HDL File                        ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v                                                            ;             ;
+; Parametros.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Parametros.v                                                       ;             ;
+; Uniciclo.v                                                         ; yes             ; User Verilog HDL File                        ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v                                                         ;             ;
+; ALU.v                                                              ; yes             ; User Verilog HDL File                        ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ALU.v                                                              ;             ;
+; Registers.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Registers.v                                                        ;             ;
+; ImmGen.v                                                           ; yes             ; User Verilog HDL File                        ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ImmGen.v                                                           ;             ;
+; ramI.v                                                             ; yes             ; User Wizard-Generated File                   ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v                                                             ;             ;
+; ramD.v                                                             ; yes             ; User Wizard-Generated File                   ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramD.v                                                             ;             ;
+; ALUControl.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ALUControl.v                                                       ;             ;
+; CPUControl.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/CPUControl.v                                                       ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                   ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                            ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                      ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                   ;             ;
+; aglobal191.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc                                                                   ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                    ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc                                                                       ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc                                                                       ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc                                                                     ;             ;
+; db/altsyncram_r5l1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf                                             ;             ;
+; db/altsyncram_keb2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_keb2.tdf                                             ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                                              ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                    ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                                ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                   ;             ;
+; db/altsyncram_53l1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_53l1.tdf                                             ;             ;
+; db/altsyncram_9db2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_9db2.tdf                                             ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                      ; altera_sld  ;
+; db/ip/sldbdf28158/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                 ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------------+
+>>>>>>> Stashed changes
 
 
 +-------------------------------------------------------------+
@@ -637,7 +701,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+<<<<<<< Updated upstream
     Info: Processing started: Sat Jun 07 18:59:01 2025
+=======
+    Info: Processing started: Fri Jun 06 15:39:16 2025
+>>>>>>> Stashed changes
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopDE -c TopDE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -663,6 +731,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file ramd.v
 Info (12021): Found 1 design units, including 1 entities, in source file alucontrol.v
     Info (12023): Found entity 1: ALUControl File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/ALUControl.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file cpucontrol.v
+<<<<<<< Updated upstream
     Info (12023): Found entity 1: CPUControl File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/CPUControl.v Line: 5
 Info (12127): Elaborating entity "TopDE" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at TopDE.v(21): truncated value with size 32 to match size of target (2) File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 21
@@ -673,6 +742,18 @@ Info (12128): Elaborating entity "ramI" for hierarchy "Uniciclo:UNI1|ramI:MemINS
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v Line: 89
 Info (12130): Elaborated megafunction instantiation "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v Line: 89
 Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v Line: 89
+=======
+    Info (12023): Found entity 1: CPUControl File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/CPUControl.v Line: 5
+Info (12127): Elaborating entity "TopDE" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at TopDE.v(21): truncated value with size 32 to match size of target (2) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 21
+Warning (10034): Output port "Estado" at TopDE.v(12) has no driver File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 12
+Info (12128): Elaborating entity "Uniciclo" for hierarchy "Uniciclo:UNI1" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 38
+Info (12128): Elaborating entity "Registers" for hierarchy "Uniciclo:UNI1|Registers:bancoRegister" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 80
+Info (12128): Elaborating entity "ramI" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 91
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v Line: 89
+Info (12130): Elaborated megafunction instantiation "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v Line: 89
+Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v Line: 89
+>>>>>>> Stashed changes
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "de1_text.mif"
@@ -689,6 +770,7 @@ Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:
     Info (12134): Parameter "width_a" = "32"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r5l1.tdf
+<<<<<<< Updated upstream
     Info (12023): Found entity 1: altsyncram_r5l1 File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_r5l1" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_keb2.tdf
@@ -700,6 +782,19 @@ Critical Warning (127004): Memory depth (1024) in the design file differs from m
 Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
 Info (12130): Elaborated megafunction instantiation "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
 Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
+=======
+    Info (12023): Found entity 1: altsyncram_r5l1 File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_r5l1" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_keb2.tdf
+    Info (12023): Found entity 1: altsyncram_keb2 File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_keb2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_keb2" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|altsyncram_keb2:altsyncram1" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 38
+Warning (113028): 16378 out of 16384 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/de1_text.mif Line: 1
+    Warning (113027): Addresses ranging from 6 to 16383 are not initialized File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/de1_text.mif Line: 1
+Critical Warning (127004): Memory depth (1024) in the design file differs from memory depth (16384) in the Memory Initialization File "C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/de1_text.mif" -- truncated remaining initial content value to fit RAM File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramI.v Line: 89
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
+Info (12130): Elaborated megafunction instantiation "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
+Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
+>>>>>>> Stashed changes
     Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -711,10 +806,17 @@ Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "Uniciclo:UNI1|ramI:MemINSTR|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
+<<<<<<< Updated upstream
 Info (12128): Elaborating entity "ramD" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 100
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/ramD.v Line: 89
 Info (12130): Elaborated megafunction instantiation "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/ramD.v Line: 89
 Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/ramD.v Line: 89
+=======
+Info (12128): Elaborating entity "ramD" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 100
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramD.v Line: 89
+Info (12130): Elaborated megafunction instantiation "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramD.v Line: 89
+Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramD.v Line: 89
+>>>>>>> Stashed changes
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "de1_data.mif"
@@ -731,6 +833,7 @@ Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:
     Info (12134): Parameter "width_a" = "32"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_53l1.tdf
+<<<<<<< Updated upstream
     Info (12023): Found entity 1: altsyncram_53l1 File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_53l1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_53l1" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9db2.tdf
@@ -742,6 +845,19 @@ Critical Warning (127004): Memory depth (1024) in the design file differs from m
 Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_53l1.tdf Line: 39
 Info (12130): Elaborated megafunction instantiation "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_53l1.tdf Line: 39
 Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_53l1.tdf Line: 39
+=======
+    Info (12023): Found entity 1: altsyncram_53l1 File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_53l1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_53l1" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9db2.tdf
+    Info (12023): Found entity 1: altsyncram_9db2 File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_9db2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_9db2" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|altsyncram_9db2:altsyncram1" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_53l1.tdf Line: 38
+Warning (113028): 32768 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/de1_data.mif Line: 1
+    Warning (113027): Addresses ranging from 0 to 32767 are not initialized File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/de1_data.mif Line: 1
+Critical Warning (127004): Memory depth (1024) in the design file differs from memory depth (32768) in the Memory Initialization File "C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/de1_data.mif" -- truncated remaining initial content value to fit RAM File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ramD.v Line: 89
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_53l1.tdf Line: 39
+Info (12130): Elaborated megafunction instantiation "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_53l1.tdf Line: 39
+Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/altsyncram_53l1.tdf Line: 39
+>>>>>>> Stashed changes
     Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -750,6 +866,7 @@ Info (12133): Instantiated megafunction "Uniciclo:UNI1|ramD:MemDADOS|altsyncram:
     Info (12134): Parameter "SHIFT_COUNT_BITS" = "6"
     Info (12134): Parameter "WIDTH_WORD" = "32"
     Info (12134): Parameter "WIDTHAD" = "10"
+<<<<<<< Updated upstream
 Info (12128): Elaborating entity "CPUControl" for hierarchy "Uniciclo:UNI1|CPUControl:cpuControl" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 116
 Warning (10230): Verilog HDL assignment warning at CPUControl.v(51): truncated value with size 32 to match size of target (10) File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/CPUControl.v Line: 51
 Info (12128): Elaborating entity "ALUControl" for hierarchy "Uniciclo:UNI1|ALUControl:aluControl" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 124
@@ -759,6 +876,17 @@ Info (12128): Elaborating entity "ImmGen" for hierarchy "Uniciclo:UNI1|ImmGen:im
 Info (12128): Elaborating entity "ALU" for hierarchy "Uniciclo:UNI1|ALU:ula" File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 150
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
 Info (11172): 2025.06.07.18:59:08 Progress: Loading sldbdf28158/alt_sld_fab_wrapper_hw.tcl
+=======
+Info (12128): Elaborating entity "CPUControl" for hierarchy "Uniciclo:UNI1|CPUControl:cpuControl" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 116
+Warning (10230): Verilog HDL assignment warning at CPUControl.v(51): truncated value with size 32 to match size of target (10) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/CPUControl.v Line: 51
+Info (12128): Elaborating entity "ALUControl" for hierarchy "Uniciclo:UNI1|ALUControl:aluControl" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 124
+Warning (10230): Verilog HDL assignment warning at ALUControl.v(30): truncated value with size 32 to match size of target (5) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ALUControl.v Line: 30
+Warning (10230): Verilog HDL assignment warning at ALUControl.v(33): truncated value with size 32 to match size of target (5) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/ALUControl.v Line: 33
+Info (12128): Elaborating entity "ImmGen" for hierarchy "Uniciclo:UNI1|ImmGen:imGerador" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 132
+Info (12128): Elaborating entity "ALU" for hierarchy "Uniciclo:UNI1|ALU:ula" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Uniciclo.v Line: 150
+Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
+Info (11172): 2025.06.06.15:39:25 Progress: Loading sldbdf28158/alt_sld_fab_wrapper_hw.tcl
+>>>>>>> Stashed changes
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -769,6 +897,7 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldbdf28158/alt_sld_fab.v
+<<<<<<< Updated upstream
     Info (12023): Found entity 1: alt_sld_fab File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab.v
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
@@ -790,6 +919,29 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Estado[3]" is stuck at GND File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 12
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (144001): Generated suppressed messages file C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/output_files/TopDE.map.smsg
+=======
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_ident.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 142
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/db/ip/sldbdf28158/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Info (13000): Registers with preset signals will power-up high File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/Registers.v Line: 48
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Estado[0]" is stuck at GND File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 12
+    Warning (13410): Pin "Estado[1]" is stuck at GND File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 12
+    Warning (13410): Pin "Estado[2]" is stuck at GND File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 12
+    Warning (13410): Pin "Estado[3]" is stuck at GND File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 12
+Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (144001): Generated suppressed messages file C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/output_files/TopDE.map.smsg
+>>>>>>> Stashed changes
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 4192 device resources after synthesis - the final resource count might be different
@@ -798,10 +950,17 @@ Info (21057): Implemented 4192 device resources after synthesis - the final reso
     Info (21061): Implemented 4015 logic cells
     Info (21064): Implemented 64 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+<<<<<<< Updated upstream
     Info: Peak virtual memory: 4847 megabytes
     Info: Processing ended: Sat Jun 07 18:59:17 2025
     Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:14
+=======
+    Info: Peak virtual memory: 4898 megabytes
+    Info: Processing ended: Fri Jun 06 15:39:35 2025
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:33
+>>>>>>> Stashed changes
 
 
 +------------------------------------------+

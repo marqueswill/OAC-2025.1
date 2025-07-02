@@ -1,5 +1,9 @@
 Fitter report for TopDE
+<<<<<<< Updated upstream
 Sat Jun 07 18:59:31 2025
+=======
+Fri Jun 06 15:39:50 2025
+>>>>>>> Stashed changes
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -71,7 +75,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< Updated upstream
 ; Fitter Status                      ; Successful - Sat Jun 07 18:59:31 2025       ;
+=======
+; Fitter Status                      ; Successful - Fri Jun 06 15:39:50 2025       ;
+>>>>>>> Stashed changes
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; TopDE                                       ;
 ; Top-level Entity Name              ; TopDE                                       ;
@@ -158,6 +166,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 6           ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
+<<<<<<< Updated upstream
 ; Average used               ; 1.06        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
@@ -168,6 +177,21 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 4            ;   1.1%      ;
 ;     Processor 5            ;   1.1%      ;
 ;     Processor 6            ;   1.1%      ;
+=======
+; Average used               ; 1.15        ;
+; Maximum used               ; 14          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   1.3%      ;
+;     Processor 3            ;   1.2%      ;
+;     Processor 4            ;   1.2%      ;
+;     Processor 5            ;   1.2%      ;
+;     Processor 6            ;   1.2%      ;
+;     Processor 7            ;   1.2%      ;
+;     Processor 8            ;   1.2%      ;
+;     Processors 9-14        ;   1.2%      ;
+>>>>>>> Stashed changes
 +----------------------------+-------------+
 
 
@@ -2831,10 +2855,17 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
 +----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
+<<<<<<< Updated upstream
 ;0;(00000000011000000000010100010011) (30002423) (6292755) (600513)    ;(00000000000100000000001010010011) (4001223) (1049235) (100293)   ;(00000000000000000000010000110011) (2063) (1075) (433)   ;(00000000100000000000000011101111) (40000357) (8388847) (8000EF)   ;(00000100010000000000000001101111) (420000157) (71303279) (440006F)   ;(00000000101000101010001100110011) (50521463) (10658611) (A2A333)   ;(00000010000000110000110001100011) (200606143) (33754211) (2030C63)   ;(11111111100000010000000100010011) (-37577355) (-8322797) (-7-14-15-14-14-13)   ;
 ;8;(00000000000100010010000000100011) (4220043) (1122339) (112023)    ;(00000000101000010010001000100011) (50221043) (10560035) (A12223)   ;(11111111111101010000010100010011) (-2575355) (-719597) (-10-15-10-14-13)   ;(11111110100111111111000011101111) (-130007421) (-23072529) (-1-600-15-1-1)   ;(00000000010000010010010110000011) (20222603) (4269443) (412583)   ;(00000000101000010010001000100011) (50221043) (10560035) (A12223)   ;(11111111111001011000010100010011) (-6475355) (-1735405) (-1-10-7-10-14-13)   ;(11111101100111111111000011101111) (-230007421) (-39849745) (-2-600-15-1-1)   ;
 ;16;(00000000010000010010010110000011) (20222603) (4269443) (412583)    ;(00000000101101010000010100110011) (55202463) (11863347) (B50533)   ;(00000000000000010010000010000011) (220203) (73859) (12083)   ;(00000000100000010000000100010011) (40200423) (8454419) (810113)   ;(00000000000000001000000001100111) (100147) (32871) (8067)   ;(00000000011100110000001100010011) (34601423) (7537427) (730313)   ;(01000000011001010000010100110011) (-2116281185) (1080362291) (40650533)   ;(00000000101001010111010100110011) (51272463) (10843443) (A57533)   ;
 ;24;(00000000101001010110010100110011) (51262463) (10839347) (A56533)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+=======
+;0;(00000000010000101000001010010011) (20501223) (4358803) (428293)    ;(00000001000000000000001111101111) (100001757) (16778223) (10003EF)   ;(00000000000100101000001010010011) (4501223) (1213075) (128293)   ;(00000000010100110000001100010011) (24601423) (5440275) (530313)   ;(00000000011000101000010001100011) (30502143) (6456419) (628463)   ;(00000000000000111000000001100111) (700147) (229479) (38067)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;8;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;16;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;24;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+>>>>>>> Stashed changes
 ;32;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;40;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
 ;48;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
@@ -3595,6 +3626,7 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):  100.000 altera_reserved_tck
+<<<<<<< Updated upstream
 Info (176353): Automatically promoted node CLOCK~input (placed in PIN J1 (CLK1, DIFFCLK_0n)) File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 6
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
 Info (176353): Automatically promoted node ClockDIV~reg0  File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 20
@@ -3605,6 +3637,18 @@ Info (176353): Automatically promoted node ClockDIV~reg0  File: C:/Users/willy/O
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node Reset~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 6
+=======
+Info (176353): Automatically promoted node CLOCK~input (placed in PIN J1 (CLK1, DIFFCLK_0n)) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 6
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
+Info (176353): Automatically promoted node ClockDIV~reg0  File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 20
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node ClockDIV~0 File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 8
+        Info (176357): Destination node ClockDIV~output File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 8
+Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+Info (176353): Automatically promoted node Reset~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/TopDE.v Line: 6
+>>>>>>> Stashed changes
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G1
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -3622,13 +3666,21 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  57 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  71 pins available
+<<<<<<< Updated upstream
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
+=======
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+>>>>>>> Stashed changes
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
+<<<<<<< Updated upstream
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+=======
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
+>>>>>>> Stashed changes
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 44% of the available device resources in the region that extends from location X58_Y37 to location X68_Y48
@@ -3636,18 +3688,31 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+<<<<<<< Updated upstream
 Info (11888): Total time spent on timing analysis during the Fitter is 0.67 seconds.
+=======
+Info (11888): Total time spent on timing analysis during the Fitter is 0.64 seconds.
+>>>>>>> Stashed changes
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+<<<<<<< Updated upstream
 Info (144001): Generated suppressed messages file C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/output_files/TopDE.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 5877 megabytes
     Info: Processing ended: Sat Jun 07 18:59:31 2025
     Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:14
+=======
+Info (144001): Generated suppressed messages file C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/output_files/TopDE.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 6584 megabytes
+    Info: Processing ended: Fri Jun 06 15:39:51 2025
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:35
+>>>>>>> Stashed changes
 
 
 +----------------------------+

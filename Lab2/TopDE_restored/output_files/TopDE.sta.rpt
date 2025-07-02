@@ -1,5 +1,9 @@
 Timing Analyzer report for TopDE
+<<<<<<< Updated upstream
 Sat Jun 07 18:59:37 2025
+=======
+Fri Jun 06 15:39:56 2025
+>>>>>>> Stashed changes
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -107,6 +111,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 6           ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
+<<<<<<< Updated upstream
 ; Average used               ; 1.20        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
@@ -116,6 +121,17 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 3            ;   4.0%      ;
 ;     Processor 4            ;   3.9%      ;
 ;     Processors 5-6         ;   3.6%      ;
+=======
+; Average used               ; 1.53        ;
+; Maximum used               ; 14          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   5.2%      ;
+;     Processor 3            ;   4.4%      ;
+;     Processor 4            ;   4.3%      ;
+;     Processors 5-14        ;   3.9%      ;
+>>>>>>> Stashed changes
 +----------------------------+-------------+
 
 
@@ -2429,7 +2445,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+<<<<<<< Updated upstream
     Info: Processing started: Sat Jun 07 18:59:35 2025
+=======
+    Info: Processing started: Fri Jun 06 15:39:55 2025
+>>>>>>> Stashed changes
 Info: Command: quartus_sta TopDE -c TopDE
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -2552,9 +2572,15 @@ Info (332114): Report Metastability: Found 1 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 17 warnings
+<<<<<<< Updated upstream
     Info: Peak virtual memory: 4907 megabytes
     Info: Processing ended: Sat Jun 07 18:59:37 2025
     Info: Elapsed time: 00:00:02
+=======
+    Info: Peak virtual memory: 5006 megabytes
+    Info: Processing ended: Fri Jun 06 15:39:56 2025
+    Info: Elapsed time: 00:00:01
+>>>>>>> Stashed changes
     Info: Total CPU time (on all processors): 00:00:02
 
 
