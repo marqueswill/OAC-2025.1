@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TopDE
-Wed Jul 02 17:25:59 2025
+Thu Jul 03 16:02:54 2025
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -57,15 +57,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 02 17:25:59 2025       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 03 16:02:54 2025       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; TopDE                                       ;
 ; Top-level Entity Name              ; TopDE                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,270                                       ;
-;     Total combinational functions  ; 2,961                                       ;
-;     Dedicated logic registers      ; 1,729                                       ;
-; Total registers                    ; 1729                                        ;
+; Total logic elements               ; 4,292                                       ;
+;     Total combinational functions  ; 2,981                                       ;
+;     Dedicated logic registers      ; 1,731                                       ;
+; Total registers                    ; 1731                                        ;
 ; Total pins                         ; 498                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 65,536                                      ;
@@ -235,20 +235,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 4,270         ;
+; Estimated Total logic elements              ; 4,292         ;
 ;                                             ;               ;
-; Total combinational functions               ; 2961          ;
+; Total combinational functions               ; 2981          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 2248          ;
-;     -- 3 input functions                    ; 556           ;
-;     -- <=2 input functions                  ; 157           ;
+;     -- 4 input functions                    ; 2269          ;
+;     -- 3 input functions                    ; 553           ;
+;     -- <=2 input functions                  ; 159           ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 2733          ;
+;     -- normal mode                          ; 2753          ;
 ;     -- arithmetic mode                      ; 228           ;
 ;                                             ;               ;
-; Total registers                             ; 1729          ;
-;     -- Dedicated logic registers            ; 1729          ;
+; Total registers                             ; 1731          ;
+;     -- Dedicated logic registers            ; 1731          ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 498           ;
@@ -257,9 +257,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; ClockDIV~reg0 ;
-; Maximum fan-out                             ; 1484          ;
-; Total fan-out                               ; 20233         ;
-; Average fan-out                             ; 3.51          ;
+; Maximum fan-out                             ; 1486          ;
+; Total fan-out                               ; 20067         ;
+; Average fan-out                             ; 3.47          ;
 +---------------------------------------------+---------------+
 
 
@@ -268,13 +268,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                               ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |TopDE                                                                                                                                  ; 2961 (4)            ; 1729 (3)                  ; 65536       ; 0            ; 0       ; 0         ; 498  ; 0            ; |TopDE                                                                                                                                                                                                                                                                                                                                            ; TopDE                             ; work         ;
-;    |Pipeline:PIP1|                                                                                                                      ; 2784 (208)          ; 1614 (490)                ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1                                                                                                                                                                                                                                                                                                                              ; Pipeline                          ; work         ;
-;       |ALU:ula|                                                                                                                         ; 229 (229)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|ALU:ula                                                                                                                                                                                                                                                                                                                      ; ALU                               ; work         ;
+; |TopDE                                                                                                                                  ; 2981 (4)            ; 1731 (3)                  ; 65536       ; 0            ; 0       ; 0         ; 498  ; 0            ; |TopDE                                                                                                                                                                                                                                                                                                                                            ; TopDE                             ; work         ;
+;    |Pipeline:PIP1|                                                                                                                      ; 2804 (228)          ; 1616 (492)                ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1                                                                                                                                                                                                                                                                                                                              ; Pipeline                          ; work         ;
+;       |ALU:ula|                                                                                                                         ; 230 (230)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|ALU:ula                                                                                                                                                                                                                                                                                                                      ; ALU                               ; work         ;
 ;       |ALUControl:aluControl|                                                                                                           ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|ALUControl:aluControl                                                                                                                                                                                                                                                                                                        ; ALUControl                        ; work         ;
-;       |CPUControl:unidadeControle|                                                                                                      ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|CPUControl:unidadeControle                                                                                                                                                                                                                                                                                                   ; CPUControl                        ; work         ;
-;       |ImmGen:imGerador|                                                                                                                ; 57 (57)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|ImmGen:imGerador                                                                                                                                                                                                                                                                                                             ; ImmGen                            ; work         ;
-;       |Registers:bancoRegister|                                                                                                         ; 2068 (2068)         ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|Registers:bancoRegister                                                                                                                                                                                                                                                                                                      ; Registers                         ; work         ;
+;       |CPUControl:unidadeControle|                                                                                                      ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|CPUControl:unidadeControle                                                                                                                                                                                                                                                                                                   ; CPUControl                        ; work         ;
+;       |ImmGen:imGerador|                                                                                                                ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|ImmGen:imGerador                                                                                                                                                                                                                                                                                                             ; ImmGen                            ; work         ;
+;       |Registers:bancoRegister|                                                                                                         ; 2066 (2066)         ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|Registers:bancoRegister                                                                                                                                                                                                                                                                                                      ; Registers                         ; work         ;
 ;       |ramD:MemD|                                                                                                                       ; 93 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|ramD:MemD                                                                                                                                                                                                                                                                                                                    ; ramD                              ; work         ;
 ;          |altsyncram:altsyncram_component|                                                                                              ; 93 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                    ; altsyncram                        ; work         ;
 ;             |altsyncram_53l1:auto_generated|                                                                                            ; 93 (0)              ; 66 (0)                    ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopDE|Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated                                                                                                                                                                                                                                                     ; altsyncram_53l1                   ; work         ;
@@ -329,11 +329,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------+---------------------------------------------+
 ; Register name                                          ; Reason for Removal                          ;
 +--------------------------------------------------------+---------------------------------------------+
+; Pipeline:PIP1|ID_EX_MemRead                            ; Merged with Pipeline:PIP1|ID_EX_MemtoReg    ;
+; Pipeline:PIP1|ID_EX_ALUOp[0]                           ; Merged with Pipeline:PIP1|ID_EX_Branch      ;
+; Pipeline:PIP1|EX_MEM_MemtoReg                          ; Merged with Pipeline:PIP1|EX_MEM_MemRead    ;
 ; Pipeline:PIP1|ID_EX_imm[21..31]                        ; Merged with Pipeline:PIP1|ID_EX_imm[20]     ;
 ; Pipeline:PIP1|EX_MEM_imm[21..31]                       ; Merged with Pipeline:PIP1|EX_MEM_imm[20]    ;
-; Pipeline:PIP1|ID_EX_MemtoReg                           ; Merged with Pipeline:PIP1|ID_EX_MemRead     ;
-; Pipeline:PIP1|ID_EX_Branch                             ; Merged with Pipeline:PIP1|ID_EX_ALUOp[0]    ;
-; Pipeline:PIP1|EX_MEM_MemtoReg                          ; Merged with Pipeline:PIP1|EX_MEM_MemRead    ;
 ; Pipeline:PIP1|Registers:bancoRegister|registers[0][0]  ; Stuck at GND due to stuck port clock_enable ;
 ; Pipeline:PIP1|Registers:bancoRegister|registers[0][1]  ; Stuck at GND due to stuck port clock_enable ;
 ; Pipeline:PIP1|Registers:bancoRegister|registers[0][2]  ; Stuck at GND due to stuck port clock_enable ;
@@ -375,12 +375,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1729  ;
-; Number of registers using Synchronous Clear  ; 25    ;
-; Number of registers using Synchronous Load   ; 66    ;
-; Number of registers using Asynchronous Clear ; 1570  ;
+; Total registers                              ; 1731  ;
+; Number of registers using Synchronous Clear  ; 22    ;
+; Number of registers using Synchronous Load   ; 67    ;
+; Number of registers using Asynchronous Clear ; 1572  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1462  ;
+; Number of registers using Clock Enable       ; 1212  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -391,7 +391,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Pipeline:PIP1|PC[22]                                                                                                                                                                                                                                                                                                            ; 3       ;
-; ClockDIV~reg0                                                                                                                                                                                                                                                                                                                   ; 1484    ;
+; ClockDIV~reg0                                                                                                                                                                                                                                                                                                                   ; 1486    ;
 ; Pipeline:PIP1|Registers:bancoRegister|registers[2][2]                                                                                                                                                                                                                                                                           ; 3       ;
 ; Pipeline:PIP1|Registers:bancoRegister|registers[2][3]                                                                                                                                                                                                                                                                           ; 3       ;
 ; Pipeline:PIP1|Registers:bancoRegister|registers[2][4]                                                                                                                                                                                                                                                                           ; 3       ;
@@ -415,25 +415,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|PC[24]                                                                                                                                                                ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopDE|Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[17]                                               ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|PC[12]                                                                                                                                                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopDE|Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[5]                                                ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopDE|Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[2]                                                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[6]                                                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[7]                                                ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopDE|Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[31]                                               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[5]                                                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TopDE|Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[2]                                                ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ID_EX_rs1_val[1]                                                                                                                                                      ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ID_EX_rs2_val[30]                                                                                                                                                     ;
-; 128:1              ; 4 bits    ; 340 LEs       ; 8 LEs                ; 332 LEs                ; Yes        ; |TopDE|Pipeline:PIP1|ID_EX_imm[1]                                                                                                                                                          ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ID_EX_imm[17]                                                                                                                                                         ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ID_EX_rs1_val[5]                                                                                                                                                      ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ID_EX_rs2_val[14]                                                                                                                                                     ;
+; 128:1              ; 4 bits    ; 340 LEs       ; 8 LEs                ; 332 LEs                ; Yes        ; |TopDE|Pipeline:PIP1|ID_EX_imm[3]                                                                                                                                                          ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |TopDE|Pipeline:PIP1|ID_EX_imm[15]                                                                                                                                                         ;
 ; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |TopDE|Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 52 LEs               ; 16 LEs                 ; Yes        ; |TopDE|Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 52 LEs               ; 16 LEs                 ; Yes        ; |TopDE|Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |TopDE|Pipeline:PIP1|ImmGen:imGerador|Selector13                                                                                                                                           ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TopDE|Pipeline:PIP1|ALUControl:aluControl|Mux2                                                                                                                                            ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |TopDE|Pipeline:PIP1|ALU:ula|Selector14                                                                                                                                                    ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |TopDE|Pipeline:PIP1|Registers:bancoRegister|Mux67                                                                                                                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TopDE|Pipeline:PIP1|WriteBackData[19]                                                                                                                                                     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TopDE|Pipeline:PIP1|ALUControl:aluControl|Mux1                                                                                                                                            ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |TopDE|Pipeline:PIP1|ALU:ula|Selector22                                                                                                                                                    ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |TopDE|Pipeline:PIP1|Registers:bancoRegister|Mux88                                                                                                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -646,28 +647,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 552                         ;
-; cycloneiii_ff         ; 1617                        ;
-;     CLR               ; 232                         ;
-;     CLR SCLR          ; 3                           ;
+; cycloneiii_ff         ; 1619                        ;
+;     CLR               ; 456                         ;
+;     CLR SLD           ; 31                          ;
 ;     ENA               ; 93                          ;
-;     ENA CLR           ; 1226                        ;
-;     ENA CLR SLD       ; 50                          ;
+;     ENA CLR           ; 1006                        ;
+;     ENA CLR SLD       ; 20                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 2790                        ;
+; cycloneiii_lcell_comb ; 2810                        ;
 ;     arith             ; 220                         ;
 ;         2 data inputs ; 65                          ;
 ;         3 data inputs ; 155                         ;
-;     normal            ; 2570                        ;
+;     normal            ; 2590                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 24                          ;
-;         2 data inputs ; 29                          ;
-;         3 data inputs ; 327                         ;
-;         4 data inputs ; 2189                        ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 324                         ;
+;         4 data inputs ; 2210                        ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.00                       ;
-; Average LUT depth     ; 4.42                        ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 4.43                        ;
 +-----------------------+-----------------------------+
 
 
@@ -686,7 +687,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Wed Jul 02 17:25:43 2025
+    Info: Processing started: Thu Jul 03 16:02:38 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TopDE -c TopDE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -716,7 +717,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file cpucont
 Info (12127): Elaborating entity "TopDE" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at TopDE.v(42): truncated value with size 32 to match size of target (2) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/TopDE.v Line: 42
 Info (12128): Elaborating entity "Pipeline" for hierarchy "Pipeline:PIP1" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/TopDE.v Line: 82
-Info (12128): Elaborating entity "ramI" for hierarchy "Pipeline:PIP1|ramI:MemC" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 105
+Info (12128): Elaborating entity "ramI" for hierarchy "Pipeline:PIP1|ramI:MemC" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 119
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/ramI.v Line: 89
 Info (12130): Elaborated megafunction instantiation "Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/ramI.v Line: 89
 Info (12133): Instantiated megafunction "Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/ramI.v Line: 89
@@ -741,8 +742,8 @@ Info (12128): Elaborating entity "altsyncram_r5l1" for hierarchy "Pipeline:PIP1|
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_keb2.tdf
     Info (12023): Found entity 1: altsyncram_keb2 File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/db/altsyncram_keb2.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_keb2" for hierarchy "Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|altsyncram_keb2:altsyncram1" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 38
-Warning (113028): 16376 out of 16384 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/de1_text.mif Line: 1
-    Warning (113027): Addresses ranging from 8 to 16383 are not initialized File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/de1_text.mif Line: 1
+Warning (113028): 16334 out of 16384 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/de1_text.mif Line: 1
+    Warning (113027): Addresses ranging from 50 to 16383 are not initialized File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/de1_text.mif Line: 1
 Critical Warning (127004): Memory depth (1024) in the design file differs from memory depth (16384) in the Memory Initialization File "C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/de1_text.mif" -- truncated remaining initial content value to fit RAM File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/ramI.v Line: 89
 Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
 Info (12130): Elaborated megafunction instantiation "Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/db/altsyncram_r5l1.tdf Line: 39
@@ -758,15 +759,15 @@ Info (12133): Instantiated megafunction "Pipeline:PIP1|ramI:MemC|altsyncram:alts
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "Registers" for hierarchy "Pipeline:PIP1|Registers:bancoRegister" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 142
-Info (12128): Elaborating entity "ImmGen" for hierarchy "Pipeline:PIP1|ImmGen:imGerador" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 150
-Info (12128): Elaborating entity "CPUControl" for hierarchy "Pipeline:PIP1|CPUControl:unidadeControle" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 168
+Info (12128): Elaborating entity "Registers" for hierarchy "Pipeline:PIP1|Registers:bancoRegister" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 160
+Info (12128): Elaborating entity "ImmGen" for hierarchy "Pipeline:PIP1|ImmGen:imGerador" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 168
+Info (12128): Elaborating entity "CPUControl" for hierarchy "Pipeline:PIP1|CPUControl:unidadeControle" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 186
 Warning (10230): Verilog HDL assignment warning at CPUControl.v(51): truncated value with size 32 to match size of target (10) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/CPUControl.v Line: 51
-Info (12128): Elaborating entity "ALUControl" for hierarchy "Pipeline:PIP1|ALUControl:aluControl" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 255
+Info (12128): Elaborating entity "ALUControl" for hierarchy "Pipeline:PIP1|ALUControl:aluControl" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 266
 Warning (10230): Verilog HDL assignment warning at ALUControl.v(30): truncated value with size 32 to match size of target (5) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/ALUControl.v Line: 30
 Warning (10230): Verilog HDL assignment warning at ALUControl.v(33): truncated value with size 32 to match size of target (5) File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/ALUControl.v Line: 33
-Info (12128): Elaborating entity "ALU" for hierarchy "Pipeline:PIP1|ALU:ula" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 271
-Info (12128): Elaborating entity "ramD" for hierarchy "Pipeline:PIP1|ramD:MemD" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 329
+Info (12128): Elaborating entity "ALU" for hierarchy "Pipeline:PIP1|ALU:ula" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 282
+Info (12128): Elaborating entity "ramD" for hierarchy "Pipeline:PIP1|ramD:MemD" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/Pipeline.v Line: 340
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/ramD.v Line: 89
 Info (12130): Elaborated megafunction instantiation "Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component" File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/ramD.v Line: 89
 Info (12133): Instantiated megafunction "Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/ramD.v Line: 89
@@ -806,7 +807,7 @@ Info (12133): Instantiated megafunction "Pipeline:PIP1|ramD:MemD|altsyncram:alts
     Info (12134): Parameter "WIDTH_WORD" = "32"
     Info (12134): Parameter "WIDTHAD" = "10"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.07.02.17:25:50 Progress: Loading sldbdf28158/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.07.03.16:02:45 Progress: Loading sldbdf28158/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -836,16 +837,16 @@ Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (144001): Generated suppressed messages file C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/output_files/TopDE.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4906 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4932 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 492 output pins
-    Info (21061): Implemented 4339 logic cells
+    Info (21061): Implemented 4365 logic cells
     Info (21064): Implemented 64 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4918 megabytes
-    Info: Processing ended: Wed Jul 02 17:25:59 2025
+    Info: Peak virtual memory: 4920 megabytes
+    Info: Processing ended: Thu Jul 03 16:02:54 2025
     Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Total CPU time (on all processors): 00:00:30
 
 
 +------------------------------------------+

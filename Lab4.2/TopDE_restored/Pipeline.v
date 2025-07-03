@@ -81,16 +81,30 @@ assign PCPlus4 = PC + 32'd4;
 
 // MUX PC
 wire [31:0] PCNext;
+
+/*
 assign PCNext = EX_MEM_Jalr  ? PCJalr_MEM :
                 EX_MEM_Jal   ? PCBranch_MEM :
                 BranchTaken  ? PCBranch_MEM :
                                PCPlus4;
-										 
+*/
+							 
+always @(*) begin
+		if (EX_MEM_Jalr)
+			PCNext <= PCJalr_MEM;
+		else if (BranchTaken || EX_MEM_Jal)
+			PCNext <= PCBranch_MEM;
+		else
+			PCNext <= PCPlus4;
+end
+
 // Lógica atualização PC
 always @(posedge clockCPU or posedge reset) begin
 	if (reset)
 		PC <= TEXT_ADDRESS;
-	else if (!hazard_stall)
+	// else if (!hazard_stall)
+	// 	PC <= PCNext;
+	else
 		PC <= PCNext;
 end
 
@@ -109,7 +123,11 @@ always @(posedge clockCPU or posedge reset) begin
 	if (reset) begin
 		IF_ID_instr <= 32'b0;
 		IF_ID_pc    <= 32'b0;
-	end else if (!hazard_stall) begin
+	// end else if (!hazard_stall) begin
+	// 	IF_ID_instr <= instr_IF;
+	// 	IF_ID_pc    <= PC;
+	// end
+	end else begin
 		IF_ID_instr <= instr_IF;
 		IF_ID_pc    <= PC;
 	end
@@ -169,9 +187,9 @@ CPUControl unidadeControle (
 		
 //hazard
 
-wire hazard_stall;
-assign hazard_stall = ID_EX_MemRead &&
-                     ((ID_EX_rd == IF_ID_instr[19:15]) || (ID_EX_rd == IF_ID_instr[24:20]));		
+// wire hazard_stall;
+// assign hazard_stall = ID_EX_MemRead &&
+//                      ((ID_EX_rd == IF_ID_instr[19:15]) || (ID_EX_rd == IF_ID_instr[24:20]));		
 
 							
 //REGISTRADOR ID/EX
@@ -199,34 +217,27 @@ always @(posedge clockCPU or posedge reset) begin
 		ID_EX_Jalr      <= 0;
 		ID_EX_ALUOp     <= 0;
 	end else begin
-		// ID_EX_pc        <= IF_ID_pc;
-		// ID_EX_imm       <= imm_ID;
-		// ID_EX_rs1_val   <= LeituraReg1;
-		// ID_EX_rs2_val   <= LeituraReg2;
-		// ID_EX_instr     <= IF_ID_instr;
-		// /*ID_EX_rs1       <= IF_ID_instr[19:15];
-		// ID_EX_rs2       <= IF_ID_instr[24:20];*/
-		// ID_EX_rd        <= IF_ID_instr[11:7];
+		ID_EX_pc        <= IF_ID_pc;
+		ID_EX_imm       <= imm_ID;
+		ID_EX_rs1_val   <= LeituraReg1;
+		ID_EX_rs2_val   <= LeituraReg2;
+		ID_EX_instr     <= IF_ID_instr;
+		/*ID_EX_rs1       <= IF_ID_instr[19:15];
+		ID_EX_rs2       <= IF_ID_instr[24:20];*/
+		ID_EX_rd        <= IF_ID_instr[11:7];
 
 		//sinais de controle são afetados pelo stall
-		if (hazard_stall) begin
-			ID_EX_ALUSrc    <= 0;
-			ID_EX_MemtoReg  <= 0;
-			ID_EX_RegWrite  <= 0;
-			ID_EX_MemRead   <= 0;
-			ID_EX_MemWrite  <= 0;
-			ID_EX_Branch    <= 0;
-			ID_EX_Jal       <= 0;
-			ID_EX_Jalr      <= 0;
-			ID_EX_ALUOp     <= 2'b00;
-		end else begin
-			ID_EX_pc        <= IF_ID_pc;
-			ID_EX_imm       <= imm_ID;
-			ID_EX_rs1_val   <= LeituraReg1;
-			ID_EX_rs2_val   <= LeituraReg2;
-			ID_EX_instr     <= IF_ID_instr;
-			ID_EX_rd        <= IF_ID_instr[11:7];
-
+		// if (hazard_stall) begin
+		// 	ID_EX_ALUSrc    <= 0;
+		// 	ID_EX_MemtoReg  <= 0;
+		// 	ID_EX_RegWrite  <= 0;
+		// 	ID_EX_MemRead   <= 0;
+		// 	ID_EX_MemWrite  <= 0;
+		// 	ID_EX_Branch    <= 0;
+		// 	ID_EX_Jal       <= 0;
+		// 	ID_EX_Jalr      <= 0;
+		// 	ID_EX_ALUOp     <= 2'b00;
+		// end else begin
 			ID_EX_ALUSrc    <= ALUSrc_ID;
 			ID_EX_MemtoReg  <= MemtoReg_ID;
 			ID_EX_RegWrite  <= RegWrite_ID;
@@ -236,7 +247,7 @@ always @(posedge clockCPU or posedge reset) begin
 			ID_EX_Jal       <= Jal_ID;
 			ID_EX_Jalr      <= Jalr_ID;
 			ID_EX_ALUOp     <= ALUOp_ID;
-		end
+		// end
 	end
 end
 
@@ -342,7 +353,7 @@ assign PCJalr_MEM = (EX_MEM_rs1_val + EX_MEM_imm) & ~32'd1;
 //REGISTRADOR MEM/WB
 reg [31:0] MEM_WB_MemData, MEM_WB_ALU_result;
 reg [4:0]  MEM_WB_rd;
-reg        MEM_WB_MemtoReg, MEM_WB_RegWrite;
+reg        MEM_WB_MemtoReg, MEM_WB_RegWrite, MEM_WB_Jalr, MEM_WB_Jal;
 
 always @(posedge clockCPU or posedge reset) begin
     if (reset) begin
@@ -351,12 +362,16 @@ always @(posedge clockCPU or posedge reset) begin
         MEM_WB_rd        <= 0;
         MEM_WB_MemtoReg  <= 0;
         MEM_WB_RegWrite  <= 0;
+		  MEM_WB_Jalr <= 0;
+		  MEM_WB_Jal <= 0;
     end else begin
         MEM_WB_MemData   <= MemData_MEM;
         MEM_WB_ALU_result <= EX_MEM_ALU_result;
         MEM_WB_rd        <= EX_MEM_rd;
         MEM_WB_MemtoReg  <= EX_MEM_MemtoReg;
         MEM_WB_RegWrite  <= EX_MEM_RegWrite;
+		  MEM_WB_Jalr <= EX_MEM_Jalr;
+		  MEM_WB_Jal <= EX_MEM_Jal;
     end
 end
 
@@ -369,7 +384,17 @@ wire [31:0] WriteBackData;
 wire RegWrite_WB;
 
 //MUX para selecionar entre MemData e ALU result
-assign WriteBackData = MEM_WB_MemtoReg ? MEM_WB_MemData : MEM_WB_ALU_result;
+//assign WriteBackData = MEM_WB_MemtoReg ? MEM_WB_MemData : MEM_WB_ALU_result;
+
+always @(*) begin
+	if (MEM_WB_Jal || MEM_WB_Jalr)
+		WriteBackData <= EX_MEM_pc; //instrução "nop" seguinte (PC+4), isso é gambiarra pq não tem stall então eu preciso colocar os nops
+	else if (MEM_WB_MemtoReg)
+		WriteBackData <= MEM_WB_MemData;
+	else
+		WriteBackData <= MEM_WB_ALU_result;
+end
+
 assign Rd_WB = MEM_WB_rd;
 assign RegWrite_WB = MEM_WB_RegWrite;
 

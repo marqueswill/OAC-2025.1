@@ -162,13 +162,13 @@ R10
 R11
 R12
 vTopDE
-Z18 !s110 1751488012
+Z18 !s110 1751569424
 !i10b 1
-!s100 KYR[APB457n3VWIHzk_9K3
-I>AF<DVlGHlf0Wij@9cfG>0
+!s100 RS@Jh`YF7f71^L2TkN:KX3
+IOn?W1Pg?J^5V46Z_bo8g`3
 R2
 Z19 dC:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab4.2/TopDE_restored/simulation/qsim
-w1751488011
+w1751569423
 R4
 R5
 R6
@@ -176,7 +176,7 @@ R7
 r1
 !s85 0
 31
-Z20 !s108 1751488012.000000
+Z20 !s108 1751569424.000000
 R9
 R10
 !i113 1
@@ -186,11 +186,11 @@ n@top@d@e
 vTopDE_vlg_vec_tst
 R18
 !i10b 1
-!s100 BNUbVDAAjAc79BP?=9cfd2
-I_KF^Q^Icj<_giL?<hN2O30
+!s100 A^Lnm832e`=J`YJR29DkJ1
+IG3Ui048:?l_0c5_Kd79YJ3
 R2
 R19
-w1751488010
+w1751569422
 Z21 8Waveform1.vwf.vt
 Z22 FWaveform1.vwf.vt
 R13

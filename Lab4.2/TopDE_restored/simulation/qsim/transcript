@@ -1,25 +1,25 @@
 # do TopDE.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:26:52 on Jul 02,2025
+# Start time: 16:03:44 on Jul 03,2025
 # vlog -work work TopDE.vo 
 # -- Compiling module TopDE
 # 
 # Top level modules:
 # 	TopDE
-# End time: 17:26:52 on Jul 02,2025, Elapsed time: 0:00:00
+# End time: 16:03:44 on Jul 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:26:52 on Jul 02,2025
+# Start time: 16:03:44 on Jul 03,2025
 # vlog -work work Waveform1.vwf.vt 
 # -- Compiling module TopDE_vlg_vec_tst
 # 
 # Top level modules:
 # 	TopDE_vlg_vec_tst
-# End time: 17:26:52 on Jul 02,2025, Elapsed time: 0:00:00
+# End time: 16:03:44 on Jul 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.TopDE_vlg_vec_tst 
-# Start time: 17:26:52 on Jul 02,2025
+# Start time: 16:03:44 on Jul 03,2025
 # Loading work.TopDE_vlg_vec_tst
 # Loading work.TopDE
 # Loading altera_ver.dffeas
@@ -40,10 +40,10 @@
 # ** Warning: (vsim-3722) Waveform1.vwf.vt(57): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
 # ** Warning: (vsim-3722) Waveform1.vwf.vt(57): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 15570 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 15378 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#25
 # ** Note: $finish    : Waveform1.vwf.vt(83)
-#    Time: 4 us  Iteration: 0  Instance: /TopDE_vlg_vec_tst
-# End time: 17:26:53 on Jul 02,2025, Elapsed time: 0:00:01
+#    Time: 8 us  Iteration: 0  Instance: /TopDE_vlg_vec_tst
+# End time: 16:03:46 on Jul 03,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 6
