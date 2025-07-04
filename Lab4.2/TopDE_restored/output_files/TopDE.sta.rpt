@@ -1,5 +1,5 @@
 Timing Analyzer report for TopDE
-Thu Jul 03 16:03:20 2025
+Fri Jul 04 15:24:24 2025
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -107,15 +107,15 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 14          ;
 ;                            ;             ;
-; Average used               ; 1.55        ;
+; Average used               ; 1.54        ;
 ; Maximum used               ; 14          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.4%      ;
-;     Processor 3            ;   4.4%      ;
-;     Processor 4            ;   4.3%      ;
-;     Processors 5-14        ;   4.1%      ;
+;     Processor 2            ;   5.0%      ;
+;     Processor 3            ;   4.3%      ;
+;     Processor 4            ;   4.2%      ;
+;     Processors 5-14        ;   4.0%      ;
 +----------------------------+-------------+
 
 
@@ -275,8 +275,8 @@ HTML report is unavailable in plain text report export.
 ; 95.206 ; Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|altsyncram_9db2:altsyncram1|ram_block3a9~portb_we_reg                                                                                                                                                                                                        ; Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[14]                                                                                                                                                                                                          ; altera_reserved_tck ; altera_reserved_tck ; 100.000      ; -0.374     ; 4.438      ;
 ; 95.209 ; Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|altsyncram_9db2:altsyncram1|ram_block3a27~portb_we_reg                                                                                                                                                                                                       ; Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[29]                                                                                                                                                                                                          ; altera_reserved_tck ; altera_reserved_tck ; 100.000      ; -0.369     ; 4.440      ;
 ; 95.210 ; Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|altsyncram_keb2:altsyncram1|ram_block3a9~portb_we_reg                                                                                                                                                                                                        ; Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[12]                                                                                                                                                                                                          ; altera_reserved_tck ; altera_reserved_tck ; 100.000      ; -0.372     ; 4.436      ;
-; 95.215 ; Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|altsyncram_9db2:altsyncram1|ram_block3a9~portb_we_reg                                                                                                                                                                                                        ; Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[9]                                                                                                                                                                                                           ; altera_reserved_tck ; altera_reserved_tck ; 100.000      ; -0.374     ; 4.429      ;
 ; 95.215 ; Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|altsyncram_9db2:altsyncram1|ram_block3a27~portb_we_reg                                                                                                                                                                                                       ; Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[31]                                                                                                                                                                                                          ; altera_reserved_tck ; altera_reserved_tck ; 100.000      ; -0.369     ; 4.434      ;
+; 95.215 ; Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|altsyncram_9db2:altsyncram1|ram_block3a9~portb_we_reg                                                                                                                                                                                                        ; Pipeline:PIP1|ramD:MemD|altsyncram:altsyncram_component|altsyncram_53l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[9]                                                                                                                                                                                                           ; altera_reserved_tck ; altera_reserved_tck ; 100.000      ; -0.374     ; 4.429      ;
 ; 95.218 ; Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|altsyncram_keb2:altsyncram1|ram_block3a27~portb_we_reg                                                                                                                                                                                                       ; Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[31]                                                                                                                                                                                                          ; altera_reserved_tck ; altera_reserved_tck ; 100.000      ; -0.371     ; 4.429      ;
 ; 95.229 ; Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|altsyncram_keb2:altsyncram1|ram_block3a9~portb_we_reg                                                                                                                                                                                                        ; Pipeline:PIP1|ramI:MemC|altsyncram:altsyncram_component|altsyncram_r5l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[11]                                                                                                                                                                                                          ; altera_reserved_tck ; altera_reserved_tck ; 100.000      ; -0.372     ; 4.417      ;
 ; 95.235 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[8]                        ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg[0] ; altera_reserved_tck ; altera_reserved_tck ; 100.000      ; -0.079     ; 4.704      ;
@@ -4777,7 +4777,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Thu Jul 03 16:03:17 2025
+    Info: Processing started: Fri Jul 04 15:24:22 2025
 Info: Command: quartus_sta TopDE -c TopDE
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -4901,8 +4901,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 17 warnings
     Info: Peak virtual memory: 5014 megabytes
-    Info: Processing ended: Thu Jul 03 16:03:20 2025
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Fri Jul 04 15:24:24 2025
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -1,9 +1,5 @@
 Assembler report for TopDE
-<<<<<<< Updated upstream
-Sat Jun 07 18:59:34 2025
-=======
-Fri Jun 06 15:39:54 2025
->>>>>>> Stashed changes
+Fri Jul 04 14:42:32 2025
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -15,11 +11,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-<<<<<<< Updated upstream
-  6. Assembler Device Options: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/output_files/TopDE.sof
-=======
   6. Assembler Device Options: C:/Users/willyanmarques/Documents/Dev/OAC-2025.1/Lab2/TopDE_restored/output_files/TopDE.sof
->>>>>>> Stashed changes
   7. Assembler Messages
 
 
@@ -47,11 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-<<<<<<< Updated upstream
-; Assembler Status      ; Successful - Sat Jun 07 18:59:34 2025 ;
-=======
-; Assembler Status      ; Successful - Fri Jun 06 15:39:54 2025 ;
->>>>>>> Stashed changes
+; Assembler Status      ; Successful - Fri Jul 04 14:42:32 2025 ;
 ; Revision Name         ; TopDE                                 ;
 ; Top-level Entity Name ; TopDE                                 ;
 ; Family                ; Cyclone IV E                          ;
@@ -74,27 +62,6 @@ https://fpgasoftware.intel.com/eula.
 ; Altera ; Signal Tap (6AF7 BCE1) ; Licensed     ;
 ; Altera ; Signal Tap (6AF7 BCEC) ; Licensed     ;
 +--------+------------------------+--------------+
-<<<<<<< Updated upstream
-
-
-+----------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                    ;
-+----------------------------------------------------------------------------------------------+
-; File Name                                                                                    ;
-+----------------------------------------------------------------------------------------------+
-; C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/output_files/TopDE.sof ;
-+----------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/willy/OneDrive/Documentos/Dev/OAC-2025.1/Lab2/TopDE_restored/output_files/TopDE.sof ;
-+----------------+-------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                               ;
-+----------------+-------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x007DBE3E                                                                                            ;
-; Checksum       ; 0x007DBE3E                                                                                            ;
-+----------------+-------------------------------------------------------------------------------------------------------+
-=======
 
 
 +---------------------------------------------------------------------------------------------+
@@ -111,10 +78,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------+------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                              ;
 +----------------+------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x007DB0D7                                                                                           ;
-; Checksum       ; 0x007DB0D7                                                                                           ;
+; JTAG usercode  ; 0x007DBBF3                                                                                           ;
+; Checksum       ; 0x007DBBF3                                                                                           ;
 +----------------+------------------------------------------------------------------------------------------------------+
->>>>>>> Stashed changes
 
 
 +--------------------+
@@ -123,25 +89,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-<<<<<<< Updated upstream
-    Info: Processing started: Sat Jun 07 18:59:32 2025
-=======
-    Info: Processing started: Fri Jun 06 15:39:52 2025
->>>>>>> Stashed changes
+    Info: Processing started: Fri Jul 04 14:42:30 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off TopDE -c TopDE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-<<<<<<< Updated upstream
-    Info: Peak virtual memory: 4704 megabytes
-    Info: Processing ended: Sat Jun 07 18:59:35 2025
-    Info: Elapsed time: 00:00:03
-=======
     Info: Peak virtual memory: 4707 megabytes
-    Info: Processing ended: Fri Jun 06 15:39:54 2025
+    Info: Processing ended: Fri Jul 04 14:42:32 2025
     Info: Elapsed time: 00:00:02
->>>>>>> Stashed changes
     Info: Total CPU time (on all processors): 00:00:02
 
 
